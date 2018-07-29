@@ -20564,9 +20564,9 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Styles.scss":
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Button.scss":
 /*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Styles.scss ***!
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Button.scss ***!
   \*****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -20576,16 +20576,16 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "/* default style */\n/* primary style */\n/* danger style */\n/* warning style */\n.-Button__1trRRsX0- {\n  box-sizing: border-box;\n  display: inline-block;\n  padding: 0 18px;\n  border: 1px solid transparent;\n  cursor: pointer;\n  height: 36px;\n  line-height: 34px;\n  overflow: hidden;\n  font-family: inherit; }\n  .-Button__1trRRsX0-:focus {\n    outline: 0; }\n  .-Button__1trRRsX0-.-Disabled__pt83b2BF- {\n    cursor: not-allowed; }\n  .-Button__1trRRsX0-.-Default__RLfC5_GJ- {\n    color: #000000;\n    border-color: #666666;\n    background-color: #ffffff; }\n    .-Button__1trRRsX0-.-Default__RLfC5_GJ-:hover {\n      color: #ffffff;\n      border-color: #666666;\n      background-color: #666666; }\n  .-Button__1trRRsX0-.-Primary__2XSg6CwX- {\n    color: #ffffff;\n    border-color: #2980B9;\n    background-color: #2980B9; }\n    .-Button__1trRRsX0-.-Primary__2XSg6CwX-:hover {\n      color: #2980B9;\n      border-color: #2980B9;\n      background-color: #ffffff; }\n  .-Button__1trRRsX0-.-Danger__3JLdwLD6- {\n    color: #ffffff;\n    border-color: #FF5B5B;\n    background-color: #FF5B5B; }\n    .-Button__1trRRsX0-.-Danger__3JLdwLD6-:hover {\n      color: #FF5B5B;\n      border-color: #FF5B5B;\n      background-color: #ffffff; }\n  .-Button__1trRRsX0-.-Warning__A8NbAC2s- {\n    color: #ffffff;\n    border-color: #FBA300;\n    background-color: #FBA300; }\n    .-Button__1trRRsX0-.-Warning__A8NbAC2s-:hover {\n      color: #FBA300;\n      border-color: #FBA300;\n      background-color: #ffffff; }\n", ""]);
+exports.push([module.i, "/* default style */\n/* primary style */\n/* danger style */\n/* warning style */\n.-Button__1la5ZcA4- {\n  box-sizing: border-box;\n  display: inline-block;\n  padding: 0 18px;\n  border: 1px solid transparent;\n  cursor: pointer;\n  height: 36px;\n  line-height: 34px;\n  overflow: hidden;\n  font-family: inherit; }\n  .-Button__1la5ZcA4-:focus {\n    outline: 0; }\n  .-Button__1la5ZcA4-.-Disabled__UH4aM3CT- {\n    cursor: not-allowed; }\n  .-Button__1la5ZcA4-.-Default__2LqQIyqw- {\n    color: #000000;\n    border-color: #666666;\n    background-color: #ffffff; }\n    .-Button__1la5ZcA4-.-Default__2LqQIyqw-:hover {\n      color: #ffffff;\n      border-color: #666666;\n      background-color: #666666; }\n  .-Button__1la5ZcA4-.-Primary__2RWpzCv2- {\n    color: #ffffff;\n    border-color: #2980B9;\n    background-color: #2980B9; }\n    .-Button__1la5ZcA4-.-Primary__2RWpzCv2-:hover {\n      color: #2980B9;\n      border-color: #2980B9;\n      background-color: #ffffff; }\n  .-Button__1la5ZcA4-.-Danger__1H-avOC8- {\n    color: #ffffff;\n    border-color: #FF5B5B;\n    background-color: #FF5B5B; }\n    .-Button__1la5ZcA4-.-Danger__1H-avOC8-:hover {\n      color: #FF5B5B;\n      border-color: #FF5B5B;\n      background-color: #ffffff; }\n  .-Button__1la5ZcA4-.-Warning__kWsOGMfg- {\n    color: #ffffff;\n    border-color: #FBA300;\n    background-color: #FBA300; }\n    .-Button__1la5ZcA4-.-Warning__kWsOGMfg-:hover {\n      color: #FBA300;\n      border-color: #FBA300;\n      background-color: #ffffff; }\n", ""]);
 
 // exports
 exports.locals = {
-	"Button": "-Button__1trRRsX0-",
-	"Disabled": "-Disabled__pt83b2BF-",
-	"Default": "-Default__RLfC5_GJ-",
-	"Primary": "-Primary__2XSg6CwX-",
-	"Danger": "-Danger__3JLdwLD6-",
-	"Warning": "-Warning__A8NbAC2s-"
+	"Button": "-Button__1la5ZcA4-",
+	"Disabled": "-Disabled__UH4aM3CT-",
+	"Default": "-Default__2LqQIyqw-",
+	"Primary": "-Primary__2RWpzCv2-",
+	"Danger": "-Danger__1H-avOC8-",
+	"Warning": "-Warning__kWsOGMfg-"
 };
 
 /***/ }),
@@ -20653,45 +20653,15 @@ exports.locals = {
 
 /***/ }),
 
-/***/ "./src/Button/Button.tsx":
-/*!*******************************!*\
-  !*** ./src/Button/Button.tsx ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils/index.ts");
-var Styles = __webpack_require__(/*! ./Styles.scss */ "./src/Button/Styles.scss");
-var Props = /** @class */ (function () {
-    function Props() {
-    }
-    return Props;
-}());
-function Button(props) {
-    var title = props.title, onClick = props.onClick, _a = props.disabled, disabled = _a === void 0 ? false : _a, _b = props.style, style = _b === void 0 ? "Default" : _b;
-    var className = Styles.Button
-        + Utils_1.addClassName(!!Styles[style], Styles[style])
-        + Utils_1.addClassName(disabled, Styles.Disabled);
-    return React.createElement("button", { className: className, onClick: function (event) { return onClick(event); } }, title);
-}
-exports.default = Button;
-
-
-/***/ }),
-
-/***/ "./src/Button/Styles.scss":
+/***/ "./src/Button/Button.scss":
 /*!********************************!*\
-  !*** ./src/Button/Styles.scss ***!
+  !*** ./src/Button/Button.scss ***!
   \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./Styles.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Styles.scss");
+var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./Button.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Button.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -20710,6 +20680,36 @@ var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyl
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./src/Button/Button.tsx":
+/*!*******************************!*\
+  !*** ./src/Button/Button.tsx ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils/index.ts");
+var Styles = __webpack_require__(/*! ./Button.scss */ "./src/Button/Button.scss");
+var Props = /** @class */ (function () {
+    function Props() {
+    }
+    return Props;
+}());
+function Button(props) {
+    var title = props.title, onClick = props.onClick, _a = props.disabled, disabled = _a === void 0 ? false : _a, _b = props.style, style = _b === void 0 ? "Default" : _b;
+    var className = Styles.Button
+        + Utils_1.addClassName(!!Styles[style], Styles[style])
+        + Utils_1.addClassName(disabled, Styles.Disabled);
+    return React.createElement("button", { className: className, onClick: function (event) { return onClick(event); } }, title);
+}
+exports.default = Button;
+
 
 /***/ }),
 
