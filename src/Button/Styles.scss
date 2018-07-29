@@ -1,59 +1,58 @@
-/* common */
-$height: 36px;
+@import "../Base.scss";
 
 
 /* default style */
 
-$base-color: black;
-$base-border-color: #666;
-$base-background-color: #fff;
+$button-default-color: $base-secondary-color;
+$button-default-border-color: $base-secondary-color + #666666;
+$button-default-background-color: $base-primary-color;
 
-$default-hover-color: #ffffff;
-$default-hover-border-color: #666;
-$default-hover-background-color: #666;
+$button-default-hover-color: $base-primary-color;
+$button-default-hover-border-color: $base-secondary-color + #666666;
+$button-default-hover-background-color: $base-secondary-color + #666666;
 
 
 /* primary style */
 
-$primary-color: #ffffff;
-$primary-border-color: #2980B9;
-$primary-background-color: #2980B9;
+$button-primary-color: $base-primary-color;
+$button-primary-border-color: $base-alpha-color;
+$button-primary-background-color: $base-alpha-color;
 
-$primary-hover-color: #0074CA;
-$primary-hover-border-color: #0074CA;
-$primary-hover-background-color: white;
+$button-primary-hover-color: $base-alpha-color;
+$button-primary-hover-border-color: $base-alpha-color;
+$button-primary-hover-background-color: $base-primary-color;
 
 
 /* danger style */
 
-$danger-color: #ffffff;
-$danger-border-color: #FF5B5B;
-$danger-background-color: #FF5B5B;
+$button-danger-color: $base-primary-color;
+$button-danger-border-color: $base-beta-color;
+$button-danger-background-color: $base-beta-color;
 
-$danger-hover-color: #FF5B5B;
-$danger-hover-border-color: #FF5B5B;
-$danger-hover-background-color: rgba(255, 255, 255, 0.1);
+$button-danger-hover-color: $base-beta-color;
+$button-danger-hover-border-color: $base-beta-color;
+$button-danger-hover-background-color: $base-primary-color;
 
 
 /* warning style */
 
-$warning-color: #ffffff;
-$warning-border-color: #FBA300;
-$warning-background-color: #FBA300;
+$button-warning-color: $base-primary-color;
+$button-warning-border-color: $base-gamma-color;
+$button-warning-background-color: $base-gamma-color;
 
-$warning-hover-color: #FBA300;
-$warning-hover-border-color: #FBA300;
-$warning-hover-background-color: rgba(255, 255, 255, 0.1);
+$button-warning-hover-color: $base-gamma-color;
+$button-warning-hover-border-color: $base-gamma-color;
+$button-warning-hover-background-color: $base-primary-color;
 
 
 .Button {
     box-sizing: border-box;
     display: inline-block;
-    padding: 0 18px;
+    padding: 0 $base-horizontal-padding;
     border: 1px solid transparent;
     cursor: pointer;
-    height: $height;
-    line-height: $height - 2px;
+    height: $base-line-height;
+    line-height: $base-line-height - 2px;
     overflow: hidden;
     font-family: inherit;
 
@@ -65,51 +64,51 @@ $warning-hover-background-color: rgba(255, 255, 255, 0.1);
         cursor: not-allowed;
     }
 
-    &.Base {    
-        color: $base-color;
-        border-color: $base-border-color;
-        background-color: $base-background-color;
+    &.Default {    
+        color: $button-default-color;
+        border-color: $button-default-border-color;
+        background-color: $button-default-background-color;
 
         &:hover {
-            color: $default-hover-color;
-            border-color: $default-hover-border-color;
-            background-color: $default-hover-background-color;
+            color: $button-default-hover-color;
+            border-color: $button-default-hover-border-color;
+            background-color: $button-default-hover-background-color;
         }
     }
 
     &.Primary {
-        color: $primary-color;
-        border-color: $primary-border-color;
-        background-color: $primary-background-color;
+        color: $button-primary-color;
+        border-color: $button-primary-border-color;
+        background-color: $button-primary-background-color;
 
         &:hover {
-            color: $primary-hover-color;
-            border-color: $primary-hover-border-color;
-            background-color: $primary-hover-background-color;
+            color: $button-primary-hover-color;
+            border-color: $button-primary-hover-border-color;
+            background-color: $button-primary-hover-background-color;
         }
     }
 
     &.Danger {
-        color: $danger-color;
-        border-color: $danger-border-color;
-        background-color: $danger-background-color;
+        color: $button-danger-color;
+        border-color: $button-danger-border-color;
+        background-color: $button-danger-background-color;
 
         &:hover {
-            color: $danger-hover-color;
-            border-color: $danger-hover-border-color;
-            background-color: $danger-hover-background-color;
+            color: $button-danger-hover-color;
+            border-color: $button-danger-hover-border-color;
+            background-color: $button-danger-hover-background-color;
         }
     }
 
     &.Warning {
-        color: $warning-color;
-        border-color: $warning-border-color;
-        background-color: $warning-background-color;
+        color: $button-warning-color;
+        border-color: $button-warning-border-color;
+        background-color: $button-warning-background-color;
 
         &:hover {
-            color: $warning-hover-color;
-            border-color: $warning-hover-border-color;
-            background-color: $warning-hover-background-color;
+            color: $button-warning-hover-color;
+            border-color: $button-warning-hover-border-color;
+            background-color: $button-warning-hover-background-color;
         }
     }
 }

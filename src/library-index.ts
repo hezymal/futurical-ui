@@ -1,10 +1,10 @@
 import Button from "./Button"
 import Layout from "./Layout"
-import TextBox from "./TextBox"
+import TextInput from "./TextInput"
 
 
 export {
     Button,
     Layout,
-    TextBox,
+    TextInput,
 }

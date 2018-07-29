@@ -7,7 +7,7 @@ class Props {
     title: string;
     onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
     disabled?: boolean;
-    style?: "Base" | "Primary" | "Danger" | "Warning";
+    style?: "Default" | "Primary" | "Danger" | "Warning";
 }
 
 
@@ -16,7 +16,7 @@ function Button(props: Props): JSX.Element {
         title,
         onClick,
         disabled = false,
-        style = "Base",
+        style = "Default",
     } = props;
 
     const className = Styles.Button 

@@ -1,7 +1,5 @@
 import * as React from "react";
-import Button from "../Button";
-import Layout from "../Layout";
-import TextBox from "../TextBox";
+import { Button, Layout, TextInput } from "../library-index";
 import * as Styles from "./Styles.scss";
 
 
@@ -12,7 +10,7 @@ function Buttons() {
         </header>
         <div>
             <Button
-                title="Base Button"
+                title="Default Button"
                 onClick={() => {}}
             />
         </div>
@@ -37,21 +35,47 @@ function Buttons() {
                 onClick={() => {}}
             />
         </div>
-    </section>
+    </section>;
 }
 
 
-function Inputs() {
-    return <section>
-        <header>
-            Inputs
-        </header>
-        <div>
-            <TextBox
-                value="TextBox"
-            />
-        </div>
-    </section>
+interface InputsState {
+    textInputValue: string;
+}
+
+
+class Inputs extends React.Component<{}, InputsState> {
+    constructor(props: {}) {
+        super(props);
+        
+        this.state = {
+            textInputValue: "Text Input",
+        };
+    }
+
+    changeTextInput = (value: string) => {
+        this.setState({
+            textInputValue: value,
+        });
+    }
+
+    render(): JSX.Element {
+        const { 
+            textInputValue 
+        } = this.state;
+
+        return <section>
+            <header>
+                Inputs
+            </header>
+            <div>
+                <TextInput
+                    onChange={value => this.changeTextInput(value)}
+                    value={textInputValue}
+                />
+            </div>
+        </section>;
+    }
 }
 
 
@@ -61,7 +85,7 @@ function Examples() {
             <Buttons />
             <Inputs />
         </Layout>
-    </div>
+    </div>;
 }
 
 
