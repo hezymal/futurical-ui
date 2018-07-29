@@ -1,11 +1,37 @@
 {
-  "name": "borderlands",
+  "name": "borderlands-ui",
   "version": "0.0.0",
-  "description": "ui library",
-  "dependencies": {},
-  "devDependencies": {},
+  "description": "borderlands-ui - ReactJS UI Library",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6",
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-core": "6",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^4.0.0-alpha",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.21.0",
+    "typescript": "^2.9.2",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
+  },
+  "optionalDependencies": {
+    "react-dom": "^16.4.1"
+  },
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:examples": "./node_modules/.bin/webpack --mode development --config ./build-scripts/examples.js",
+    "watch:examples": "./node_modules/.bin/webpack --mode development --config ./build-scripts/examples.js --watch",
+    "build:prod": "./node_modules/.bin/webpack --config ./build-scripts/production.js",
+    "build:dev": "./node_modules/.bin/webpack --config ./build-scripts/development.js",
+    "build": "yarn run build:dev && yarn run build:prod && node ./build-scripts/make-bootstrap-script.js"
   },
   "author": "github.com/hezymal",
   "license": "ISC"

@@ -1,0 +1,115 @@
+/* common */
+$height: 36px;
+
+
+/* default style */
+
+$base-color: black;
+$base-border-color: #666;
+$base-background-color: #fff;
+
+$default-hover-color: #ffffff;
+$default-hover-border-color: #666;
+$default-hover-background-color: #666;
+
+
+/* primary style */
+
+$primary-color: #ffffff;
+$primary-border-color: #2980B9;
+$primary-background-color: #2980B9;
+
+$primary-hover-color: #0074CA;
+$primary-hover-border-color: #0074CA;
+$primary-hover-background-color: white;
+
+
+/* danger style */
+
+$danger-color: #ffffff;
+$danger-border-color: #FF5B5B;
+$danger-background-color: #FF5B5B;
+
+$danger-hover-color: #FF5B5B;
+$danger-hover-border-color: #FF5B5B;
+$danger-hover-background-color: rgba(255, 255, 255, 0.1);
+
+
+/* warning style */
+
+$warning-color: #ffffff;
+$warning-border-color: #FBA300;
+$warning-background-color: #FBA300;
+
+$warning-hover-color: #FBA300;
+$warning-hover-border-color: #FBA300;
+$warning-hover-background-color: rgba(255, 255, 255, 0.1);
+
+
+.Button {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 18px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    height: $height;
+    line-height: $height - 2px;
+    overflow: hidden;
+    font-family: inherit;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &.Disabled {
+        cursor: not-allowed;
+    }
+
+    &.Base {    
+        color: $base-color;
+        border-color: $base-border-color;
+        background-color: $base-background-color;
+
+        &:hover {
+            color: $default-hover-color;
+            border-color: $default-hover-border-color;
+            background-color: $default-hover-background-color;
+        }
+    }
+
+    &.Primary {
+        color: $primary-color;
+        border-color: $primary-border-color;
+        background-color: $primary-background-color;
+
+        &:hover {
+            color: $primary-hover-color;
+            border-color: $primary-hover-border-color;
+            background-color: $primary-hover-background-color;
+        }
+    }
+
+    &.Danger {
+        color: $danger-color;
+        border-color: $danger-border-color;
+        background-color: $danger-background-color;
+
+        &:hover {
+            color: $danger-hover-color;
+            border-color: $danger-hover-border-color;
+            background-color: $danger-hover-background-color;
+        }
+    }
+
+    &.Warning {
+        color: $warning-color;
+        border-color: $warning-border-color;
+        background-color: $warning-background-color;
+
+        &:hover {
+            color: $warning-hover-color;
+            border-color: $warning-hover-border-color;
+            background-color: $warning-hover-background-color;
+        }
+    }
+}
