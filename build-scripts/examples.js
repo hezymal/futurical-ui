@@ -6,9 +6,9 @@ const baseConfig = require("./base");
 module.exports = {
     ...baseConfig,
     mode: "development",
-    entry: path.join(__dirname, "../src/examples-index.tsx"),
+    entry: path.resolve(__dirname, "../src/examples-index.tsx"),
     output: {
-        path: path.join(__dirname, "/examples"),
+        path: path.resolve(__dirname, "../examples"),
         filename: "bundle.js",
     },
     devtool: "sourcemap",
