@@ -3,8 +3,8 @@ import * as React from "react";
 
 class Props {
     children?: null | string | JSX.Element | JSX.Element[];
-    className: string;
-    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    className?: string;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 

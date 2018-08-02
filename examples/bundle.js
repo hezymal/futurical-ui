@@ -20564,6 +20564,28 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/CheckButton/CheckButton.scss":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/CheckButton/CheckButton.scss ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-CheckButton__2Sn9P-uD- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden; }\n  .-CheckButton__2Sn9P-uD-:hover {\n    border-color: #2980B9; }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:before, .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:after {\n    content: \"\";\n    position: absolute;\n    border-top: 2px solid #666666;\n    width: 20px;\n    height: 20px; }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:before {\n    top: 8px;\n    left: 10px;\n    transform: rotate(-45deg); }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:after {\n    top: 8px;\n    left: -5px;\n    transform: rotate(45deg); }\n", ""]);
+
+// exports
+exports.locals = {
+	"CheckButton": "-CheckButton__2Sn9P-uD-",
+	"Checked": "-Checked__1brn6LZH-"
+};
+
+/***/ }),
+
 /***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Examples/Styles.scss":
 /*!*******************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Examples/Styles.scss ***!
@@ -20674,6 +20696,78 @@ exports.locals = {
 
 /***/ }),
 
+/***/ "./src/CheckButton/CheckButton.scss":
+/*!******************************************!*\
+  !*** ./src/CheckButton/CheckButton.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./CheckButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/CheckButton/CheckButton.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/CheckButton/CheckButton.tsx":
+/*!*****************************************!*\
+  !*** ./src/CheckButton/CheckButton.tsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Button_1 = __webpack_require__(/*! ../Primitives/Button */ "./src/Primitives/Button/index.ts");
+var Styles = __webpack_require__(/*! ./CheckButton.scss */ "./src/CheckButton/CheckButton.scss");
+var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
+function CheckButton(props) {
+    var value = props.value, className = props.className, onChange = props.onChange;
+    var fullClassName = Styles.CheckButton
+        + Utils_1.addClassName(!!className, className)
+        + Utils_1.addClassName(value, Styles.Checked);
+    return React.createElement(Button_1.default, { className: fullClassName, onClick: function () { return onChange(!value); } });
+}
+exports.default = CheckButton;
+
+
+/***/ }),
+
+/***/ "./src/CheckButton/index.ts":
+/*!**********************************!*\
+  !*** ./src/CheckButton/index.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var CheckButton_1 = __webpack_require__(/*! ./CheckButton */ "./src/CheckButton/CheckButton.tsx");
+exports.default = CheckButton_1.default;
+
+
+/***/ }),
+
 /***/ "./src/Examples/Examples.tsx":
 /*!***********************************!*\
   !*** ./src/Examples/Examples.tsx ***!
@@ -20697,7 +20791,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var library_index_1 = __webpack_require__(/*! ../library-index */ "./src/library-index.ts");
 var Styles = __webpack_require__(/*! ./Styles.scss */ "./src/Examples/Styles.scss");
-function Buttons() {
+function SimpleButtons() {
     return React.createElement("section", null,
         React.createElement("header", null, "Buttons"),
         React.createElement("div", null,
@@ -20734,11 +20828,31 @@ var Inputs = /** @class */ (function (_super) {
     };
     return Inputs;
 }(React.Component));
+var CheckButtons = /** @class */ (function (_super) {
+    __extends(CheckButtons, _super);
+    function CheckButtons(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value1: false,
+        };
+        return _this;
+    }
+    CheckButtons.prototype.render = function () {
+        var _this = this;
+        var value1 = this.state.value1;
+        return React.createElement("section", null,
+            React.createElement("header", null, "Check Buttons"),
+            React.createElement("div", null,
+                React.createElement(library_index_1.CheckButton, { value: value1, onChange: function (newValue) { return _this.setState({ value1: newValue }); } })));
+    };
+    return CheckButtons;
+}(React.Component));
 function Examples() {
     return React.createElement("div", { className: Styles.Examples },
         React.createElement(library_index_1.Layout, null,
-            React.createElement(Buttons, null),
-            React.createElement(Inputs, null)));
+            React.createElement(SimpleButtons, null),
+            React.createElement(Inputs, null),
+            React.createElement(CheckButtons, null)));
 }
 exports.default = Examples;
 
@@ -21080,7 +21194,7 @@ if(false) {}
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var Button_1 = __webpack_require__(/*! ../Primitives/Button */ "./src/Primitives/Button/index.ts");
-var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils/index.ts");
+var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
 var Styles = __webpack_require__(/*! ./SimpleButton.scss */ "./src/SimpleButton/SimpleButton.scss");
 var Props = /** @class */ (function () {
     function Props() {
@@ -21183,10 +21297,10 @@ exports.default = TextInput_1.default;
 
 /***/ }),
 
-/***/ "./src/Utils/index.ts":
-/*!****************************!*\
-  !*** ./src/Utils/index.ts ***!
-  \****************************/
+/***/ "./src/Utils.ts":
+/*!**********************!*\
+  !*** ./src/Utils.ts ***!
+  \**********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21230,12 +21344,14 @@ ReactDOM.render(React.createElement(Examples_1.default, null), document.getEleme
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/SimpleButton/index.ts");
-exports.SimpleButton = SimpleButton_1.default;
+var CheckButton_1 = __webpack_require__(/*! ./CheckButton */ "./src/CheckButton/index.ts");
+exports.CheckButton = CheckButton_1.default;
 var Layout_1 = __webpack_require__(/*! ./Layout */ "./src/Layout/index.ts");
 exports.Layout = Layout_1.default;
 var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/NumberInput/index.ts");
 exports.NumberInput = NumberInput_1.default;
+var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/SimpleButton/index.ts");
+exports.SimpleButton = SimpleButton_1.default;
 var TextInput_1 = __webpack_require__(/*! ./TextInput */ "./src/TextInput/index.ts");
 exports.TextInput = TextInput_1.default;
 

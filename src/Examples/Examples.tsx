@@ -1,14 +1,15 @@
 import * as React from "react";
 import { 
-    SimpleButton, 
+    CheckButton,
     Layout, 
     NumberInput, 
+    SimpleButton, 
     TextInput,
 } from "../library-index";
 import * as Styles from "./Styles.scss";
 
 
-function Buttons() {
+function SimpleButtons() {
     return <section>
         <header>Buttons</header>
         <div>
@@ -93,11 +94,42 @@ class Inputs extends React.Component<{}, InputsState> {
 }
 
 
+interface CheckButtonsState {
+    value1: boolean;
+}
+
+
+class CheckButtons extends React.Component<{}, CheckButtonsState> {
+    constructor(props: {}) {
+        super(props);
+
+        this.state = {
+            value1: false,
+        };
+    }
+
+    render() {
+        const { value1 } = this.state;
+
+        return <section>
+            <header>Check Buttons</header>
+            <div>
+                <CheckButton
+                    value={value1}
+                    onChange={newValue => this.setState({ value1: newValue })}
+                />
+            </div>
+        </section>;
+    }
+}
+
+
 function Examples() {
     return <div className={Styles.Examples}>
         <Layout>
-            <Buttons />
+            <SimpleButtons />
             <Inputs />
+            <CheckButtons />
         </Layout>
     </div>;
 }

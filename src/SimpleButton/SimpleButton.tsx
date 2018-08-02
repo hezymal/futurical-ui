@@ -15,7 +15,7 @@ class Props {
 function SimpleButton(props: Props): JSX.Element {
     const {
         title,
-        onClick,
+        onClick, 
         disabled = false,
         style = "Default",
     } = props;
