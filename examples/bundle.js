@@ -20564,32 +20564,6 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Button.scss":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Button.scss ***!
-  \*****************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/* default style */\n/* primary style */\n/* danger style */\n/* warning style */\n.-Button__1la5ZcA4- {\n  box-sizing: border-box;\n  display: inline-block;\n  padding: 0 18px;\n  border: 1px solid transparent;\n  cursor: pointer;\n  height: 36px;\n  line-height: 34px;\n  overflow: hidden;\n  font-family: inherit; }\n  .-Button__1la5ZcA4-:focus {\n    outline: 0; }\n  .-Button__1la5ZcA4-.-Disabled__UH4aM3CT- {\n    cursor: not-allowed; }\n  .-Button__1la5ZcA4-.-Default__2LqQIyqw- {\n    color: #000000;\n    border-color: #666666;\n    background-color: #ffffff; }\n    .-Button__1la5ZcA4-.-Default__2LqQIyqw-:hover {\n      color: #ffffff;\n      border-color: #666666;\n      background-color: #666666; }\n  .-Button__1la5ZcA4-.-Primary__2RWpzCv2- {\n    color: #ffffff;\n    border-color: #2980B9;\n    background-color: #2980B9; }\n    .-Button__1la5ZcA4-.-Primary__2RWpzCv2-:hover {\n      color: #2980B9;\n      border-color: #2980B9;\n      background-color: #ffffff; }\n  .-Button__1la5ZcA4-.-Danger__1H-avOC8- {\n    color: #ffffff;\n    border-color: #FF5B5B;\n    background-color: #FF5B5B; }\n    .-Button__1la5ZcA4-.-Danger__1H-avOC8-:hover {\n      color: #FF5B5B;\n      border-color: #FF5B5B;\n      background-color: #ffffff; }\n  .-Button__1la5ZcA4-.-Warning__kWsOGMfg- {\n    color: #ffffff;\n    border-color: #FBA300;\n    background-color: #FBA300; }\n    .-Button__1la5ZcA4-.-Warning__kWsOGMfg-:hover {\n      color: #FBA300;\n      border-color: #FBA300;\n      background-color: #ffffff; }\n", ""]);
-
-// exports
-exports.locals = {
-	"Button": "-Button__1la5ZcA4-",
-	"Disabled": "-Disabled__UH4aM3CT-",
-	"Default": "-Default__2LqQIyqw-",
-	"Primary": "-Primary__2RWpzCv2-",
-	"Danger": "-Danger__1H-avOC8-",
-	"Warning": "-Warning__kWsOGMfg-"
-};
-
-/***/ }),
-
 /***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Examples/Styles.scss":
 /*!*******************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Examples/Styles.scss ***!
@@ -20632,6 +20606,53 @@ exports.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/NumberInput/NumberInput.scss":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/NumberInput/NumberInput.scss ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-NumberInput__MC-S4y2J- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-NumberInput__MC-S4y2J-:focus {\n    outline: none; }\n  .-NumberInput__MC-S4y2J-:hover, .-NumberInput__MC-S4y2J-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+
+// exports
+exports.locals = {
+	"NumberInput": "-NumberInput__MC-S4y2J-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/SimpleButton/SimpleButton.scss":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/SimpleButton/SimpleButton.scss ***!
+  \*****************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* default style */\n/* primary style */\n/* danger style */\n/* warning style */\n.-Button__H_UXIpUD- {\n  box-sizing: border-box;\n  display: inline-block;\n  padding: 0 18px;\n  border: 1px solid transparent;\n  cursor: pointer;\n  height: 36px;\n  line-height: 34px;\n  overflow: hidden;\n  font-family: inherit; }\n  .-Button__H_UXIpUD-:focus {\n    outline: 0; }\n  .-Button__H_UXIpUD-.-Disabled__3G07vFgZ- {\n    cursor: not-allowed; }\n  .-Button__H_UXIpUD-.-Default__3tiSrgWx- {\n    color: #000000;\n    border-color: #666666;\n    background-color: #ffffff; }\n    .-Button__H_UXIpUD-.-Default__3tiSrgWx-:hover {\n      color: #ffffff;\n      border-color: #666666;\n      background-color: #666666; }\n  .-Button__H_UXIpUD-.-Primary__7lB-0i86- {\n    color: #ffffff;\n    border-color: #2980B9;\n    background-color: #2980B9; }\n    .-Button__H_UXIpUD-.-Primary__7lB-0i86-:hover {\n      color: #2980B9;\n      border-color: #2980B9;\n      background-color: #ffffff; }\n  .-Button__H_UXIpUD-.-Danger__1mmrwzHD- {\n    color: #ffffff;\n    border-color: #FF5B5B;\n    background-color: #FF5B5B; }\n    .-Button__H_UXIpUD-.-Danger__1mmrwzHD-:hover {\n      color: #FF5B5B;\n      border-color: #FF5B5B;\n      background-color: #ffffff; }\n  .-Button__H_UXIpUD-.-Warning__BrRks6cV- {\n    color: #ffffff;\n    border-color: #FBA300;\n    background-color: #FBA300; }\n    .-Button__H_UXIpUD-.-Warning__BrRks6cV-:hover {\n      color: #FBA300;\n      border-color: #FBA300;\n      background-color: #ffffff; }\n", ""]);
+
+// exports
+exports.locals = {
+	"Button": "-Button__H_UXIpUD-",
+	"Disabled": "-Disabled__3G07vFgZ-",
+	"Default": "-Default__3tiSrgWx-",
+	"Primary": "-Primary__7lB-0i86-",
+	"Danger": "-Danger__1mmrwzHD-",
+	"Warning": "-Warning__BrRks6cV-"
+};
+
+/***/ }),
+
 /***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TextInput/TextInput.scss":
 /*!***********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TextInput/TextInput.scss ***!
@@ -20650,82 +20671,6 @@ exports.push([module.i, ".-TextInput__27eI_iQN- {\n  box-sizing: border-box;\n  
 exports.locals = {
 	"TextInput": "-TextInput__27eI_iQN-"
 };
-
-/***/ }),
-
-/***/ "./src/Button/Button.scss":
-/*!********************************!*\
-  !*** ./src/Button/Button.scss ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./Button.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Button/Button.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/Button/Button.tsx":
-/*!*******************************!*\
-  !*** ./src/Button/Button.tsx ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils/index.ts");
-var Styles = __webpack_require__(/*! ./Button.scss */ "./src/Button/Button.scss");
-var Props = /** @class */ (function () {
-    function Props() {
-    }
-    return Props;
-}());
-function Button(props) {
-    var title = props.title, onClick = props.onClick, _a = props.disabled, disabled = _a === void 0 ? false : _a, _b = props.style, style = _b === void 0 ? "Default" : _b;
-    var className = Styles.Button
-        + Utils_1.addClassName(!!Styles[style], Styles[style])
-        + Utils_1.addClassName(disabled, Styles.Disabled);
-    return React.createElement("button", { className: className, onClick: function (event) { return onClick(event); } }, title);
-}
-exports.default = Button;
-
-
-/***/ }),
-
-/***/ "./src/Button/index.ts":
-/*!*****************************!*\
-  !*** ./src/Button/index.ts ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Button_1 = __webpack_require__(/*! ./Button */ "./src/Button/Button.tsx");
-exports.default = Button_1.default;
-
 
 /***/ }),
 
@@ -20756,35 +20701,36 @@ function Buttons() {
     return React.createElement("section", null,
         React.createElement("header", null, "Buttons"),
         React.createElement("div", null,
-            React.createElement(library_index_1.Button, { title: "Default Button", onClick: function () { } })),
+            React.createElement(library_index_1.SimpleButton, { title: "Default Button", onClick: function () { } })),
         React.createElement("div", null,
-            React.createElement(library_index_1.Button, { title: "Primary Button", style: "Primary", onClick: function () { } })),
+            React.createElement(library_index_1.SimpleButton, { title: "Primary Button", style: "Primary", onClick: function () { } })),
         React.createElement("div", null,
-            React.createElement(library_index_1.Button, { title: "Danger Button", style: "Danger", onClick: function () { } })),
+            React.createElement(library_index_1.SimpleButton, { title: "Danger Button", style: "Danger", onClick: function () { } })),
         React.createElement("div", null,
-            React.createElement(library_index_1.Button, { title: "Warning Button", style: "Warning", onClick: function () { } })));
+            React.createElement(library_index_1.SimpleButton, { title: "Warning Button", style: "Warning", onClick: function () { } })));
 }
 var Inputs = /** @class */ (function (_super) {
     __extends(Inputs, _super);
     function Inputs(props) {
         var _this = _super.call(this, props) || this;
-        _this.changeTextInput = function (value) {
-            _this.setState({
-                textInputValue: value,
-            });
-        };
         _this.state = {
+            integerInputValue: 1234,
+            floatInputValue: 12.34,
             textInputValue: "Text Input",
         };
         return _this;
     }
     Inputs.prototype.render = function () {
         var _this = this;
-        var textInputValue = this.state.textInputValue;
+        var _a = this.state, textInputValue = _a.textInputValue, integerInputValue = _a.integerInputValue, floatInputValue = _a.floatInputValue;
         return React.createElement("section", null,
             React.createElement("header", null, "Inputs"),
             React.createElement("div", null,
-                React.createElement(library_index_1.TextInput, { onChange: function (value) { return _this.changeTextInput(value); }, value: textInputValue })));
+                React.createElement(library_index_1.TextInput, { value: textInputValue, onChange: function (value) { return _this.setState({ textInputValue: value }); } })),
+            React.createElement("div", null,
+                React.createElement(library_index_1.NumberInput, { value: integerInputValue, onChange: function (value) { return _this.setState({ integerInputValue: value }); } })),
+            React.createElement("div", null,
+                React.createElement(library_index_1.NumberInput, { value: floatInputValue, isFloat: true, onChange: function (value) { return _this.setState({ floatInputValue: value }); } })));
     };
     return Inputs;
 }(React.Component));
@@ -20912,6 +20858,263 @@ exports.default = Layout_1.default;
 
 /***/ }),
 
+/***/ "./src/NumberInput/NumberInput.scss":
+/*!******************************************!*\
+  !*** ./src/NumberInput/NumberInput.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./NumberInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/NumberInput/NumberInput.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/NumberInput/NumberInput.tsx":
+/*!*****************************************!*\
+  !*** ./src/NumberInput/NumberInput.tsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Styles = __webpack_require__(/*! ./NumberInput.scss */ "./src/NumberInput/NumberInput.scss");
+var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/Input/index.ts");
+var NumberInput = /** @class */ (function (_super) {
+    __extends(NumberInput, _super);
+    function NumberInput(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            displayValue: props.value.toString(),
+        };
+        return _this;
+    }
+    NumberInput.prototype.render = function () {
+        var _this = this;
+        var _a = this.props, onChange = _a.onChange, isFloat = _a.isFloat;
+        var displayValue = this.state.displayValue;
+        var pattern = isFloat ? /^[0-9]*\.{0,1}[0-9]*$/ : /^[0-9]*$/;
+        return React.createElement(Input_1.default, { value: displayValue, className: Styles.NumberInput, pattern: pattern, onChange: function (value) {
+                _this.setState({ displayValue: value });
+                onChange(isFloat ? parseFloat(value) : parseInt(value));
+            } });
+    };
+    return NumberInput;
+}(React.Component));
+exports.default = NumberInput;
+
+
+/***/ }),
+
+/***/ "./src/NumberInput/index.ts":
+/*!**********************************!*\
+  !*** ./src/NumberInput/index.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/NumberInput/NumberInput.tsx");
+exports.default = NumberInput_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Primitives/Button/Button.tsx":
+/*!******************************************!*\
+  !*** ./src/Primitives/Button/Button.tsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Props = /** @class */ (function () {
+    function Props() {
+    }
+    return Props;
+}());
+function Button(props) {
+    var children = props.children, className = props.className, onClick = props.onClick;
+    return React.createElement("button", { className: className, onClick: function (event) { return onClick(event); } }, children);
+}
+exports.default = Button;
+
+
+/***/ }),
+
+/***/ "./src/Primitives/Button/index.ts":
+/*!****************************************!*\
+  !*** ./src/Primitives/Button/index.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Button_1 = __webpack_require__(/*! ./Button */ "./src/Primitives/Button/Button.tsx");
+exports.default = Button_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Primitives/Input/Input.tsx":
+/*!****************************************!*\
+  !*** ./src/Primitives/Input/Input.tsx ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function Input(props) {
+    var value = props.value, pattern = props.pattern, className = props.className, onChange = props.onChange;
+    return React.createElement("input", { type: "text", value: value, className: className, onChange: function (event) {
+            var value = event.target.value;
+            if (pattern && pattern.test(value)) {
+                onChange(value);
+            }
+            else {
+                onChange(value);
+            }
+        } });
+}
+exports.default = Input;
+
+
+/***/ }),
+
+/***/ "./src/Primitives/Input/index.ts":
+/*!***************************************!*\
+  !*** ./src/Primitives/Input/index.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Input_1 = __webpack_require__(/*! ./Input */ "./src/Primitives/Input/Input.tsx");
+exports.default = Input_1.default;
+
+
+/***/ }),
+
+/***/ "./src/SimpleButton/SimpleButton.scss":
+/*!********************************************!*\
+  !*** ./src/SimpleButton/SimpleButton.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./SimpleButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/SimpleButton/SimpleButton.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/SimpleButton/SimpleButton.tsx":
+/*!*******************************************!*\
+  !*** ./src/SimpleButton/SimpleButton.tsx ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Button_1 = __webpack_require__(/*! ../Primitives/Button */ "./src/Primitives/Button/index.ts");
+var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils/index.ts");
+var Styles = __webpack_require__(/*! ./SimpleButton.scss */ "./src/SimpleButton/SimpleButton.scss");
+var Props = /** @class */ (function () {
+    function Props() {
+    }
+    return Props;
+}());
+function SimpleButton(props) {
+    var title = props.title, onClick = props.onClick, _a = props.disabled, disabled = _a === void 0 ? false : _a, _b = props.style, style = _b === void 0 ? "Default" : _b;
+    var className = Styles.Button
+        + Utils_1.addClassName(!!Styles[style], Styles[style])
+        + Utils_1.addClassName(disabled, Styles.Disabled);
+    return React.createElement(Button_1.default, { className: className, onClick: function (event) { return onClick(event); } }, title);
+}
+exports.default = SimpleButton;
+
+
+/***/ }),
+
+/***/ "./src/SimpleButton/index.ts":
+/*!***********************************!*\
+  !*** ./src/SimpleButton/index.ts ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/SimpleButton/SimpleButton.tsx");
+exports.default = SimpleButton_1.default;
+
+
+/***/ }),
+
 /***/ "./src/TextInput/TextInput.scss":
 /*!**************************************!*\
   !*** ./src/TextInput/TextInput.scss ***!
@@ -20954,9 +21157,10 @@ if(false) {}
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var Styles = __webpack_require__(/*! ./TextInput.scss */ "./src/TextInput/TextInput.scss");
+var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/Input/index.ts");
 function TextBox(props) {
-    var value = props.value, onChange = props.onChange;
-    return React.createElement("input", { type: "text", value: value, onChange: function (event) { return onChange(event.target.value); }, className: Styles.TextInput });
+    var value = props.value, pattern = props.pattern, onChange = props.onChange;
+    return React.createElement(Input_1.default, { value: value, className: Styles.TextInput, pattern: pattern, onChange: function (value) { return onChange(value); } });
 }
 exports.default = TextBox;
 
@@ -20988,7 +21192,6 @@ exports.default = TextInput_1.default;
 
 "use strict";
 
-//import * as Styles from "./Styles.scss";
 Object.defineProperty(exports, "__esModule", { value: true });
 function addClassName(condition, classNameIfTrue, classNameIfFalse) {
     if (classNameIfFalse === void 0) { classNameIfFalse = ""; }
@@ -21027,10 +21230,12 @@ ReactDOM.render(React.createElement(Examples_1.default, null), document.getEleme
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Button_1 = __webpack_require__(/*! ./Button */ "./src/Button/index.ts");
-exports.Button = Button_1.default;
+var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/SimpleButton/index.ts");
+exports.SimpleButton = SimpleButton_1.default;
 var Layout_1 = __webpack_require__(/*! ./Layout */ "./src/Layout/index.ts");
 exports.Layout = Layout_1.default;
+var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/NumberInput/index.ts");
+exports.NumberInput = NumberInput_1.default;
 var TextInput_1 = __webpack_require__(/*! ./TextInput */ "./src/TextInput/index.ts");
 exports.TextInput = TextInput_1.default;
 

@@ -1,9 +1,11 @@
-import * as React from "react"
-import * as Styles from "./TextInput.scss"
+import * as React from "react";
+import * as Styles from "./TextInput.scss";
+import Input from "../Primitives/Input";
 
 
 interface TextBoxProps {
     value: string;
+    pattern?: RegExp;
     onChange: (value: string) => void;
 }
 
@@ -11,15 +13,16 @@ interface TextBoxProps {
 function TextBox(props: TextBoxProps) {
     const {
         value,
+        pattern,
         onChange,
     } = props;
 
-    return <input
-        type="text"
+    return <Input
         value={value}
-        onChange={event => onChange(event.target.value)}
         className={Styles.TextInput}
-    />
+        pattern={pattern}
+        onChange={value => onChange(value)}
+    />;
 }
 
 
