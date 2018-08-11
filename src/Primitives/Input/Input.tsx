@@ -23,8 +23,10 @@ function Input(props: InputProps): JSX.Element {
         className={className}
         onChange={event => {
             const value = event.target.value;
-            if (pattern && pattern.test(value)) {
-                onChange(value);
+            if (pattern) {
+                if (pattern.test(value)) {
+                    onChange(value);
+                }
             } else {
                 onChange(value);
             }
