@@ -25,7 +25,7 @@
   "optionalDependencies": {
     "react-dom": "^16.4.1"
   },
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build:examples": "./node_modules/.bin/webpack --mode development --config ./build-scripts/examples.js",
     "watch:examples": "./node_modules/.bin/webpack --mode development --config ./build-scripts/examples.js --watch",
