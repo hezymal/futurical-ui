@@ -24,8 +24,8 @@ $size: $base-line-height - 10px;
             content: "";
             position: absolute;
             border-top: 2px solid $base-secondary-color + #666666;
-            width: $size - 6px;
-            height: $size - 6px;
+            width: $size - 7px;
+            height: $size - 5px;
         }
         &:before {
             top: 8px;
