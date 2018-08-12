@@ -3,6 +3,7 @@ import {
     CheckButton,
     Layout, 
     NumberInput, 
+    RadioButton,
     SimpleButton, 
     TextInput,
 } from "../library-index";
@@ -43,14 +44,7 @@ function SimpleButtons() {
 }
 
 
-interface InputsState {
-    integerInputValue: number;
-    floatInputValue: number;
-    textInputValue: string;
-}
-
-
-class Inputs extends React.Component<{}, InputsState> {
+class Inputs extends React.Component<{}, any> {
     constructor(props: {}) {
         super(props);
         
@@ -94,30 +88,49 @@ class Inputs extends React.Component<{}, InputsState> {
 }
 
 
-interface CheckButtonsState {
-    value1: boolean;
-}
-
-
-class CheckButtons extends React.Component<{}, CheckButtonsState> {
+class CheckButtons extends React.Component<{}, any> {
     constructor(props: {}) {
         super(props);
 
         this.state = {
-            value1: false,
+            value: false,
         };
     }
 
     render() {
-        const { value1 } = this.state;
+        const { value } = this.state;
 
         return <section>
-            <header>Check Buttons</header>
+            <header>Check button</header>
             <div>
                 <CheckButton
-                    value={value1}
-                    onChange={newValue => this.setState({ value1: newValue })}
+                    value={value}
+                    onChange={newValue => this.setState({ value: newValue })}
                 />
+            </div>
+        </section>;
+    }
+}
+
+
+class RadioButtonGroup extends React.Component<{}, any> {
+    constructor(props: {}) {
+        super(props);
+
+        this.state = {
+            value: 1,
+        };
+    }
+
+    render() {
+        const { value } = this.state;
+
+        return <section>
+            <header>Radio button group</header>
+            <div>
+                <RadioButton value={1} checked={value === 1} onSelect={value => this.setState({ value })} />
+                <RadioButton value={2} checked={value === 2} onSelect={value => this.setState({ value })} />
+                <RadioButton value={3} checked={value === 3} onSelect={value => this.setState({ value })} />
             </div>
         </section>;
     }
@@ -130,6 +143,7 @@ function Examples() {
             <SimpleButtons />
             <Inputs />
             <CheckButtons />
+            <RadioButtonGroup />
         </Layout>
     </div>;
 }

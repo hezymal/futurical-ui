@@ -20576,7 +20576,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".-CheckButton__2Sn9P-uD- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden; }\n  .-CheckButton__2Sn9P-uD-:hover {\n    border-color: #2980B9; }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:before, .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:after {\n    content: \"\";\n    position: absolute;\n    border-top: 2px solid #666666;\n    width: 20px;\n    height: 20px; }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:before {\n    top: 8px;\n    left: 10px;\n    transform: rotate(-45deg); }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:after {\n    top: 8px;\n    left: -5px;\n    transform: rotate(45deg); }\n", ""]);
+exports.push([module.i, ".-CheckButton__2Sn9P-uD- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden; }\n  .-CheckButton__2Sn9P-uD-:hover {\n    border-color: #2980B9; }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:before, .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:after {\n    content: \"\";\n    position: absolute;\n    border-top: 2px solid #666666;\n    width: 19px;\n    height: 21px; }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:before {\n    top: 8px;\n    left: 10px;\n    transform: rotate(-45deg); }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:after {\n    top: 8px;\n    left: -5px;\n    transform: rotate(45deg); }\n", ""]);
 
 // exports
 exports.locals = {
@@ -20645,6 +20645,28 @@ exports.push([module.i, ".-NumberInput__MC-S4y2J- {\n  box-sizing: border-box;\n
 // exports
 exports.locals = {
 	"NumberInput": "-NumberInput__MC-S4y2J-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/RadioButton/RadioButton.scss":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/RadioButton/RadioButton.scss ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-RadioButton__380d-ord- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden;\n  vertical-align: bottom;\n  border-radius: 50%; }\n  .-RadioButton__380d-ord-:hover {\n    border-color: #2980B9; }\n  .-RadioButton__380d-ord-.-Checked__2CUup6el-:after {\n    content: \"\";\n    width: 16px;\n    height: 16px;\n    border: 1px solid #666666;\n    background-color: #666666;\n    border-radius: 50%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin: -8px 0 0 -8px;\n    box-sizing: border-box; }\n", ""]);
+
+// exports
+exports.locals = {
+	"RadioButton": "-RadioButton__380d-ord-",
+	"Checked": "-Checked__2CUup6el-"
 };
 
 /***/ }),
@@ -20833,26 +20855,48 @@ var CheckButtons = /** @class */ (function (_super) {
     function CheckButtons(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            value1: false,
+            value: false,
         };
         return _this;
     }
     CheckButtons.prototype.render = function () {
         var _this = this;
-        var value1 = this.state.value1;
+        var value = this.state.value;
         return React.createElement("section", null,
-            React.createElement("header", null, "Check Buttons"),
+            React.createElement("header", null, "Check button"),
             React.createElement("div", null,
-                React.createElement(library_index_1.CheckButton, { value: value1, onChange: function (newValue) { return _this.setState({ value1: newValue }); } })));
+                React.createElement(library_index_1.CheckButton, { value: value, onChange: function (newValue) { return _this.setState({ value: newValue }); } })));
     };
     return CheckButtons;
+}(React.Component));
+var RadioButtonGroup = /** @class */ (function (_super) {
+    __extends(RadioButtonGroup, _super);
+    function RadioButtonGroup(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value: 1,
+        };
+        return _this;
+    }
+    RadioButtonGroup.prototype.render = function () {
+        var _this = this;
+        var value = this.state.value;
+        return React.createElement("section", null,
+            React.createElement("header", null, "Radio button group"),
+            React.createElement("div", null,
+                React.createElement(library_index_1.RadioButton, { value: 1, checked: value === 1, onSelect: function (value) { return _this.setState({ value: value }); } }),
+                React.createElement(library_index_1.RadioButton, { value: 2, checked: value === 2, onSelect: function (value) { return _this.setState({ value: value }); } }),
+                React.createElement(library_index_1.RadioButton, { value: 3, checked: value === 3, onSelect: function (value) { return _this.setState({ value: value }); } })));
+    };
+    return RadioButtonGroup;
 }(React.Component));
 function Examples() {
     return React.createElement("div", { className: Styles.Examples },
         React.createElement(library_index_1.Layout, null,
             React.createElement(SimpleButtons, null),
             React.createElement(Inputs, null),
-            React.createElement(CheckButtons, null)));
+            React.createElement(CheckButtons, null),
+            React.createElement(RadioButtonGroup, null)));
 }
 exports.default = Examples;
 
@@ -21123,8 +21167,10 @@ function Input(props) {
     var value = props.value, pattern = props.pattern, className = props.className, onChange = props.onChange;
     return React.createElement("input", { type: "text", value: value, className: className, onChange: function (event) {
             var value = event.target.value;
-            if (pattern && pattern.test(value)) {
-                onChange(value);
+            if (pattern) {
+                if (pattern.test(value)) {
+                    onChange(value);
+                }
             }
             else {
                 onChange(value);
@@ -21148,6 +21194,78 @@ exports.default = Input;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Input_1 = __webpack_require__(/*! ./Input */ "./src/Primitives/Input/Input.tsx");
 exports.default = Input_1.default;
+
+
+/***/ }),
+
+/***/ "./src/RadioButton/RadioButton.scss":
+/*!******************************************!*\
+  !*** ./src/RadioButton/RadioButton.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./RadioButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/RadioButton/RadioButton.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/RadioButton/RadioButton.tsx":
+/*!*****************************************!*\
+  !*** ./src/RadioButton/RadioButton.tsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Button_1 = __webpack_require__(/*! ../Primitives/Button */ "./src/Primitives/Button/index.ts");
+var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
+var Styles = __webpack_require__(/*! ./RadioButton.scss */ "./src/RadioButton/RadioButton.scss");
+function RadioButton(props) {
+    var value = props.value, checked = props.checked, _a = props.className, className = _a === void 0 ? "" : _a, onSelect = props.onSelect;
+    var fullClassName = Styles.RadioButton
+        + Utils_1.addClassName(!!className, className)
+        + Utils_1.addClassName(checked, Styles.Checked);
+    return React.createElement(Button_1.default, { className: fullClassName, onClick: function () { return onSelect && onSelect(value); } });
+}
+exports.default = RadioButton;
+
+
+/***/ }),
+
+/***/ "./src/RadioButton/index.ts":
+/*!**********************************!*\
+  !*** ./src/RadioButton/index.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var RadioButton_1 = __webpack_require__(/*! ./RadioButton */ "./src/RadioButton/RadioButton.tsx");
+exports.default = RadioButton_1.default;
 
 
 /***/ }),
@@ -21350,6 +21468,8 @@ var Layout_1 = __webpack_require__(/*! ./Layout */ "./src/Layout/index.ts");
 exports.Layout = Layout_1.default;
 var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/NumberInput/index.ts");
 exports.NumberInput = NumberInput_1.default;
+var RadioButton_1 = __webpack_require__(/*! ./RadioButton */ "./src/RadioButton/index.ts");
+exports.RadioButton = RadioButton_1.default;
 var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/SimpleButton/index.ts");
 exports.SimpleButton = SimpleButton_1.default;
 var TextInput_1 = __webpack_require__(/*! ./TextInput */ "./src/TextInput/index.ts");
