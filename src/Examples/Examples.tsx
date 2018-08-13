@@ -143,17 +143,28 @@ class DateAndTimeInputs extends React.Component<{}, any> {
         super(props);
 
         this.state = {
-            value1: "00:00"
+            value1: "00:00",
+            value2: "00:00:00",
         };
     }
 
     render() {
-        const { value1 } = this.state;
+        const { value1, value2 } = this.state;
 
         return <section>
             <header>Data and Time inputs</header>
             <div>
-                <TimeInput value={value1} onChange={newValue => this.setState({ value1: newValue })} />
+                <TimeInput 
+                    value={value1} 
+                    onChange={newValue => this.setState({ value1: newValue })} 
+                />
+            </div>
+            <div>
+                <TimeInput 
+                    value={value2} 
+                    secondComponent={true}
+                    onChange={newValue => this.setState({ value2: newValue })} 
+                />
             </div>
         </section>;
     }

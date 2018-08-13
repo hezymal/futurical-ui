@@ -6,6 +6,7 @@ import { addClassName } from "../Utils";
 
 interface Props {
     value: string;
+    secondComponent?: boolean;
     className?: string;
     onChange: (value: string) => void;
 }
@@ -14,6 +15,7 @@ interface Props {
 function TimeInput(props: Props) {
     const {
         value,
+        secondComponent = false,
         className,
         onChange,
     } = props;
@@ -21,13 +23,17 @@ function TimeInput(props: Props) {
     const fullClassName = Styles.TimeInput
         + addClassName(!!className, className);
 
+    const pattern = secondComponent 
+        ? /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}:[0-5]{1}[0-9]{1}$/
+        : /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}$/;
+
     return <Input
         value={value}
-        pattern={/^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}$/}
+        pattern={pattern}
         className={fullClassName}
         insert={true}
         onChange={newValue => onChange(newValue)}
-    />
+    />;
 }
 
 

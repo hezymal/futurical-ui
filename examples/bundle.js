@@ -20916,17 +20916,20 @@ var DateAndTimeInputs = /** @class */ (function (_super) {
     function DateAndTimeInputs(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            value1: "00:00"
+            value1: "00:00",
+            value2: "00:00:00",
         };
         return _this;
     }
     DateAndTimeInputs.prototype.render = function () {
         var _this = this;
-        var value1 = this.state.value1;
+        var _a = this.state, value1 = _a.value1, value2 = _a.value2;
         return React.createElement("section", null,
             React.createElement("header", null, "Data and Time inputs"),
             React.createElement("div", null,
-                React.createElement(library_index_1.TimeInput, { value: value1, onChange: function (newValue) { return _this.setState({ value1: newValue }); } })));
+                React.createElement(library_index_1.TimeInput, { value: value1, onChange: function (newValue) { return _this.setState({ value1: newValue }); } })),
+            React.createElement("div", null,
+                React.createElement(library_index_1.TimeInput, { value: value2, secondComponent: true, onChange: function (newValue) { return _this.setState({ value2: newValue }); } })));
     };
     return DateAndTimeInputs;
 }(React.Component));
@@ -21544,10 +21547,13 @@ var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/I
 var Styles = __webpack_require__(/*! ./TimeInput.scss */ "./src/TimeInput/TimeInput.scss");
 var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
 function TimeInput(props) {
-    var value = props.value, className = props.className, onChange = props.onChange;
+    var value = props.value, _a = props.secondComponent, secondComponent = _a === void 0 ? false : _a, className = props.className, onChange = props.onChange;
     var fullClassName = Styles.TimeInput
         + Utils_1.addClassName(!!className, className);
-    return React.createElement(Input_1.default, { value: value, pattern: /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}$/, className: fullClassName, insert: true, onChange: function (newValue) { return onChange(newValue); } });
+    var pattern = secondComponent
+        ? /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}:[0-5]{1}[0-9]{1}$/
+        : /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}$/;
+    return React.createElement(Input_1.default, { value: value, pattern: pattern, className: fullClassName, insert: true, onChange: function (newValue) { return onChange(newValue); } });
 }
 exports.default = TimeInput;
 
