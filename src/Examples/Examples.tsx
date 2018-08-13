@@ -6,6 +6,7 @@ import {
     RadioButton,
     SimpleButton, 
     TextInput,
+    TimeInput,
 } from "../library-index";
 import * as Styles from "./Styles.scss";
 
@@ -49,9 +50,9 @@ class Inputs extends React.Component<{}, any> {
         super(props);
         
         this.state = {
+            textInputValue: "Text Input",
             integerInputValue: 1234,
             floatInputValue: 12.34,
-            textInputValue: "Text Input",
         };
     }
 
@@ -137,6 +138,28 @@ class RadioButtonGroup extends React.Component<{}, any> {
 }
 
 
+class DateAndTimeInputs extends React.Component<{}, any> {
+    constructor(props: {}) {
+        super(props);
+
+        this.state = {
+            value1: "00:00"
+        };
+    }
+
+    render() {
+        const { value1 } = this.state;
+
+        return <section>
+            <header>Data and Time inputs</header>
+            <div>
+                <TimeInput value={value1} onChange={newValue => this.setState({ value1: newValue })} />
+            </div>
+        </section>;
+    }
+}
+
+
 function Examples() {
     return <div className={Styles.Examples}>
         <Layout>
@@ -144,6 +167,7 @@ function Examples() {
             <Inputs />
             <CheckButtons />
             <RadioButtonGroup />
+            <DateAndTimeInputs />
         </Layout>
     </div>;
 }

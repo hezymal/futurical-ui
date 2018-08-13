@@ -20718,6 +20718,27 @@ exports.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TimeInput/TimeInput.scss":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TimeInput/TimeInput.scss ***!
+  \***********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-TimeInput__3gvCt5D0- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-TimeInput__3gvCt5D0-:focus {\n    outline: none; }\n  .-TimeInput__3gvCt5D0-:hover, .-TimeInput__3gvCt5D0-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+
+// exports
+exports.locals = {
+	"TimeInput": "-TimeInput__3gvCt5D0-"
+};
+
+/***/ }),
+
 /***/ "./src/CheckButton/CheckButton.scss":
 /*!******************************************!*\
   !*** ./src/CheckButton/CheckButton.scss ***!
@@ -20830,9 +20851,9 @@ var Inputs = /** @class */ (function (_super) {
     function Inputs(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
+            textInputValue: "Text Input",
             integerInputValue: 1234,
             floatInputValue: 12.34,
-            textInputValue: "Text Input",
         };
         return _this;
     }
@@ -20890,13 +20911,33 @@ var RadioButtonGroup = /** @class */ (function (_super) {
     };
     return RadioButtonGroup;
 }(React.Component));
+var DateAndTimeInputs = /** @class */ (function (_super) {
+    __extends(DateAndTimeInputs, _super);
+    function DateAndTimeInputs(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value1: "00:00"
+        };
+        return _this;
+    }
+    DateAndTimeInputs.prototype.render = function () {
+        var _this = this;
+        var value1 = this.state.value1;
+        return React.createElement("section", null,
+            React.createElement("header", null, "Data and Time inputs"),
+            React.createElement("div", null,
+                React.createElement(library_index_1.TimeInput, { value: value1, onChange: function (newValue) { return _this.setState({ value1: newValue }); } })));
+    };
+    return DateAndTimeInputs;
+}(React.Component));
 function Examples() {
     return React.createElement("div", { className: Styles.Examples },
         React.createElement(library_index_1.Layout, null,
             React.createElement(SimpleButtons, null),
             React.createElement(Inputs, null),
             React.createElement(CheckButtons, null),
-            React.createElement(RadioButtonGroup, null)));
+            React.createElement(RadioButtonGroup, null),
+            React.createElement(DateAndTimeInputs, null)));
 }
 exports.default = Examples;
 
@@ -21161,22 +21202,65 @@ exports.default = Button_1.default;
 
 "use strict";
 
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-function Input(props) {
-    var value = props.value, pattern = props.pattern, className = props.className, onChange = props.onChange;
-    return React.createElement("input", { type: "text", value: value, className: className, onChange: function (event) {
-            var value = event.target.value;
-            if (pattern) {
-                if (pattern.test(value)) {
-                    onChange(value);
+var Input = /** @class */ (function (_super) {
+    __extends(Input, _super);
+    function Input(props) {
+        var _this = _super.call(this, props) || this;
+        _this.setCursorPosition = _this.setCursorPosition.bind(_this);
+        _this.state = {
+            cursorPosition: 0
+        };
+        return _this;
+    }
+    Input.prototype.setCursorPosition = function () {
+        this.inputRef.focus();
+        this.inputRef.setSelectionRange(this.state.cursorPosition, this.state.cursorPosition);
+    };
+    Input.prototype.render = function () {
+        var _this = this;
+        var _a = this.props, value = _a.value, _b = _a.pattern, pattern = _b === void 0 ? null : _b, _c = _a.insert, insert = _c === void 0 ? false : _c, className = _a.className, onChange = _a.onChange;
+        return React.createElement("input", { ref: function (ref) { return _this.inputRef = ref; }, type: "text", value: value, className: className, onChange: function (event) {
+                var newValue;
+                var target;
+                var selectionStart;
+                if (insert) {
+                    var nativeEvent = event.nativeEvent;
+                    target = nativeEvent.target;
+                    selectionStart = target.selectionStart;
+                    var startValue = value.substr(0, selectionStart - 1);
+                    var endValue = value.substr(selectionStart);
+                    newValue = startValue + nativeEvent.data + endValue;
                 }
-            }
-            else {
-                onChange(value);
-            }
-        } });
-}
+                else {
+                    newValue = event.target.value;
+                }
+                if (pattern) {
+                    if (pattern.test(newValue)) {
+                        onChange(newValue);
+                    }
+                }
+                else {
+                    onChange(newValue);
+                }
+                if (insert) {
+                    _this.setState({ cursorPosition: selectionStart }, _this.setCursorPosition);
+                }
+            } });
+    };
+    return Input;
+}(React.Component));
 exports.default = Input;
 
 
@@ -21415,6 +21499,77 @@ exports.default = TextInput_1.default;
 
 /***/ }),
 
+/***/ "./src/TimeInput/TimeInput.scss":
+/*!**************************************!*\
+  !*** ./src/TimeInput/TimeInput.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./TimeInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TimeInput/TimeInput.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/TimeInput/TimeInput.tsx":
+/*!*************************************!*\
+  !*** ./src/TimeInput/TimeInput.tsx ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/Input/index.ts");
+var Styles = __webpack_require__(/*! ./TimeInput.scss */ "./src/TimeInput/TimeInput.scss");
+var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
+function TimeInput(props) {
+    var value = props.value, className = props.className, onChange = props.onChange;
+    var fullClassName = Styles.TimeInput
+        + Utils_1.addClassName(!!className, className);
+    return React.createElement(Input_1.default, { value: value, pattern: /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}$/, className: fullClassName, insert: true, onChange: function (newValue) { return onChange(newValue); } });
+}
+exports.default = TimeInput;
+
+
+/***/ }),
+
+/***/ "./src/TimeInput/index.ts":
+/*!********************************!*\
+  !*** ./src/TimeInput/index.ts ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var TimeInput_1 = __webpack_require__(/*! ./TimeInput */ "./src/TimeInput/TimeInput.tsx");
+exports.default = TimeInput_1.default;
+
+
+/***/ }),
+
 /***/ "./src/Utils.ts":
 /*!**********************!*\
   !*** ./src/Utils.ts ***!
@@ -21474,6 +21629,8 @@ var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/SimpleButt
 exports.SimpleButton = SimpleButton_1.default;
 var TextInput_1 = __webpack_require__(/*! ./TextInput */ "./src/TextInput/index.ts");
 exports.TextInput = TextInput_1.default;
+var TimeInput_1 = __webpack_require__(/*! ./TimeInput */ "./src/TimeInput/index.ts");
+exports.TimeInput = TimeInput_1.default;
 
 
 /***/ })
