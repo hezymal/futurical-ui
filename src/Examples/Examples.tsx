@@ -1,6 +1,7 @@
 import * as React from "react";
 import { 
     CheckButton,
+    DateInput,
     Layout, 
     NumberInput, 
     RadioButton,
@@ -145,14 +146,15 @@ class DateAndTimeInputs extends React.Component<{}, any> {
         this.state = {
             value1: "00:00",
             value2: "00:00:00",
+            value3: "01.01.2018",
         };
     }
 
     render() {
-        const { value1, value2 } = this.state;
+        const { value1, value2, value3 } = this.state;
 
         return <section>
-            <header>Data and Time inputs</header>
+            <header>Data and time inputs</header>
             <div>
                 <TimeInput 
                     value={value1} 
@@ -164,6 +166,12 @@ class DateAndTimeInputs extends React.Component<{}, any> {
                     value={value2} 
                     secondComponent={true}
                     onChange={newValue => this.setState({ value2: newValue })} 
+                />
+            </div>
+            <div>
+                <DateInput
+                    value={value3}
+                    onChange={newValue => this.setState({ value3: newValue })} 
                 />
             </div>
         </section>;

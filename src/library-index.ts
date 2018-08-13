@@ -1,4 +1,5 @@
 import CheckButton from "./CheckButton";
+import DateInput from "./DateInput";
 import Layout from "./Layout";
 import NumberInput from "./NumberInput";
 import RadioButton from "./RadioButton";
@@ -9,6 +10,7 @@ import TimeInput from "./TimeInput";
 
 export {
     CheckButton,
+    DateInput,
     Layout,
     NumberInput,
     RadioButton,

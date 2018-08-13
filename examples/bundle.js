@@ -20586,6 +20586,27 @@ exports.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/DateInput/DateInput.scss":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/DateInput/DateInput.scss ***!
+  \***********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-DateInput__138AWXr_- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-DateInput__138AWXr_-:focus {\n    outline: none; }\n  .-DateInput__138AWXr_-:hover, .-DateInput__138AWXr_-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+
+// exports
+exports.locals = {
+	"DateInput": "-DateInput__138AWXr_-"
+};
+
+/***/ }),
+
 /***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Examples/Styles.scss":
 /*!*******************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Examples/Styles.scss ***!
@@ -20811,6 +20832,78 @@ exports.default = CheckButton_1.default;
 
 /***/ }),
 
+/***/ "./src/DateInput/DateInput.scss":
+/*!**************************************!*\
+  !*** ./src/DateInput/DateInput.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./DateInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/DateInput/DateInput.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/DateInput/DateInput.tsx":
+/*!*************************************!*\
+  !*** ./src/DateInput/DateInput.tsx ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/Input/index.ts");
+var Styles = __webpack_require__(/*! ./DateInput.scss */ "./src/DateInput/DateInput.scss");
+var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
+function DateInput(props) {
+    var value = props.value, className = props.className, onChange = props.onChange;
+    var fullClassName = Styles.DateInput
+        + Utils_1.addClassName(!!className, className);
+    var pattern = /^([0-2]{1}[0-9]{1}|3[0-1]{1})\.(0[0-9]{1}|1[0-2]{1})\.[0-9]{4}$/;
+    return React.createElement(Input_1.default, { value: value, pattern: pattern, className: fullClassName, insert: true, onChange: function (newValue) { return onChange(newValue); } });
+}
+exports.default = DateInput;
+
+
+/***/ }),
+
+/***/ "./src/DateInput/index.ts":
+/*!********************************!*\
+  !*** ./src/DateInput/index.ts ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var DateInput_1 = __webpack_require__(/*! ./DateInput */ "./src/DateInput/DateInput.tsx");
+exports.default = DateInput_1.default;
+
+
+/***/ }),
+
 /***/ "./src/Examples/Examples.tsx":
 /*!***********************************!*\
   !*** ./src/Examples/Examples.tsx ***!
@@ -20918,18 +21011,21 @@ var DateAndTimeInputs = /** @class */ (function (_super) {
         _this.state = {
             value1: "00:00",
             value2: "00:00:00",
+            value3: "01.01.2018",
         };
         return _this;
     }
     DateAndTimeInputs.prototype.render = function () {
         var _this = this;
-        var _a = this.state, value1 = _a.value1, value2 = _a.value2;
+        var _a = this.state, value1 = _a.value1, value2 = _a.value2, value3 = _a.value3;
         return React.createElement("section", null,
-            React.createElement("header", null, "Data and Time inputs"),
+            React.createElement("header", null, "Data and time inputs"),
             React.createElement("div", null,
                 React.createElement(library_index_1.TimeInput, { value: value1, onChange: function (newValue) { return _this.setState({ value1: newValue }); } })),
             React.createElement("div", null,
-                React.createElement(library_index_1.TimeInput, { value: value2, secondComponent: true, onChange: function (newValue) { return _this.setState({ value2: newValue }); } })));
+                React.createElement(library_index_1.TimeInput, { value: value2, secondComponent: true, onChange: function (newValue) { return _this.setState({ value2: newValue }); } })),
+            React.createElement("div", null,
+                React.createElement(library_index_1.DateInput, { value: value3, onChange: function (newValue) { return _this.setState({ value3: newValue }); } })));
     };
     return DateAndTimeInputs;
 }(React.Component));
@@ -21625,6 +21721,8 @@ ReactDOM.render(React.createElement(Examples_1.default, null), document.getEleme
 Object.defineProperty(exports, "__esModule", { value: true });
 var CheckButton_1 = __webpack_require__(/*! ./CheckButton */ "./src/CheckButton/index.ts");
 exports.CheckButton = CheckButton_1.default;
+var DateInput_1 = __webpack_require__(/*! ./DateInput */ "./src/DateInput/index.ts");
+exports.DateInput = DateInput_1.default;
 var Layout_1 = __webpack_require__(/*! ./Layout */ "./src/Layout/index.ts");
 exports.Layout = Layout_1.default;
 var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/NumberInput/index.ts");
