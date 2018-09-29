@@ -1,12 +1,11 @@
-import CheckButton from "./CheckButton";
-import DateInput from "./DateInput";
-import Layout from "./Layout";
-import NumberInput from "./NumberInput";
-import RadioButton from "./RadioButton";
-import SimpleButton from "./SimpleButton";
-import TextInput from "./TextInput";
-import TimeInput from "./TimeInput";
-
+import CheckButton from "./Components/CheckButton";
+import DateInput from "./Components/DateInput";
+import Layout from "./Components/Layout";
+import NumberInput from "./Components/NumberInput";
+import RadioButton from "./Components/RadioButton";
+import SimpleButton from "./Components/SimpleButton";
+import TextInput from "./Components/TextInput";
+import TimeInput from "./Components/TimeInput";
 
 export {
     CheckButton,
@@ -16,5 +15,5 @@ export {
     RadioButton,
     SimpleButton,
     TextInput,
-    TimeInput,
+    TimeInput
 };

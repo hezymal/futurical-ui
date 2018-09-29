@@ -1,0 +1,38 @@
+@import "../../Base.scss";
+
+.CheckButton {
+    background-color: $base-primary-color;
+    border: 1px solid ($base-secondary-color + #666666);
+    cursor: pointer;
+    width: $base-square-size;
+    height: $base-square-size;
+    margin: 5px;
+    outline: 0;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        border-color: $base-alpha-color;
+    }
+
+    &.Checked {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            border-top: 2px solid $base-secondary-color + #666666;
+            width: $base-square-size - 7px;
+            height: $base-square-size - 5px;
+        }
+        &:before {
+            top: 8px;
+            left: 10px;
+            transform: rotate(-45deg);
+        }
+        &:after {
+            top: 8px;
+            left: -5px;
+            transform: rotate(45deg);
+        }
+    }
+}

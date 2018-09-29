@@ -20564,45 +20564,177 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/CheckButton/CheckButton.scss":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/CheckButton/CheckButton.scss ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/CheckButton/CheckButton.scss":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/CheckButton/CheckButton.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".-CheckButton__2Sn9P-uD- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden; }\n  .-CheckButton__2Sn9P-uD-:hover {\n    border-color: #2980B9; }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:before, .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:after {\n    content: \"\";\n    position: absolute;\n    border-top: 2px solid #666666;\n    width: 19px;\n    height: 21px; }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:before {\n    top: 8px;\n    left: 10px;\n    transform: rotate(-45deg); }\n  .-CheckButton__2Sn9P-uD-.-Checked__1brn6LZH-:after {\n    top: 8px;\n    left: -5px;\n    transform: rotate(45deg); }\n", ""]);
+exports.push([module.i, ".-CheckButton__3UfukqYr- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden; }\n  .-CheckButton__3UfukqYr-:hover {\n    border-color: #2980B9; }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:before, .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:after {\n    content: \"\";\n    position: absolute;\n    border-top: 2px solid #666666;\n    width: 19px;\n    height: 21px; }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:before {\n    top: 8px;\n    left: 10px;\n    transform: rotate(-45deg); }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:after {\n    top: 8px;\n    left: -5px;\n    transform: rotate(45deg); }\n", ""]);
 
 // exports
 exports.locals = {
-	"CheckButton": "-CheckButton__2Sn9P-uD-",
-	"Checked": "-Checked__1brn6LZH-"
+	"CheckButton": "-CheckButton__3UfukqYr-",
+	"Checked": "-Checked__249LDhAR-"
 };
 
 /***/ }),
 
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/DateInput/DateInput.scss":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/DateInput/DateInput.scss ***!
-  \***********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/DateInput/DateInput.scss":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/DateInput/DateInput.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".-DateInput__138AWXr_- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-DateInput__138AWXr_-:focus {\n    outline: none; }\n  .-DateInput__138AWXr_-:hover, .-DateInput__138AWXr_-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+exports.push([module.i, ".-DateInput__2kMDbbDa- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-DateInput__2kMDbbDa-:focus {\n    outline: none; }\n  .-DateInput__2kMDbbDa-:hover, .-DateInput__2kMDbbDa-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
 
 // exports
 exports.locals = {
-	"DateInput": "-DateInput__138AWXr_-"
+	"DateInput": "-DateInput__2kMDbbDa-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/Layout/Styles.scss":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/Layout/Styles.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic);", ""]);
+
+// module
+exports.push([module.i, ".-Layout__1ofJ7jMJ- {\n  font-family: \"Open Sans\", sans-serif; }\n", ""]);
+
+// exports
+exports.locals = {
+	"Layout": "-Layout__1ofJ7jMJ-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/NumberInput/NumberInput.scss":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/NumberInput/NumberInput.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-NumberInput__10VgBsYk- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-NumberInput__10VgBsYk-:focus {\n    outline: none; }\n  .-NumberInput__10VgBsYk-:hover, .-NumberInput__10VgBsYk-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+
+// exports
+exports.locals = {
+	"NumberInput": "-NumberInput__10VgBsYk-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/RadioButton/RadioButton.scss":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/RadioButton/RadioButton.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-RadioButton__3jAcLNE6- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden;\n  vertical-align: bottom;\n  border-radius: 50%; }\n  .-RadioButton__3jAcLNE6-:hover {\n    border-color: #2980B9; }\n  .-RadioButton__3jAcLNE6-.-Checked__3eDPBBZh-:after {\n    content: \"\";\n    width: 16px;\n    height: 16px;\n    border: 1px solid #666666;\n    background-color: #666666;\n    border-radius: 50%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin: -8px 0 0 -8px;\n    box-sizing: border-box; }\n", ""]);
+
+// exports
+exports.locals = {
+	"RadioButton": "-RadioButton__3jAcLNE6-",
+	"Checked": "-Checked__3eDPBBZh-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/SimpleButton/SimpleButton.scss":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/SimpleButton/SimpleButton.scss ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* default style */\n/* primary style */\n/* danger style */\n/* warning style */\n.-Button__MfisyIzC- {\n  box-sizing: border-box;\n  display: inline-block;\n  padding: 0 18px;\n  border: 1px solid transparent;\n  cursor: pointer;\n  height: 36px;\n  line-height: 34px;\n  overflow: hidden;\n  font-family: inherit; }\n  .-Button__MfisyIzC-:focus {\n    outline: 0; }\n  .-Button__MfisyIzC-.-Disabled__2Kw4XGRu- {\n    cursor: not-allowed; }\n  .-Button__MfisyIzC-.-Default__3dWQ58IS- {\n    color: #000000;\n    border-color: #666666;\n    background-color: #ffffff; }\n    .-Button__MfisyIzC-.-Default__3dWQ58IS-:hover {\n      color: #ffffff;\n      border-color: #666666;\n      background-color: #666666; }\n  .-Button__MfisyIzC-.-Primary__28Fjmkrb- {\n    color: #ffffff;\n    border-color: #2980B9;\n    background-color: #2980B9; }\n    .-Button__MfisyIzC-.-Primary__28Fjmkrb-:hover {\n      color: #2980B9;\n      border-color: #2980B9;\n      background-color: #ffffff; }\n  .-Button__MfisyIzC-.-Danger__10YtLg-u- {\n    color: #ffffff;\n    border-color: #FF5B5B;\n    background-color: #FF5B5B; }\n    .-Button__MfisyIzC-.-Danger__10YtLg-u-:hover {\n      color: #FF5B5B;\n      border-color: #FF5B5B;\n      background-color: #ffffff; }\n  .-Button__MfisyIzC-.-Warning__3ToeVWgr- {\n    color: #ffffff;\n    border-color: #FBA300;\n    background-color: #FBA300; }\n    .-Button__MfisyIzC-.-Warning__3ToeVWgr-:hover {\n      color: #FBA300;\n      border-color: #FBA300;\n      background-color: #ffffff; }\n", ""]);
+
+// exports
+exports.locals = {
+	"Button": "-Button__MfisyIzC-",
+	"Disabled": "-Disabled__2Kw4XGRu-",
+	"Default": "-Default__3dWQ58IS-",
+	"Primary": "-Primary__28Fjmkrb-",
+	"Danger": "-Danger__10YtLg-u-",
+	"Warning": "-Warning__3ToeVWgr-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/TextInput/TextInput.scss":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/TextInput/TextInput.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-TextInput__1gc6aVnX- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-TextInput__1gc6aVnX-:focus {\n    outline: none; }\n  .-TextInput__1gc6aVnX-:hover, .-TextInput__1gc6aVnX-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+
+// exports
+exports.locals = {
+	"TextInput": "-TextInput__1gc6aVnX-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/TimeInput/TimeInput.scss":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/TimeInput/TimeInput.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-TimeInput__37NVrFRY- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-TimeInput__37NVrFRY-:focus {\n    outline: none; }\n  .-TimeInput__37NVrFRY-:hover, .-TimeInput__37NVrFRY-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+
+// exports
+exports.locals = {
+	"TimeInput": "-TimeInput__37NVrFRY-"
 };
 
 /***/ }),
@@ -20628,147 +20760,15 @@ exports.locals = {
 
 /***/ }),
 
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Layout/Styles.scss":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Layout/Styles.scss ***!
-  \*****************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic);", ""]);
-
-// module
-exports.push([module.i, ".-Layout__KNgJ-tKT- {\n  font-family: \"Open Sans\", sans-serif; }\n", ""]);
-
-// exports
-exports.locals = {
-	"Layout": "-Layout__KNgJ-tKT-"
-};
-
-/***/ }),
-
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/NumberInput/NumberInput.scss":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/NumberInput/NumberInput.scss ***!
-  \***************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".-NumberInput__MC-S4y2J- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-NumberInput__MC-S4y2J-:focus {\n    outline: none; }\n  .-NumberInput__MC-S4y2J-:hover, .-NumberInput__MC-S4y2J-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
-
-// exports
-exports.locals = {
-	"NumberInput": "-NumberInput__MC-S4y2J-"
-};
-
-/***/ }),
-
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/RadioButton/RadioButton.scss":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/RadioButton/RadioButton.scss ***!
-  \***************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".-RadioButton__380d-ord- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden;\n  vertical-align: bottom;\n  border-radius: 50%; }\n  .-RadioButton__380d-ord-:hover {\n    border-color: #2980B9; }\n  .-RadioButton__380d-ord-.-Checked__2CUup6el-:after {\n    content: \"\";\n    width: 16px;\n    height: 16px;\n    border: 1px solid #666666;\n    background-color: #666666;\n    border-radius: 50%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin: -8px 0 0 -8px;\n    box-sizing: border-box; }\n", ""]);
-
-// exports
-exports.locals = {
-	"RadioButton": "-RadioButton__380d-ord-",
-	"Checked": "-Checked__2CUup6el-"
-};
-
-/***/ }),
-
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/SimpleButton/SimpleButton.scss":
-/*!*****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/SimpleButton/SimpleButton.scss ***!
-  \*****************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/* default style */\n/* primary style */\n/* danger style */\n/* warning style */\n.-Button__H_UXIpUD- {\n  box-sizing: border-box;\n  display: inline-block;\n  padding: 0 18px;\n  border: 1px solid transparent;\n  cursor: pointer;\n  height: 36px;\n  line-height: 34px;\n  overflow: hidden;\n  font-family: inherit; }\n  .-Button__H_UXIpUD-:focus {\n    outline: 0; }\n  .-Button__H_UXIpUD-.-Disabled__3G07vFgZ- {\n    cursor: not-allowed; }\n  .-Button__H_UXIpUD-.-Default__3tiSrgWx- {\n    color: #000000;\n    border-color: #666666;\n    background-color: #ffffff; }\n    .-Button__H_UXIpUD-.-Default__3tiSrgWx-:hover {\n      color: #ffffff;\n      border-color: #666666;\n      background-color: #666666; }\n  .-Button__H_UXIpUD-.-Primary__7lB-0i86- {\n    color: #ffffff;\n    border-color: #2980B9;\n    background-color: #2980B9; }\n    .-Button__H_UXIpUD-.-Primary__7lB-0i86-:hover {\n      color: #2980B9;\n      border-color: #2980B9;\n      background-color: #ffffff; }\n  .-Button__H_UXIpUD-.-Danger__1mmrwzHD- {\n    color: #ffffff;\n    border-color: #FF5B5B;\n    background-color: #FF5B5B; }\n    .-Button__H_UXIpUD-.-Danger__1mmrwzHD-:hover {\n      color: #FF5B5B;\n      border-color: #FF5B5B;\n      background-color: #ffffff; }\n  .-Button__H_UXIpUD-.-Warning__BrRks6cV- {\n    color: #ffffff;\n    border-color: #FBA300;\n    background-color: #FBA300; }\n    .-Button__H_UXIpUD-.-Warning__BrRks6cV-:hover {\n      color: #FBA300;\n      border-color: #FBA300;\n      background-color: #ffffff; }\n", ""]);
-
-// exports
-exports.locals = {
-	"Button": "-Button__H_UXIpUD-",
-	"Disabled": "-Disabled__3G07vFgZ-",
-	"Default": "-Default__3tiSrgWx-",
-	"Primary": "-Primary__7lB-0i86-",
-	"Danger": "-Danger__1mmrwzHD-",
-	"Warning": "-Warning__BrRks6cV-"
-};
-
-/***/ }),
-
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TextInput/TextInput.scss":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TextInput/TextInput.scss ***!
-  \***********************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".-TextInput__27eI_iQN- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-TextInput__27eI_iQN-:focus {\n    outline: none; }\n  .-TextInput__27eI_iQN-:hover, .-TextInput__27eI_iQN-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
-
-// exports
-exports.locals = {
-	"TextInput": "-TextInput__27eI_iQN-"
-};
-
-/***/ }),
-
-/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TimeInput/TimeInput.scss":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TimeInput/TimeInput.scss ***!
-  \***********************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".-TimeInput__3gvCt5D0- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-TimeInput__3gvCt5D0-:focus {\n    outline: none; }\n  .-TimeInput__3gvCt5D0-:hover, .-TimeInput__3gvCt5D0-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
-
-// exports
-exports.locals = {
-	"TimeInput": "-TimeInput__3gvCt5D0-"
-};
-
-/***/ }),
-
-/***/ "./src/CheckButton/CheckButton.scss":
-/*!******************************************!*\
-  !*** ./src/CheckButton/CheckButton.scss ***!
-  \******************************************/
+/***/ "./src/Components/CheckButton/CheckButton.scss":
+/*!*****************************************************!*\
+  !*** ./src/Components/CheckButton/CheckButton.scss ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./CheckButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/CheckButton/CheckButton.scss");
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./CheckButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/CheckButton/CheckButton.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -20782,7 +20782,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -20790,10 +20790,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./src/CheckButton/CheckButton.tsx":
-/*!*****************************************!*\
-  !*** ./src/CheckButton/CheckButton.tsx ***!
-  \*****************************************/
+/***/ "./src/Components/CheckButton/CheckButton.tsx":
+/*!****************************************************!*\
+  !*** ./src/Components/CheckButton/CheckButton.tsx ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20801,46 +20801,46 @@ if(false) {}
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Button_1 = __webpack_require__(/*! ../Primitives/Button */ "./src/Primitives/Button/index.ts");
-var Styles = __webpack_require__(/*! ./CheckButton.scss */ "./src/CheckButton/CheckButton.scss");
-var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
+var Button_1 = __webpack_require__(/*! Primitives/Button */ "./src/Primitives/Button/index.ts");
+var Styles = __webpack_require__(/*! ./CheckButton.scss */ "./src/Components/CheckButton/CheckButton.scss");
+var Utils_1 = __webpack_require__(/*! ../../Utils */ "./src/Utils.ts");
 function CheckButton(props) {
     var value = props.value, className = props.className, onChange = props.onChange;
-    var fullClassName = Styles.CheckButton
-        + Utils_1.addClassName(!!className, className)
-        + Utils_1.addClassName(value, Styles.Checked);
-    return React.createElement(Button_1.default, { className: fullClassName, onClick: function () { return onChange(!value); } });
+    var fullClassName = Styles.CheckButton +
+        Utils_1.addClassName(!!className, className) +
+        Utils_1.addClassName(value, Styles.Checked);
+    return (React.createElement(Button_1.default, { className: fullClassName, onClick: function () { return onChange(!value); } }));
 }
 exports.default = CheckButton;
 
 
 /***/ }),
 
-/***/ "./src/CheckButton/index.ts":
-/*!**********************************!*\
-  !*** ./src/CheckButton/index.ts ***!
-  \**********************************/
+/***/ "./src/Components/CheckButton/index.ts":
+/*!*********************************************!*\
+  !*** ./src/Components/CheckButton/index.ts ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var CheckButton_1 = __webpack_require__(/*! ./CheckButton */ "./src/CheckButton/CheckButton.tsx");
+var CheckButton_1 = __webpack_require__(/*! ./CheckButton */ "./src/Components/CheckButton/CheckButton.tsx");
 exports.default = CheckButton_1.default;
 
 
 /***/ }),
 
-/***/ "./src/DateInput/DateInput.scss":
-/*!**************************************!*\
-  !*** ./src/DateInput/DateInput.scss ***!
-  \**************************************/
+/***/ "./src/Components/DateInput/DateInput.scss":
+/*!*************************************************!*\
+  !*** ./src/Components/DateInput/DateInput.scss ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./DateInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/DateInput/DateInput.scss");
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./DateInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/DateInput/DateInput.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -20854,7 +20854,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -20862,10 +20862,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./src/DateInput/DateInput.tsx":
-/*!*************************************!*\
-  !*** ./src/DateInput/DateInput.tsx ***!
-  \*************************************/
+/***/ "./src/Components/DateInput/DateInput.tsx":
+/*!************************************************!*\
+  !*** ./src/Components/DateInput/DateInput.tsx ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20873,33 +20873,484 @@ if(false) {}
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/Input/index.ts");
-var Styles = __webpack_require__(/*! ./DateInput.scss */ "./src/DateInput/DateInput.scss");
-var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
+var Input_1 = __webpack_require__(/*! Primitives/Input */ "./src/Primitives/Input/index.ts");
+var Styles = __webpack_require__(/*! ./DateInput.scss */ "./src/Components/DateInput/DateInput.scss");
+var Utils_1 = __webpack_require__(/*! ../../Utils */ "./src/Utils.ts");
 function DateInput(props) {
     var value = props.value, className = props.className, onChange = props.onChange;
-    var fullClassName = Styles.DateInput
-        + Utils_1.addClassName(!!className, className);
+    var fullClassName = Styles.DateInput + Utils_1.addClassName(!!className, className);
     var pattern = /^([0-2]{1}[0-9]{1}|3[0-1]{1})\.(0[0-9]{1}|1[0-2]{1})\.[0-9]{4}$/;
-    return React.createElement(Input_1.default, { value: value, pattern: pattern, className: fullClassName, insert: true, onChange: function (newValue) { return onChange(newValue); } });
+    return (React.createElement(Input_1.default, { value: value, pattern: pattern, className: fullClassName, insert: true, onChange: function (newValue) { return onChange(newValue); } }));
 }
 exports.default = DateInput;
 
 
 /***/ }),
 
-/***/ "./src/DateInput/index.ts":
-/*!********************************!*\
-  !*** ./src/DateInput/index.ts ***!
-  \********************************/
+/***/ "./src/Components/DateInput/index.ts":
+/*!*******************************************!*\
+  !*** ./src/Components/DateInput/index.ts ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var DateInput_1 = __webpack_require__(/*! ./DateInput */ "./src/DateInput/DateInput.tsx");
+var DateInput_1 = __webpack_require__(/*! ./DateInput */ "./src/Components/DateInput/DateInput.tsx");
 exports.default = DateInput_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Components/Layout/Layout.tsx":
+/*!******************************************!*\
+  !*** ./src/Components/Layout/Layout.tsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Styles = __webpack_require__(/*! ./Styles.scss */ "./src/Components/Layout/Styles.scss");
+function Layout(props) {
+    var children = props.children;
+    return React.createElement("div", { className: Styles.Layout }, children);
+}
+exports.default = Layout;
+
+
+/***/ }),
+
+/***/ "./src/Components/Layout/Styles.scss":
+/*!*******************************************!*\
+  !*** ./src/Components/Layout/Styles.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./Styles.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/Layout/Styles.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/Components/Layout/index.ts":
+/*!****************************************!*\
+  !*** ./src/Components/Layout/index.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Layout_1 = __webpack_require__(/*! ./Layout */ "./src/Components/Layout/Layout.tsx");
+exports.default = Layout_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Components/NumberInput/NumberInput.scss":
+/*!*****************************************************!*\
+  !*** ./src/Components/NumberInput/NumberInput.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./NumberInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/NumberInput/NumberInput.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/Components/NumberInput/NumberInput.tsx":
+/*!****************************************************!*\
+  !*** ./src/Components/NumberInput/NumberInput.tsx ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Input_1 = __webpack_require__(/*! Primitives/Input */ "./src/Primitives/Input/index.ts");
+var Styles = __webpack_require__(/*! ./NumberInput.scss */ "./src/Components/NumberInput/NumberInput.scss");
+var NumberInput = /** @class */ (function (_super) {
+    __extends(NumberInput, _super);
+    function NumberInput(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            displayValue: props.value.toString()
+        };
+        return _this;
+    }
+    NumberInput.prototype.render = function () {
+        var _this = this;
+        var _a = this.props, onChange = _a.onChange, isFloat = _a.isFloat;
+        var displayValue = this.state.displayValue;
+        var pattern = isFloat ? /^[0-9]*\.{0,1}[0-9]*$/ : /^[0-9]*$/;
+        return (React.createElement(Input_1.default, { value: displayValue, className: Styles.NumberInput, pattern: pattern, onChange: function (value) {
+                _this.setState({ displayValue: value });
+                onChange(isFloat ? parseFloat(value) : parseInt(value));
+            } }));
+    };
+    return NumberInput;
+}(React.Component));
+exports.default = NumberInput;
+
+
+/***/ }),
+
+/***/ "./src/Components/NumberInput/index.ts":
+/*!*********************************************!*\
+  !*** ./src/Components/NumberInput/index.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/Components/NumberInput/NumberInput.tsx");
+exports.default = NumberInput_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Components/RadioButton/RadioButton.scss":
+/*!*****************************************************!*\
+  !*** ./src/Components/RadioButton/RadioButton.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./RadioButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/RadioButton/RadioButton.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/Components/RadioButton/RadioButton.tsx":
+/*!****************************************************!*\
+  !*** ./src/Components/RadioButton/RadioButton.tsx ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Button_1 = __webpack_require__(/*! Primitives/Button */ "./src/Primitives/Button/index.ts");
+var Utils_1 = __webpack_require__(/*! ../../Utils */ "./src/Utils.ts");
+var Styles = __webpack_require__(/*! ./RadioButton.scss */ "./src/Components/RadioButton/RadioButton.scss");
+function RadioButton(props) {
+    var value = props.value, checked = props.checked, _a = props.className, className = _a === void 0 ? "" : _a, onSelect = props.onSelect;
+    var fullClassName = Styles.RadioButton +
+        Utils_1.addClassName(!!className, className) +
+        Utils_1.addClassName(checked, Styles.Checked);
+    return (React.createElement(Button_1.default, { className: fullClassName, onClick: function () { return onSelect && onSelect(value); } }));
+}
+exports.default = RadioButton;
+
+
+/***/ }),
+
+/***/ "./src/Components/RadioButton/index.ts":
+/*!*********************************************!*\
+  !*** ./src/Components/RadioButton/index.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var RadioButton_1 = __webpack_require__(/*! ./RadioButton */ "./src/Components/RadioButton/RadioButton.tsx");
+exports.default = RadioButton_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Components/SimpleButton/SimpleButton.scss":
+/*!*******************************************************!*\
+  !*** ./src/Components/SimpleButton/SimpleButton.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./SimpleButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/SimpleButton/SimpleButton.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/Components/SimpleButton/SimpleButton.tsx":
+/*!******************************************************!*\
+  !*** ./src/Components/SimpleButton/SimpleButton.tsx ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Button_1 = __webpack_require__(/*! Primitives/Button */ "./src/Primitives/Button/index.ts");
+var Utils_1 = __webpack_require__(/*! ../../Utils */ "./src/Utils.ts");
+var Styles = __webpack_require__(/*! ./SimpleButton.scss */ "./src/Components/SimpleButton/SimpleButton.scss");
+var Props = /** @class */ (function () {
+    function Props() {
+    }
+    return Props;
+}());
+function SimpleButton(props) {
+    var title = props.title, onClick = props.onClick, _a = props.disabled, disabled = _a === void 0 ? false : _a, _b = props.style, style = _b === void 0 ? "Default" : _b;
+    var className = Styles.Button +
+        Utils_1.addClassName(!!Styles[style], Styles[style]) +
+        Utils_1.addClassName(disabled, Styles.Disabled);
+    return (React.createElement(Button_1.default, { className: className, onClick: function (event) { return onClick(event); } }, title));
+}
+exports.default = SimpleButton;
+
+
+/***/ }),
+
+/***/ "./src/Components/SimpleButton/index.ts":
+/*!**********************************************!*\
+  !*** ./src/Components/SimpleButton/index.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/Components/SimpleButton/SimpleButton.tsx");
+exports.default = SimpleButton_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Components/TextInput/TextInput.scss":
+/*!*************************************************!*\
+  !*** ./src/Components/TextInput/TextInput.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./TextInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/TextInput/TextInput.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/Components/TextInput/TextInput.tsx":
+/*!************************************************!*\
+  !*** ./src/Components/TextInput/TextInput.tsx ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Input_1 = __webpack_require__(/*! Primitives/Input */ "./src/Primitives/Input/index.ts");
+var Styles = __webpack_require__(/*! ./TextInput.scss */ "./src/Components/TextInput/TextInput.scss");
+function TextBox(props) {
+    var value = props.value, pattern = props.pattern, onChange = props.onChange;
+    return (React.createElement(Input_1.default, { value: value, className: Styles.TextInput, pattern: pattern, onChange: function (value) { return onChange(value); } }));
+}
+exports.default = TextBox;
+
+
+/***/ }),
+
+/***/ "./src/Components/TextInput/index.ts":
+/*!*******************************************!*\
+  !*** ./src/Components/TextInput/index.ts ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var TextInput_1 = __webpack_require__(/*! ./TextInput */ "./src/Components/TextInput/TextInput.tsx");
+exports.default = TextInput_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Components/TimeInput/TimeInput.scss":
+/*!*************************************************!*\
+  !*** ./src/Components/TimeInput/TimeInput.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./TimeInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/TimeInput/TimeInput.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/Components/TimeInput/TimeInput.tsx":
+/*!************************************************!*\
+  !*** ./src/Components/TimeInput/TimeInput.tsx ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Input_1 = __webpack_require__(/*! Primitives/Input */ "./src/Primitives/Input/index.ts");
+var Styles = __webpack_require__(/*! ./TimeInput.scss */ "./src/Components/TimeInput/TimeInput.scss");
+var Utils_1 = __webpack_require__(/*! ../../Utils */ "./src/Utils.ts");
+function TimeInput(props) {
+    var value = props.value, _a = props.secondComponent, secondComponent = _a === void 0 ? false : _a, className = props.className, onChange = props.onChange;
+    var fullClassName = Styles.TimeInput + Utils_1.addClassName(!!className, className);
+    var pattern = secondComponent
+        ? /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}:[0-5]{1}[0-9]{1}$/
+        : /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}$/;
+    return (React.createElement(Input_1.default, { value: value, pattern: pattern, className: fullClassName, insert: true, onChange: function (newValue) { return onChange(newValue); } }));
+}
+exports.default = TimeInput;
+
+
+/***/ }),
+
+/***/ "./src/Components/TimeInput/index.ts":
+/*!*******************************************!*\
+  !*** ./src/Components/TimeInput/index.ts ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var TimeInput_1 = __webpack_require__(/*! ./TimeInput */ "./src/Components/TimeInput/TimeInput.tsx");
+exports.default = TimeInput_1.default;
 
 
 /***/ }),
@@ -20928,7 +21379,7 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var library_index_1 = __webpack_require__(/*! ../library-index */ "./src/library-index.ts");
 var Styles = __webpack_require__(/*! ./Styles.scss */ "./src/Examples/Styles.scss");
 function SimpleButtons() {
-    return React.createElement("section", null,
+    return (React.createElement("section", null,
         React.createElement("header", null, "Buttons"),
         React.createElement("div", null,
             React.createElement(library_index_1.SimpleButton, { title: "Default Button", onClick: function () { } })),
@@ -20937,7 +21388,7 @@ function SimpleButtons() {
         React.createElement("div", null,
             React.createElement(library_index_1.SimpleButton, { title: "Danger Button", style: "Danger", onClick: function () { } })),
         React.createElement("div", null,
-            React.createElement(library_index_1.SimpleButton, { title: "Warning Button", style: "Warning", onClick: function () { } })));
+            React.createElement(library_index_1.SimpleButton, { title: "Warning Button", style: "Warning", onClick: function () { } }))));
 }
 var Inputs = /** @class */ (function (_super) {
     __extends(Inputs, _super);
@@ -20946,21 +21397,27 @@ var Inputs = /** @class */ (function (_super) {
         _this.state = {
             textInputValue: "Text Input",
             integerInputValue: 1234,
-            floatInputValue: 12.34,
+            floatInputValue: 12.34
         };
         return _this;
     }
     Inputs.prototype.render = function () {
         var _this = this;
         var _a = this.state, textInputValue = _a.textInputValue, integerInputValue = _a.integerInputValue, floatInputValue = _a.floatInputValue;
-        return React.createElement("section", null,
+        return (React.createElement("section", null,
             React.createElement("header", null, "Inputs"),
             React.createElement("div", null,
-                React.createElement(library_index_1.TextInput, { value: textInputValue, onChange: function (value) { return _this.setState({ textInputValue: value }); } })),
+                React.createElement(library_index_1.TextInput, { value: textInputValue, onChange: function (value) {
+                        return _this.setState({ textInputValue: value });
+                    } })),
             React.createElement("div", null,
-                React.createElement(library_index_1.NumberInput, { value: integerInputValue, onChange: function (value) { return _this.setState({ integerInputValue: value }); } })),
+                React.createElement(library_index_1.NumberInput, { value: integerInputValue, onChange: function (value) {
+                        return _this.setState({ integerInputValue: value });
+                    } })),
             React.createElement("div", null,
-                React.createElement(library_index_1.NumberInput, { value: floatInputValue, isFloat: true, onChange: function (value) { return _this.setState({ floatInputValue: value }); } })));
+                React.createElement(library_index_1.NumberInput, { value: floatInputValue, isFloat: true, onChange: function (value) {
+                        return _this.setState({ floatInputValue: value });
+                    } }))));
     };
     return Inputs;
 }(React.Component));
@@ -20969,17 +21426,19 @@ var CheckButtons = /** @class */ (function (_super) {
     function CheckButtons(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            value: false,
+            value: false
         };
         return _this;
     }
     CheckButtons.prototype.render = function () {
         var _this = this;
         var value = this.state.value;
-        return React.createElement("section", null,
+        return (React.createElement("section", null,
             React.createElement("header", null, "Check button"),
             React.createElement("div", null,
-                React.createElement(library_index_1.CheckButton, { value: value, onChange: function (newValue) { return _this.setState({ value: newValue }); } })));
+                React.createElement(library_index_1.CheckButton, { value: value, onChange: function (newValue) {
+                        return _this.setState({ value: newValue });
+                    } }))));
     };
     return CheckButtons;
 }(React.Component));
@@ -20988,19 +21447,19 @@ var RadioButtonGroup = /** @class */ (function (_super) {
     function RadioButtonGroup(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            value: 1,
+            value: 1
         };
         return _this;
     }
     RadioButtonGroup.prototype.render = function () {
         var _this = this;
         var value = this.state.value;
-        return React.createElement("section", null,
+        return (React.createElement("section", null,
             React.createElement("header", null, "Radio button group"),
             React.createElement("div", null,
                 React.createElement(library_index_1.RadioButton, { value: 1, checked: value === 1, onSelect: function (value) { return _this.setState({ value: value }); } }),
                 React.createElement(library_index_1.RadioButton, { value: 2, checked: value === 2, onSelect: function (value) { return _this.setState({ value: value }); } }),
-                React.createElement(library_index_1.RadioButton, { value: 3, checked: value === 3, onSelect: function (value) { return _this.setState({ value: value }); } })));
+                React.createElement(library_index_1.RadioButton, { value: 3, checked: value === 3, onSelect: function (value) { return _this.setState({ value: value }); } }))));
     };
     return RadioButtonGroup;
 }(React.Component));
@@ -21011,32 +21470,38 @@ var DateAndTimeInputs = /** @class */ (function (_super) {
         _this.state = {
             value1: "00:00",
             value2: "00:00:00",
-            value3: "01.01.2018",
+            value3: "01.01.2018"
         };
         return _this;
     }
     DateAndTimeInputs.prototype.render = function () {
         var _this = this;
         var _a = this.state, value1 = _a.value1, value2 = _a.value2, value3 = _a.value3;
-        return React.createElement("section", null,
+        return (React.createElement("section", null,
             React.createElement("header", null, "Data and time inputs"),
             React.createElement("div", null,
-                React.createElement(library_index_1.TimeInput, { value: value1, onChange: function (newValue) { return _this.setState({ value1: newValue }); } })),
+                React.createElement(library_index_1.TimeInput, { value: value1, onChange: function (newValue) {
+                        return _this.setState({ value1: newValue });
+                    } })),
             React.createElement("div", null,
-                React.createElement(library_index_1.TimeInput, { value: value2, secondComponent: true, onChange: function (newValue) { return _this.setState({ value2: newValue }); } })),
+                React.createElement(library_index_1.TimeInput, { value: value2, secondComponent: true, onChange: function (newValue) {
+                        return _this.setState({ value2: newValue });
+                    } })),
             React.createElement("div", null,
-                React.createElement(library_index_1.DateInput, { value: value3, onChange: function (newValue) { return _this.setState({ value3: newValue }); } })));
+                React.createElement(library_index_1.DateInput, { value: value3, onChange: function (newValue) {
+                        return _this.setState({ value3: newValue });
+                    } }))));
     };
     return DateAndTimeInputs;
 }(React.Component));
 function Examples() {
-    return React.createElement("div", { className: Styles.Examples },
+    return (React.createElement("div", { className: Styles.Examples },
         React.createElement(library_index_1.Layout, null,
             React.createElement(SimpleButtons, null),
             React.createElement(Inputs, null),
             React.createElement(CheckButtons, null),
             React.createElement(RadioButtonGroup, null),
-            React.createElement(DateAndTimeInputs, null)));
+            React.createElement(DateAndTimeInputs, null))));
 }
 exports.default = Examples;
 
@@ -21089,168 +21554,6 @@ exports.default = Examples_1.default;
 
 /***/ }),
 
-/***/ "./src/Layout/Layout.tsx":
-/*!*******************************!*\
-  !*** ./src/Layout/Layout.tsx ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Styles = __webpack_require__(/*! ./Styles.scss */ "./src/Layout/Styles.scss");
-function Layout(props) {
-    var children = props.children;
-    return React.createElement("div", { className: Styles.Layout }, children);
-}
-exports.default = Layout;
-
-
-/***/ }),
-
-/***/ "./src/Layout/Styles.scss":
-/*!********************************!*\
-  !*** ./src/Layout/Styles.scss ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./Styles.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Layout/Styles.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/Layout/index.ts":
-/*!*****************************!*\
-  !*** ./src/Layout/index.ts ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Layout_1 = __webpack_require__(/*! ./Layout */ "./src/Layout/Layout.tsx");
-exports.default = Layout_1.default;
-
-
-/***/ }),
-
-/***/ "./src/NumberInput/NumberInput.scss":
-/*!******************************************!*\
-  !*** ./src/NumberInput/NumberInput.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./NumberInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/NumberInput/NumberInput.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/NumberInput/NumberInput.tsx":
-/*!*****************************************!*\
-  !*** ./src/NumberInput/NumberInput.tsx ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Styles = __webpack_require__(/*! ./NumberInput.scss */ "./src/NumberInput/NumberInput.scss");
-var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/Input/index.ts");
-var NumberInput = /** @class */ (function (_super) {
-    __extends(NumberInput, _super);
-    function NumberInput(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            displayValue: props.value.toString(),
-        };
-        return _this;
-    }
-    NumberInput.prototype.render = function () {
-        var _this = this;
-        var _a = this.props, onChange = _a.onChange, isFloat = _a.isFloat;
-        var displayValue = this.state.displayValue;
-        var pattern = isFloat ? /^[0-9]*\.{0,1}[0-9]*$/ : /^[0-9]*$/;
-        return React.createElement(Input_1.default, { value: displayValue, className: Styles.NumberInput, pattern: pattern, onChange: function (value) {
-                _this.setState({ displayValue: value });
-                onChange(isFloat ? parseFloat(value) : parseInt(value));
-            } });
-    };
-    return NumberInput;
-}(React.Component));
-exports.default = NumberInput;
-
-
-/***/ }),
-
-/***/ "./src/NumberInput/index.ts":
-/*!**********************************!*\
-  !*** ./src/NumberInput/index.ts ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/NumberInput/NumberInput.tsx");
-exports.default = NumberInput_1.default;
-
-
-/***/ }),
-
 /***/ "./src/Primitives/Button/Button.tsx":
 /*!******************************************!*\
   !*** ./src/Primitives/Button/Button.tsx ***!
@@ -21269,7 +21572,7 @@ var Props = /** @class */ (function () {
 }());
 function Button(props) {
     var children = props.children, className = props.className, onClick = props.onClick;
-    return React.createElement("button", { className: className, onClick: function (event) { return onClick(event); } }, children);
+    return (React.createElement("button", { className: className, onClick: function (event) { return onClick(event); } }, children));
 }
 exports.default = Button;
 
@@ -21330,7 +21633,7 @@ var Input = /** @class */ (function (_super) {
     Input.prototype.render = function () {
         var _this = this;
         var _a = this.props, value = _a.value, _b = _a.pattern, pattern = _b === void 0 ? null : _b, _c = _a.insert, insert = _c === void 0 ? false : _c, className = _a.className, onChange = _a.onChange;
-        return React.createElement("input", { ref: function (ref) { return _this.inputRef = ref; }, type: "text", value: value, className: className, onChange: function (event) {
+        return (React.createElement("input", { ref: function (ref) { return (_this.inputRef = ref); }, type: "text", value: value, className: className, onChange: function (event) {
                 var newValue;
                 var target;
                 var selectionStart;
@@ -21356,7 +21659,7 @@ var Input = /** @class */ (function (_super) {
                 if (insert) {
                     _this.setState({ cursorPosition: selectionStart }, _this.setCursorPosition);
                 }
-            } });
+            } }));
     };
     return Input;
 }(React.Component));
@@ -21377,297 +21680,6 @@ exports.default = Input;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Input_1 = __webpack_require__(/*! ./Input */ "./src/Primitives/Input/Input.tsx");
 exports.default = Input_1.default;
-
-
-/***/ }),
-
-/***/ "./src/RadioButton/RadioButton.scss":
-/*!******************************************!*\
-  !*** ./src/RadioButton/RadioButton.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./RadioButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/RadioButton/RadioButton.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/RadioButton/RadioButton.tsx":
-/*!*****************************************!*\
-  !*** ./src/RadioButton/RadioButton.tsx ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Button_1 = __webpack_require__(/*! ../Primitives/Button */ "./src/Primitives/Button/index.ts");
-var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
-var Styles = __webpack_require__(/*! ./RadioButton.scss */ "./src/RadioButton/RadioButton.scss");
-function RadioButton(props) {
-    var value = props.value, checked = props.checked, _a = props.className, className = _a === void 0 ? "" : _a, onSelect = props.onSelect;
-    var fullClassName = Styles.RadioButton
-        + Utils_1.addClassName(!!className, className)
-        + Utils_1.addClassName(checked, Styles.Checked);
-    return React.createElement(Button_1.default, { className: fullClassName, onClick: function () { return onSelect && onSelect(value); } });
-}
-exports.default = RadioButton;
-
-
-/***/ }),
-
-/***/ "./src/RadioButton/index.ts":
-/*!**********************************!*\
-  !*** ./src/RadioButton/index.ts ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var RadioButton_1 = __webpack_require__(/*! ./RadioButton */ "./src/RadioButton/RadioButton.tsx");
-exports.default = RadioButton_1.default;
-
-
-/***/ }),
-
-/***/ "./src/SimpleButton/SimpleButton.scss":
-/*!********************************************!*\
-  !*** ./src/SimpleButton/SimpleButton.scss ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./SimpleButton.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/SimpleButton/SimpleButton.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/SimpleButton/SimpleButton.tsx":
-/*!*******************************************!*\
-  !*** ./src/SimpleButton/SimpleButton.tsx ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Button_1 = __webpack_require__(/*! ../Primitives/Button */ "./src/Primitives/Button/index.ts");
-var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
-var Styles = __webpack_require__(/*! ./SimpleButton.scss */ "./src/SimpleButton/SimpleButton.scss");
-var Props = /** @class */ (function () {
-    function Props() {
-    }
-    return Props;
-}());
-function SimpleButton(props) {
-    var title = props.title, onClick = props.onClick, _a = props.disabled, disabled = _a === void 0 ? false : _a, _b = props.style, style = _b === void 0 ? "Default" : _b;
-    var className = Styles.Button
-        + Utils_1.addClassName(!!Styles[style], Styles[style])
-        + Utils_1.addClassName(disabled, Styles.Disabled);
-    return React.createElement(Button_1.default, { className: className, onClick: function (event) { return onClick(event); } }, title);
-}
-exports.default = SimpleButton;
-
-
-/***/ }),
-
-/***/ "./src/SimpleButton/index.ts":
-/*!***********************************!*\
-  !*** ./src/SimpleButton/index.ts ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/SimpleButton/SimpleButton.tsx");
-exports.default = SimpleButton_1.default;
-
-
-/***/ }),
-
-/***/ "./src/TextInput/TextInput.scss":
-/*!**************************************!*\
-  !*** ./src/TextInput/TextInput.scss ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./TextInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TextInput/TextInput.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/TextInput/TextInput.tsx":
-/*!*************************************!*\
-  !*** ./src/TextInput/TextInput.tsx ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Styles = __webpack_require__(/*! ./TextInput.scss */ "./src/TextInput/TextInput.scss");
-var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/Input/index.ts");
-function TextBox(props) {
-    var value = props.value, pattern = props.pattern, onChange = props.onChange;
-    return React.createElement(Input_1.default, { value: value, className: Styles.TextInput, pattern: pattern, onChange: function (value) { return onChange(value); } });
-}
-exports.default = TextBox;
-
-
-/***/ }),
-
-/***/ "./src/TextInput/index.ts":
-/*!********************************!*\
-  !*** ./src/TextInput/index.ts ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var TextInput_1 = __webpack_require__(/*! ./TextInput */ "./src/TextInput/TextInput.tsx");
-exports.default = TextInput_1.default;
-
-
-/***/ }),
-
-/***/ "./src/TimeInput/TimeInput.scss":
-/*!**************************************!*\
-  !*** ./src/TimeInput/TimeInput.scss ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../node_modules/sass-loader/lib/loader.js!./TimeInput.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/TimeInput/TimeInput.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./src/TimeInput/TimeInput.tsx":
-/*!*************************************!*\
-  !*** ./src/TimeInput/TimeInput.tsx ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var Input_1 = __webpack_require__(/*! ../Primitives/Input */ "./src/Primitives/Input/index.ts");
-var Styles = __webpack_require__(/*! ./TimeInput.scss */ "./src/TimeInput/TimeInput.scss");
-var Utils_1 = __webpack_require__(/*! ../Utils */ "./src/Utils.ts");
-function TimeInput(props) {
-    var value = props.value, _a = props.secondComponent, secondComponent = _a === void 0 ? false : _a, className = props.className, onChange = props.onChange;
-    var fullClassName = Styles.TimeInput
-        + Utils_1.addClassName(!!className, className);
-    var pattern = secondComponent
-        ? /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}:[0-5]{1}[0-9]{1}$/
-        : /^([0-1]{1}[0-9]{1}|2[0-3]{1})\:[0-5]{1}[0-9]{1}$/;
-    return React.createElement(Input_1.default, { value: value, pattern: pattern, className: fullClassName, insert: true, onChange: function (newValue) { return onChange(newValue); } });
-}
-exports.default = TimeInput;
-
-
-/***/ }),
-
-/***/ "./src/TimeInput/index.ts":
-/*!********************************!*\
-  !*** ./src/TimeInput/index.ts ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var TimeInput_1 = __webpack_require__(/*! ./TimeInput */ "./src/TimeInput/TimeInput.tsx");
-exports.default = TimeInput_1.default;
 
 
 /***/ }),
@@ -21719,21 +21731,21 @@ ReactDOM.render(React.createElement(Examples_1.default, null), document.getEleme
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var CheckButton_1 = __webpack_require__(/*! ./CheckButton */ "./src/CheckButton/index.ts");
+var CheckButton_1 = __webpack_require__(/*! ./Components/CheckButton */ "./src/Components/CheckButton/index.ts");
 exports.CheckButton = CheckButton_1.default;
-var DateInput_1 = __webpack_require__(/*! ./DateInput */ "./src/DateInput/index.ts");
+var DateInput_1 = __webpack_require__(/*! ./Components/DateInput */ "./src/Components/DateInput/index.ts");
 exports.DateInput = DateInput_1.default;
-var Layout_1 = __webpack_require__(/*! ./Layout */ "./src/Layout/index.ts");
+var Layout_1 = __webpack_require__(/*! ./Components/Layout */ "./src/Components/Layout/index.ts");
 exports.Layout = Layout_1.default;
-var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/NumberInput/index.ts");
+var NumberInput_1 = __webpack_require__(/*! ./Components/NumberInput */ "./src/Components/NumberInput/index.ts");
 exports.NumberInput = NumberInput_1.default;
-var RadioButton_1 = __webpack_require__(/*! ./RadioButton */ "./src/RadioButton/index.ts");
+var RadioButton_1 = __webpack_require__(/*! ./Components/RadioButton */ "./src/Components/RadioButton/index.ts");
 exports.RadioButton = RadioButton_1.default;
-var SimpleButton_1 = __webpack_require__(/*! ./SimpleButton */ "./src/SimpleButton/index.ts");
+var SimpleButton_1 = __webpack_require__(/*! ./Components/SimpleButton */ "./src/Components/SimpleButton/index.ts");
 exports.SimpleButton = SimpleButton_1.default;
-var TextInput_1 = __webpack_require__(/*! ./TextInput */ "./src/TextInput/index.ts");
+var TextInput_1 = __webpack_require__(/*! ./Components/TextInput */ "./src/Components/TextInput/index.ts");
 exports.TextInput = TextInput_1.default;
-var TimeInput_1 = __webpack_require__(/*! ./TimeInput */ "./src/TimeInput/index.ts");
+var TimeInput_1 = __webpack_require__(/*! ./Components/TimeInput */ "./src/Components/TimeInput/index.ts");
 exports.TimeInput = TimeInput_1.default;
 
 

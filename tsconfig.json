@@ -1,13 +1,25 @@
 {
     "compilerOptions": {
+        "baseUrl": "./src",
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
         "module": "commonjs",
         "target": "es5",
-        "jsx": "react"
+        "jsx": "react",
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+        "paths": {
+            "Components": ["Components/*"],
+            "Primitives/*": ["Primitives/*"]
+        },
+		"downlevelIteration": true,
+        "lib": ["dom", "es2018"]
     },
     "include": [
         "./src/**/*"
+    ],
+    "exclude": [
+        "./node_modules/**/*"
     ]
 }
