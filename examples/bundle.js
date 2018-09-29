@@ -86,6 +86,68 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/lib/css-base.js":
 /*!*************************************************!*\
   !*** ./node_modules/css-loader/lib/css-base.js ***!
@@ -20576,7 +20638,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".-CheckButton__3UfukqYr- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden; }\n  .-CheckButton__3UfukqYr-:hover {\n    border-color: #2980B9; }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:before, .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:after {\n    content: \"\";\n    position: absolute;\n    border-top: 2px solid #666666;\n    width: 19px;\n    height: 21px; }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:before {\n    top: 8px;\n    left: 10px;\n    transform: rotate(-45deg); }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:after {\n    top: 8px;\n    left: -5px;\n    transform: rotate(45deg); }\n", ""]);
+exports.push([module.i, ".-CheckButton__3UfukqYr- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden; }\n  .-CheckButton__3UfukqYr-:hover {\n    border-color: #2980b9; }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:before, .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:after {\n    content: \"\";\n    position: absolute;\n    border-top: 2px solid #666666;\n    width: 19px;\n    height: 21px; }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:before {\n    top: 8px;\n    left: 10px;\n    transform: rotate(-45deg); }\n  .-CheckButton__3UfukqYr-.-Checked__249LDhAR-:after {\n    top: 8px;\n    left: -5px;\n    transform: rotate(45deg); }\n", ""]);
 
 // exports
 exports.locals = {
@@ -20598,7 +20660,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".-DateInput__2kMDbbDa- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-DateInput__2kMDbbDa-:focus {\n    outline: none; }\n  .-DateInput__2kMDbbDa-:hover, .-DateInput__2kMDbbDa-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+exports.push([module.i, ".-DateInput__2kMDbbDa- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-DateInput__2kMDbbDa-:focus {\n    outline: none; }\n  .-DateInput__2kMDbbDa-:hover, .-DateInput__2kMDbbDa-:focus {\n    border: 1px solid #2980b9; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -20640,11 +20702,33 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".-NumberInput__10VgBsYk- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-NumberInput__10VgBsYk-:focus {\n    outline: none; }\n  .-NumberInput__10VgBsYk-:hover, .-NumberInput__10VgBsYk-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+exports.push([module.i, ".-NumberInput__10VgBsYk- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-NumberInput__10VgBsYk-:focus {\n    outline: none; }\n  .-NumberInput__10VgBsYk-:hover, .-NumberInput__10VgBsYk-:focus {\n    border: 1px solid #2980b9; }\n", ""]);
 
 // exports
 exports.locals = {
 	"NumberInput": "-NumberInput__10VgBsYk-"
+};
+
+/***/ }),
+
+/***/ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/OptionSelect/OptionSelect.scss":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/OptionSelect/OptionSelect.scss ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".-OptionSelect__2_Wfna-m- {\n  box-sizing: border-box;\n  position: relative;\n  width: 100%;\n  height: 36px;\n  border: 1px solid #666666;\n  font-size: 13px;\n  cursor: pointer; }\n  .-OptionSelect__2_Wfna-m- > div {\n    line-height: 34px;\n    padding: 0 8px; }\n  .-OptionSelect__2_Wfna-m- > ul {\n    display: none;\n    position: absolute;\n    top: calc(100% + 1px);\n    left: -1px;\n    width: 100%;\n    margin: 0;\n    padding: 0;\n    background-color: #ffffff;\n    border: 1px solid #666666;\n    border-top: none; }\n    .-OptionSelect__2_Wfna-m- > ul > li {\n      margin: 0;\n      padding: 5px 10px;\n      list-style: none; }\n      .-OptionSelect__2_Wfna-m- > ul > li:hover {\n        background-color: #ddd; }\n  .-OptionSelect__2_Wfna-m-:hover {\n    border: 1px solid #2980b9; }\n    .-OptionSelect__2_Wfna-m-:hover > ul {\n      border: 1px solid #2980b9;\n      border-top: none; }\n  .-OptionSelect__2_Wfna-m-.-IsOpened__9JmbEBFv- {\n    border-bottom-style: dashed; }\n    .-OptionSelect__2_Wfna-m-.-IsOpened__9JmbEBFv- > ul {\n      display: block; }\n", ""]);
+
+// exports
+exports.locals = {
+	"OptionSelect": "-OptionSelect__2_Wfna-m-",
+	"IsOpened": "-IsOpened__9JmbEBFv-"
 };
 
 /***/ }),
@@ -20661,7 +20745,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".-RadioButton__3jAcLNE6- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden;\n  vertical-align: bottom;\n  border-radius: 50%; }\n  .-RadioButton__3jAcLNE6-:hover {\n    border-color: #2980B9; }\n  .-RadioButton__3jAcLNE6-.-Checked__3eDPBBZh-:after {\n    content: \"\";\n    width: 16px;\n    height: 16px;\n    border: 1px solid #666666;\n    background-color: #666666;\n    border-radius: 50%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin: -8px 0 0 -8px;\n    box-sizing: border-box; }\n", ""]);
+exports.push([module.i, ".-RadioButton__3jAcLNE6- {\n  background-color: #ffffff;\n  border: 1px solid #666666;\n  cursor: pointer;\n  width: 26px;\n  height: 26px;\n  margin: 5px;\n  outline: 0;\n  position: relative;\n  overflow: hidden;\n  vertical-align: bottom;\n  border-radius: 50%; }\n  .-RadioButton__3jAcLNE6-:hover {\n    border-color: #2980b9; }\n  .-RadioButton__3jAcLNE6-.-Checked__3eDPBBZh-:after {\n    content: \"\";\n    width: 16px;\n    height: 16px;\n    border: 1px solid #666666;\n    background-color: #666666;\n    border-radius: 50%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin: -8px 0 0 -8px;\n    box-sizing: border-box; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -20683,7 +20767,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* default style */\n/* primary style */\n/* danger style */\n/* warning style */\n.-Button__MfisyIzC- {\n  box-sizing: border-box;\n  display: inline-block;\n  padding: 0 18px;\n  border: 1px solid transparent;\n  cursor: pointer;\n  height: 36px;\n  line-height: 34px;\n  overflow: hidden;\n  font-family: inherit; }\n  .-Button__MfisyIzC-:focus {\n    outline: 0; }\n  .-Button__MfisyIzC-.-Disabled__2Kw4XGRu- {\n    cursor: not-allowed; }\n  .-Button__MfisyIzC-.-Default__3dWQ58IS- {\n    color: #000000;\n    border-color: #666666;\n    background-color: #ffffff; }\n    .-Button__MfisyIzC-.-Default__3dWQ58IS-:hover {\n      color: #ffffff;\n      border-color: #666666;\n      background-color: #666666; }\n  .-Button__MfisyIzC-.-Primary__28Fjmkrb- {\n    color: #ffffff;\n    border-color: #2980B9;\n    background-color: #2980B9; }\n    .-Button__MfisyIzC-.-Primary__28Fjmkrb-:hover {\n      color: #2980B9;\n      border-color: #2980B9;\n      background-color: #ffffff; }\n  .-Button__MfisyIzC-.-Danger__10YtLg-u- {\n    color: #ffffff;\n    border-color: #FF5B5B;\n    background-color: #FF5B5B; }\n    .-Button__MfisyIzC-.-Danger__10YtLg-u-:hover {\n      color: #FF5B5B;\n      border-color: #FF5B5B;\n      background-color: #ffffff; }\n  .-Button__MfisyIzC-.-Warning__3ToeVWgr- {\n    color: #ffffff;\n    border-color: #FBA300;\n    background-color: #FBA300; }\n    .-Button__MfisyIzC-.-Warning__3ToeVWgr-:hover {\n      color: #FBA300;\n      border-color: #FBA300;\n      background-color: #ffffff; }\n", ""]);
+exports.push([module.i, "/* default style */\n/* primary style */\n/* danger style */\n/* warning style */\n.-Button__MfisyIzC- {\n  box-sizing: border-box;\n  display: inline-block;\n  padding: 0 18px;\n  border: 1px solid transparent;\n  cursor: pointer;\n  height: 36px;\n  line-height: 34px;\n  overflow: hidden;\n  font-family: inherit; }\n  .-Button__MfisyIzC-:focus {\n    outline: 0; }\n  .-Button__MfisyIzC-.-Disabled__2Kw4XGRu- {\n    cursor: not-allowed; }\n  .-Button__MfisyIzC-.-Default__3dWQ58IS- {\n    color: #000000;\n    border-color: #666666;\n    background-color: #ffffff; }\n    .-Button__MfisyIzC-.-Default__3dWQ58IS-:hover {\n      color: #ffffff;\n      border-color: #666666;\n      background-color: #666666; }\n  .-Button__MfisyIzC-.-Primary__28Fjmkrb- {\n    color: #ffffff;\n    border-color: #2980b9;\n    background-color: #2980b9; }\n    .-Button__MfisyIzC-.-Primary__28Fjmkrb-:hover {\n      color: #2980b9;\n      border-color: #2980b9;\n      background-color: #ffffff; }\n  .-Button__MfisyIzC-.-Danger__10YtLg-u- {\n    color: #ffffff;\n    border-color: #ff5b5b;\n    background-color: #ff5b5b; }\n    .-Button__MfisyIzC-.-Danger__10YtLg-u-:hover {\n      color: #ff5b5b;\n      border-color: #ff5b5b;\n      background-color: #ffffff; }\n  .-Button__MfisyIzC-.-Warning__3ToeVWgr- {\n    color: #ffffff;\n    border-color: #fba300;\n    background-color: #fba300; }\n    .-Button__MfisyIzC-.-Warning__3ToeVWgr-:hover {\n      color: #fba300;\n      border-color: #fba300;\n      background-color: #ffffff; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -20709,7 +20793,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".-TextInput__1gc6aVnX- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-TextInput__1gc6aVnX-:focus {\n    outline: none; }\n  .-TextInput__1gc6aVnX-:hover, .-TextInput__1gc6aVnX-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+exports.push([module.i, ".-TextInput__1gc6aVnX- {\n  box-sizing: border-box;\n  height: 36px;\n  border: 1px solid #666666;\n  line-height: 34px;\n  padding: 0 8px;\n  font-size: 13px;\n  font-family: inherit;\n  color: #000000; }\n  .-TextInput__1gc6aVnX-:focus {\n    outline: none; }\n  .-TextInput__1gc6aVnX-:hover, .-TextInput__1gc6aVnX-:focus {\n    border: 1px solid #2980b9; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -20730,7 +20814,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".-TimeInput__37NVrFRY- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-TimeInput__37NVrFRY-:focus {\n    outline: none; }\n  .-TimeInput__37NVrFRY-:hover, .-TimeInput__37NVrFRY-:focus {\n    border: 1px solid #2980B9; }\n", ""]);
+exports.push([module.i, ".-TimeInput__37NVrFRY- {\n  box-sizing: border-box;\n  height: 36px;\n  line-height: 34px;\n  border: 1px solid #666666;\n  padding: 0 8px;\n  font-family: inherit;\n  color: #000000; }\n  .-TimeInput__37NVrFRY-:focus {\n    outline: none; }\n  .-TimeInput__37NVrFRY-:hover, .-TimeInput__37NVrFRY-:focus {\n    border: 1px solid #2980b9; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -20751,7 +20835,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".-Examples__KhzGuuU-- {\n  display: flex;\n  flex-wrap: wrap;\n  margin: 0 auto;\n  padding: 0;\n  width: 1024px; }\n  .-Examples__KhzGuuU-- section {\n    display: flex;\n    flex-wrap: wrap; }\n    .-Examples__KhzGuuU-- section header {\n      width: 100%; }\n    .-Examples__KhzGuuU-- section > div {\n      margin: 10px 0 10px 10px; }\n", ""]);
+exports.push([module.i, ".-Examples__KhzGuuU-- {\n  margin: 0 auto;\n  width: 1024px; }\n  .-Examples__KhzGuuU-- > section {\n    display: flex;\n    flex-wrap: wrap; }\n    .-Examples__KhzGuuU-- > section > header {\n      width: 100%; }\n    .-Examples__KhzGuuU-- > section > div {\n      margin: 10px 0 10px 10px; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -20913,11 +20997,13 @@ exports.default = DateInput_1.default;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var classnames = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var Styles = __webpack_require__(/*! ./Styles.scss */ "./src/Components/Layout/Styles.scss");
 function Layout(props) {
     var children = props.children;
-    return React.createElement("div", { className: Styles.Layout }, children);
+    var className = classnames(Styles.Layout, props.className);
+    return React.createElement("div", { className: className }, children);
 }
 exports.default = Layout;
 
@@ -21061,6 +21147,110 @@ exports.default = NumberInput;
 Object.defineProperty(exports, "__esModule", { value: true });
 var NumberInput_1 = __webpack_require__(/*! ./NumberInput */ "./src/Components/NumberInput/NumberInput.tsx");
 exports.default = NumberInput_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Components/OptionSelect/OptionSelect.scss":
+/*!*******************************************************!*\
+  !*** ./src/Components/OptionSelect/OptionSelect.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/typings-for-css-modules-loader/lib?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!../../../node_modules/sass-loader/lib/loader.js!./OptionSelect.scss */ "./node_modules/typings-for-css-modules-loader/lib/index.js?modules&namedExport&localIdentName='[local]__[hash:base64:8]'!./node_modules/sass-loader/lib/loader.js!./src/Components/OptionSelect/OptionSelect.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/Components/OptionSelect/OptionSelect.tsx":
+/*!******************************************************!*\
+  !*** ./src/Components/OptionSelect/OptionSelect.tsx ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var classnames = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Styles = __webpack_require__(/*! ./OptionSelect.scss */ "./src/Components/OptionSelect/OptionSelect.scss");
+var OptionSelect = /** @class */ (function (_super) {
+    __extends(OptionSelect, _super);
+    function OptionSelect(props) {
+        var _this = _super.call(this, props) || this;
+        _this.toggle = function () {
+            _this.setState(function (prevState) { return ({ isOpened: !prevState.isOpened }); });
+        };
+        _this.select = function (value) {
+            _this.props.onChange(value);
+            _this.toggle();
+        };
+        _this.state = {
+            isOpened: false
+        };
+        return _this;
+    }
+    OptionSelect.prototype.render = function () {
+        var _this = this;
+        var _a;
+        var _b = this.props, value = _b.value, options = _b.options;
+        var selected = options.find(function (option) { return option.value === value; });
+        var className = classnames(Styles.OptionSelect, this.props.className, (_a = {},
+            _a[Styles.IsOpened] = this.state.isOpened,
+            _a));
+        return (React.createElement("div", { className: className },
+            React.createElement("div", { onClick: this.toggle }, selected ? selected.title : "Выберите элемент..."),
+            React.createElement("ul", null, options.map(function (option, index) { return (React.createElement("li", { key: index, onClick: function () { return _this.select(option.value); } }, option.title)); }))));
+    };
+    return OptionSelect;
+}(React.Component));
+exports.default = OptionSelect;
+
+
+/***/ }),
+
+/***/ "./src/Components/OptionSelect/index.ts":
+/*!**********************************************!*\
+  !*** ./src/Components/OptionSelect/index.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var OptionSelect_1 = __webpack_require__(/*! ./OptionSelect */ "./src/Components/OptionSelect/OptionSelect.tsx");
+exports.default = OptionSelect_1.default;
 
 
 /***/ }),
@@ -21494,14 +21684,39 @@ var DateAndTimeInputs = /** @class */ (function (_super) {
     };
     return DateAndTimeInputs;
 }(React.Component));
+var OptionsSelects = /** @class */ (function (_super) {
+    __extends(OptionsSelects, _super);
+    function OptionsSelects(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value1: "red"
+        };
+        return _this;
+    }
+    OptionsSelects.prototype.render = function () {
+        var _this = this;
+        var value1 = this.state.value1;
+        return (React.createElement("section", { style: { display: "block" } },
+            React.createElement("header", null, "Option selects"),
+            React.createElement("div", null,
+                React.createElement(library_index_1.OptionSelect, { value: value1, options: [
+                        { title: "Red", value: "red" },
+                        { title: "Green", value: "green" },
+                        { title: "Blue", value: "blue" }
+                    ], onChange: function (newValue) {
+                        return _this.setState({ value1: newValue });
+                    } }))));
+    };
+    return OptionsSelects;
+}(React.Component));
 function Examples() {
-    return (React.createElement("div", { className: Styles.Examples },
-        React.createElement(library_index_1.Layout, null,
-            React.createElement(SimpleButtons, null),
-            React.createElement(Inputs, null),
-            React.createElement(CheckButtons, null),
-            React.createElement(RadioButtonGroup, null),
-            React.createElement(DateAndTimeInputs, null))));
+    return (React.createElement(library_index_1.Layout, { className: Styles.Examples },
+        React.createElement(SimpleButtons, null),
+        React.createElement(Inputs, null),
+        React.createElement(CheckButtons, null),
+        React.createElement(RadioButtonGroup, null),
+        React.createElement(DateAndTimeInputs, null),
+        React.createElement(OptionsSelects, null)));
 }
 exports.default = Examples;
 
@@ -21747,6 +21962,8 @@ var TextInput_1 = __webpack_require__(/*! ./Components/TextInput */ "./src/Compo
 exports.TextInput = TextInput_1.default;
 var TimeInput_1 = __webpack_require__(/*! ./Components/TimeInput */ "./src/Components/TimeInput/index.ts");
 exports.TimeInput = TimeInput_1.default;
+var OptionSelect_1 = __webpack_require__(/*! ./Components/OptionSelect */ "./src/Components/OptionSelect/index.ts");
+exports.OptionSelect = OptionSelect_1.default;
 
 
 /***/ })

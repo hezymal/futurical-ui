@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "borderlands-ui - ReactJS UI Library",
   "dependencies": {
+    "@types/classnames": "^2.2.6",
     "classnames": "^2.2.6",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1"

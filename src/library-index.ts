@@ -6,6 +6,7 @@ import RadioButton from "./Components/RadioButton";
 import SimpleButton from "./Components/SimpleButton";
 import TextInput from "./Components/TextInput";
 import TimeInput from "./Components/TimeInput";
+import OptionSelect from "./Components/OptionSelect";
 
 export {
     CheckButton,
@@ -15,5 +16,6 @@ export {
     RadioButton,
     SimpleButton,
     TextInput,
-    TimeInput
+    TimeInput,
+    OptionSelect
 };

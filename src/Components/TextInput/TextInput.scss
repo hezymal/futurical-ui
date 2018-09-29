@@ -2,10 +2,11 @@
 
 .TextInput {
     box-sizing: border-box;
-    height: 36px;
-    line-height: 34px;
-    border: 1px solid ($base-secondary-color + #666666);
-    padding: 0 8px;
+    height: $component-height;
+    border: $component-border;
+    line-height: $component-height - 2px;
+    padding: 0 $component-padding;
+    font-size: $component-font-size;
     font-family: inherit;
     color: $base-secondary-color;
 

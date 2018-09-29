@@ -7,7 +7,8 @@ import {
     RadioButton,
     SimpleButton,
     TextInput,
-    TimeInput
+    TimeInput,
+    OptionSelect
 } from "../library-index";
 import * as Styles from "./Styles.scss";
 
@@ -206,17 +207,49 @@ class DateAndTimeInputs extends React.Component<{}, any> {
     }
 }
 
+class OptionsSelects extends React.Component<{}, any> {
+    constructor(props: {}) {
+        super(props);
+
+        this.state = {
+            value1: "red"
+        };
+    }
+
+    render() {
+        const { value1 } = this.state;
+
+        return (
+            <section style={{ display: "block" }}>
+                <header>Option selects</header>
+                <div>
+                    <OptionSelect
+                        value={value1}
+                        options={[
+                            { title: "Red", value: "red" },
+                            { title: "Green", value: "green" },
+                            { title: "Blue", value: "blue" }
+                        ]}
+                        onChange={newValue =>
+                            this.setState({ value1: newValue })
+                        }
+                    />
+                </div>
+            </section>
+        );
+    }
+}
+
 function Examples() {
     return (
-        <div className={Styles.Examples}>
-            <Layout>
-                <SimpleButtons />
-                <Inputs />
-                <CheckButtons />
-                <RadioButtonGroup />
-                <DateAndTimeInputs />
-            </Layout>
-        </div>
+        <Layout className={Styles.Examples}>
+            <SimpleButtons />
+            <Inputs />
+            <CheckButtons />
+            <RadioButtonGroup />
+            <DateAndTimeInputs />
+            <OptionsSelects />
+        </Layout>
     );
 }
 

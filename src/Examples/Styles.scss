@@ -1,15 +1,12 @@
 .Examples {
-    display: flex;
-    flex-wrap: wrap;
     margin: 0 auto;
-    padding: 0;
     width: 1024px;
 
-    section {
+    > section {
         display: flex;
         flex-wrap: wrap;
     
-        header {
+        > header {
             width: 100%;
         }
 

@@ -4,6 +4,15 @@ $base-square-size: $base-line-height - 10px;
 
 $base-primary-color: #ffffff;
 $base-secondary-color: #000000;
-$base-alpha-color: #2980B9;
-$base-beta-color: #FF5B5B;
-$base-gamma-color: #FBA300;
+$base-alpha-color: #2980b9;
+$base-beta-color: #ff5b5b;
+$base-gamma-color: #fba300;
+
+// component //
+
+$component-background: $base-primary-color;
+$component-height: 36px;
+$component-padding: 8px;
+$component-border: 1px solid ($base-secondary-color + #666666);
+$component-border-hover: 1px solid $base-alpha-color;
+$component-font-size: 13px;
