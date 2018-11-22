@@ -7,6 +7,7 @@ import SimpleButton from "./Components/SimpleButton";
 import TextInput from "./Components/TextInput";
 import TimeInput from "./Components/TimeInput";
 import OptionSelect from "./Components/OptionSelect";
+import VirtualTable from "./Components/VirtualTable";
 
 export {
     CheckButton,
@@ -17,5 +18,6 @@ export {
     SimpleButton,
     TextInput,
     TimeInput,
-    OptionSelect
+    OptionSelect,
+    VirtualTable,
 };

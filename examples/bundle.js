@@ -21545,6 +21545,306 @@ exports.default = TimeInput_1.default;
 
 /***/ }),
 
+/***/ "./src/Components/VirtualTable/VirtualTable.tsx":
+/*!******************************************************!*\
+  !*** ./src/Components/VirtualTable/VirtualTable.tsx ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function clearSelection() {
+    if (window.getSelection().empty) {
+        window.getSelection().empty();
+    }
+    else if (window.getSelection().removeAllRanges) {
+        window.getSelection().removeAllRanges();
+    }
+}
+var headerHeight = 50;
+var HeadComponent = /** @class */ (function (_super) {
+    __extends(HeadComponent, _super);
+    function HeadComponent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.onDocumentMouseUp = _this.onDocumentMouseUp.bind(_this);
+        _this.onDocumentMouseMove = _this.onDocumentMouseMove.bind(_this);
+        _this.onResizerDragStart = _this.onResizerDragStart.bind(_this);
+        _this.onResizerMouseDown = _this.onResizerMouseDown.bind(_this);
+        _this.state = {
+            columns: props.columns,
+            resizerIndex: -1,
+            resizerPosition: [],
+        };
+        return _this;
+    }
+    HeadComponent.prototype.componentWillMount = function () {
+        window.document.documentElement.addEventListener("mouseup", this.onDocumentMouseUp);
+        window.document.documentElement.addEventListener("mousemove", this.onDocumentMouseMove);
+    };
+    HeadComponent.prototype.componentWillUnmount = function () {
+        window.document.documentElement.removeEventListener("mouseup", this.onDocumentMouseUp);
+        window.document.documentElement.removeEventListener("mousemove", this.onDocumentMouseMove);
+    };
+    HeadComponent.prototype.render = function () {
+        var _this = this;
+        var columns = this.state.columns;
+        var tableStyle = {
+            border: "none",
+            borderSpacing: 0,
+            width: "100%",
+            height: headerHeight + "px",
+        };
+        var headerCellStyle = {
+            position: "relative",
+            height: headerHeight + "px",
+            margin: 0,
+            padding: "0 5px",
+        };
+        var resizerStyle = {
+            position: "absolute",
+            top: "0px",
+            right: "0px",
+            display: "inline-block",
+            width: "6px",
+            height: "100%",
+            cursor: "e-resize",
+            backgroundColor: "black"
+        };
+        // draw headers
+        var headers = [];
+        var columnCount = columns.length;
+        var spaceColumnWidth = 1024;
+        var _loop_1 = function (index) {
+            var column = columns[index];
+            spaceColumnWidth -= column.width;
+            headers.push(React.createElement("td", { key: column.id, style: __assign({}, headerCellStyle, { width: column.width }) },
+                column.title,
+                React.createElement("span", { style: resizerStyle, onDragStart: this_1.onResizerDragStart, onMouseDown: function (e) { return _this.onResizerMouseDown(e, index); } })));
+        };
+        var this_1 = this;
+        for (var index = 0; index < columnCount; index++) {
+            _loop_1(index);
+        }
+        if (spaceColumnWidth > 0) {
+            headers.push(React.createElement("td", { key: "space-column", style: __assign({}, headerCellStyle, { width: spaceColumnWidth }) }));
+        }
+        return (React.createElement("table", { style: tableStyle },
+            React.createElement("thead", null,
+                React.createElement("tr", null, headers))));
+    };
+    HeadComponent.prototype.onResizerMouseDown = function (e, index) {
+        console.log("down", e.pageX);
+        clearSelection();
+        this.setState({
+            resizerIndex: index,
+            resizerPosition: [e.pageX, e.pageY],
+        });
+    };
+    HeadComponent.prototype.onDocumentMouseMove = function (e) {
+        var resizerIndex = this.state.resizerIndex;
+        if (resizerIndex !== -1) {
+            clearSelection();
+            var pageX_1 = e.pageX, pageY = e.pageY;
+            var _a = __read(this.state.resizerPosition, 2), posX_1 = _a[0], posY = _a[1];
+            var columns = this.state.columns;
+            console.log("up", pageX_1);
+            this.setState({
+                //resizerIndex: -1,
+                resizerPosition: [e.pageX, e.pageY],
+                columns: columns.map(function (column, index) {
+                    if (index === resizerIndex) {
+                        var newWidth = column.width + (pageX_1 - posX_1);
+                        return __assign({}, column, { width: newWidth });
+                    }
+                    return column;
+                }),
+            });
+        }
+    };
+    HeadComponent.prototype.onResizerDragStart = function (e) {
+        return false;
+    };
+    HeadComponent.prototype.onDocumentMouseUp = function (e) {
+        var resizerIndex = this.state.resizerIndex;
+        if (resizerIndex !== -1) {
+            clearSelection();
+            console.log("up");
+            this.setState({
+                resizerIndex: -1,
+            });
+        }
+    };
+    return HeadComponent;
+}(React.Component));
+var BodyComponent = /** @class */ (function (_super) {
+    __extends(BodyComponent, _super);
+    function BodyComponent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.onScroll = _this.onScroll.bind(_this);
+        _this.state = {
+            scrollTop: 0,
+        };
+        return _this;
+    }
+    BodyComponent.prototype.render = function () {
+        var e_1, _a;
+        var _b = this.props, columns = _b.columns, data = _b.data, tableHeight = _b.tableHeight, _c = _b.rowHeight, rowHeight = _c === void 0 ? 50 : _c;
+        var scrollTop = this.state.scrollTop;
+        var body = [];
+        // calculate indexes and sizes
+        var height = tableHeight - headerHeight;
+        var topCount = Math.floor(scrollTop / rowHeight);
+        var middleCount = Math.ceil((scrollTop + height) / rowHeight) - topCount;
+        var endCount = data.length - topCount - middleCount;
+        // top space
+        var topSpaceStyle = {
+            backgroundColor: "green",
+            height: (topCount * rowHeight) + "px",
+            margin: 0,
+            padding: 0,
+        };
+        body.push(React.createElement("tr", { key: "top-space" },
+            React.createElement("td", { colSpan: columns.length, style: topSpaceStyle })));
+        // middle
+        var cellStyle = {
+            height: rowHeight + "px",
+            margin: 0,
+            padding: 0,
+        };
+        for (var offset = 0; offset < middleCount; offset++) {
+            var index = topCount + offset;
+            var item = data[index];
+            var row = [];
+            try {
+                for (var columns_1 = __values(columns), columns_1_1 = columns_1.next(); !columns_1_1.done; columns_1_1 = columns_1.next()) {
+                    var column = columns_1_1.value;
+                    var value = item ? item[column.id] : null;
+                    row.push(React.createElement("td", { key: column.id + index, style: cellStyle }, column.getValue ? column.getValue(value, item, column) : value));
+                }
+            }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+            finally {
+                try {
+                    if (columns_1_1 && !columns_1_1.done && (_a = columns_1.return)) _a.call(columns_1);
+                }
+                finally { if (e_1) throw e_1.error; }
+            }
+            body.push(React.createElement("tr", { key: index }, row));
+        }
+        // bottom space
+        var bottomSpaceStyle = {
+            backgroundColor: "green",
+            height: endCount * rowHeight + "px",
+            margin: 0,
+            padding: 0,
+        };
+        body.push(React.createElement("tr", { key: "bottom-space" },
+            React.createElement("td", { colSpan: columns.length, style: bottomSpaceStyle })));
+        // body
+        var style = {
+            height: height + "px",
+            overflow: "auto",
+        };
+        var tableStyle = {
+            border: "none",
+            borderSpacing: 0,
+            width: "100%",
+        };
+        return (React.createElement("div", { style: style, onScroll: this.onScroll },
+            React.createElement("table", { style: tableStyle },
+                React.createElement("tbody", null, body))));
+    };
+    BodyComponent.prototype.onScroll = function (e) {
+        this.setState({ scrollTop: e.currentTarget.scrollTop });
+    };
+    return BodyComponent;
+}(React.Component));
+var VirtualTable = /** @class */ (function (_super) {
+    __extends(VirtualTable, _super);
+    function VirtualTable(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {};
+        return _this;
+    }
+    VirtualTable.prototype.render = function () {
+        var _a = this.props, columns = _a.columns, data = _a.data, height = _a.height, rowHeight = _a.rowHeight;
+        var style = {
+            height: height + "px",
+        };
+        return (React.createElement("div", { style: style },
+            React.createElement(HeadComponent, { columns: columns }),
+            React.createElement(BodyComponent, { columns: columns, data: data, tableHeight: height, rowHeight: rowHeight })));
+    };
+    return VirtualTable;
+}(React.Component));
+exports.default = VirtualTable;
+
+
+/***/ }),
+
+/***/ "./src/Components/VirtualTable/index.ts":
+/*!**********************************************!*\
+  !*** ./src/Components/VirtualTable/index.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var VirtualTable_1 = __webpack_require__(/*! ./VirtualTable */ "./src/Components/VirtualTable/VirtualTable.tsx");
+exports.default = VirtualTable_1.default;
+
+
+/***/ }),
+
 /***/ "./src/Examples/Examples.tsx":
 /*!***********************************!*\
   !*** ./src/Examples/Examples.tsx ***!
@@ -21709,6 +22009,47 @@ var OptionsSelects = /** @class */ (function (_super) {
     };
     return OptionsSelects;
 }(React.Component));
+var Tables = /** @class */ (function (_super) {
+    __extends(Tables, _super);
+    function Tables(props) {
+        var _this = _super.call(this, props) || this;
+        _this.generateData = _this.generateData.bind(_this);
+        _this.state = {
+            data: _this.generateData(20),
+        };
+        return _this;
+    }
+    Tables.prototype.render = function () {
+        var data = this.state.data;
+        return (React.createElement("section", { style: { display: "block" } },
+            React.createElement("header", null, "Tables"),
+            React.createElement("div", null,
+                React.createElement(library_index_1.VirtualTable, { columns: [
+                        {
+                            id: "id",
+                            title: "#",
+                            getValue: function (value) { console.log(value); return value; },
+                            width: 100,
+                        },
+                        {
+                            id: "name",
+                            title: "Name",
+                            width: 100,
+                        },
+                    ], data: data, height: 200, rowHeight: 50 }))));
+    };
+    Tables.prototype.generateData = function (size) {
+        var data = [];
+        for (var i = 1; i <= size; i++) {
+            data.push({
+                id: i,
+                name: i.toString(),
+            });
+        }
+        return data;
+    };
+    return Tables;
+}(React.Component));
 function Examples() {
     return (React.createElement(library_index_1.Layout, { className: Styles.Examples },
         React.createElement(SimpleButtons, null),
@@ -21716,7 +22057,8 @@ function Examples() {
         React.createElement(CheckButtons, null),
         React.createElement(RadioButtonGroup, null),
         React.createElement(DateAndTimeInputs, null),
-        React.createElement(OptionsSelects, null)));
+        React.createElement(OptionsSelects, null),
+        React.createElement(Tables, null)));
 }
 exports.default = Examples;
 
@@ -21964,6 +22306,8 @@ var TimeInput_1 = __webpack_require__(/*! ./Components/TimeInput */ "./src/Compo
 exports.TimeInput = TimeInput_1.default;
 var OptionSelect_1 = __webpack_require__(/*! ./Components/OptionSelect */ "./src/Components/OptionSelect/index.ts");
 exports.OptionSelect = OptionSelect_1.default;
+var VirtualTable_1 = __webpack_require__(/*! ./Components/VirtualTable */ "./src/Components/VirtualTable/index.ts");
+exports.VirtualTable = VirtualTable_1.default;
 
 
 /***/ })

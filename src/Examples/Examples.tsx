@@ -8,7 +8,8 @@ import {
     SimpleButton,
     TextInput,
     TimeInput,
-    OptionSelect
+    OptionSelect,
+    VirtualTable
 } from "../library-index";
 import * as Styles from "./Styles.scss";
 
@@ -240,6 +241,61 @@ class OptionsSelects extends React.Component<{}, any> {
     }
 }
 
+class Tables extends React.Component<{}, any> {
+    constructor(props: {}) {
+        super(props);
+
+        this.generateData = this.generateData.bind(this);
+
+        this.state = {
+            data: this.generateData(20),
+        };
+    }
+
+    render() {
+        const { data } = this.state;
+
+        return (
+            <section style={{ display: "block" }}>
+                <header>Tables</header>
+                <div>
+                    <VirtualTable
+                        columns={[
+                            { 
+                                id: "id", 
+                                title: "#", 
+                                getValue: (value) => { console.log(value); return value; },
+                                width: 100,
+                            },
+                            { 
+                                id: "name", 
+                                title: "Name",
+                                width: 100,
+                            },
+                        ]}
+                        data={data}
+                        height={200}
+                        rowHeight={50}
+                    />
+                </div>
+            </section>
+        );
+    }
+
+    private generateData(size: number) {
+        const data: any[] = [];
+
+        for (let i = 1; i <= size; i++) {
+            data.push({
+                id: i,
+                name: i.toString(),
+            });
+        }
+
+        return data;
+    }
+}
+
 function Examples() {
     return (
         <Layout className={Styles.Examples}>
@@ -249,6 +305,7 @@ function Examples() {
             <RadioButtonGroup />
             <DateAndTimeInputs />
             <OptionsSelects />
+            <Tables />
         </Layout>
     );
 }
