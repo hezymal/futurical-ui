@@ -21572,22 +21572,6 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     }
     return t;
 };
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
 var __values = (this && this.__values) || function (o) {
     var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
     if (m) return m.call(o);
@@ -21613,28 +21597,11 @@ var HeadComponent = /** @class */ (function (_super) {
     __extends(HeadComponent, _super);
     function HeadComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.onDocumentMouseUp = _this.onDocumentMouseUp.bind(_this);
-        _this.onDocumentMouseMove = _this.onDocumentMouseMove.bind(_this);
-        _this.onResizerDragStart = _this.onResizerDragStart.bind(_this);
-        _this.onResizerMouseDown = _this.onResizerMouseDown.bind(_this);
-        _this.state = {
-            columns: props.columns,
-            resizerIndex: -1,
-            resizerPosition: [],
-        };
+        _this.state = {};
         return _this;
     }
-    HeadComponent.prototype.componentWillMount = function () {
-        window.document.documentElement.addEventListener("mouseup", this.onDocumentMouseUp);
-        window.document.documentElement.addEventListener("mousemove", this.onDocumentMouseMove);
-    };
-    HeadComponent.prototype.componentWillUnmount = function () {
-        window.document.documentElement.removeEventListener("mouseup", this.onDocumentMouseUp);
-        window.document.documentElement.removeEventListener("mousemove", this.onDocumentMouseMove);
-    };
     HeadComponent.prototype.render = function () {
-        var _this = this;
-        var columns = this.state.columns;
+        var _a = this.props, columns = _a.columns, onResizerMouseDown = _a.onResizerMouseDown, onResizerDragStart = _a.onResizerDragStart;
         var tableStyle = {
             border: "none",
             borderSpacing: 0,
@@ -21646,6 +21613,7 @@ var HeadComponent = /** @class */ (function (_super) {
             height: headerHeight + "px",
             margin: 0,
             padding: "0 5px",
+            boxSizing: "border-box",
         };
         var resizerStyle = {
             position: "absolute",
@@ -21660,66 +21628,26 @@ var HeadComponent = /** @class */ (function (_super) {
         // draw headers
         var headers = [];
         var columnCount = columns.length;
-        var spaceColumnWidth = 1024;
+        var tableWidth = 0;
+        var spaceColumnWidth = 1014;
         var _loop_1 = function (index) {
             var column = columns[index];
             spaceColumnWidth -= column.width;
+            tableWidth += column.width;
             headers.push(React.createElement("td", { key: column.id, style: __assign({}, headerCellStyle, { width: column.width }) },
                 column.title,
-                React.createElement("span", { style: resizerStyle, onDragStart: this_1.onResizerDragStart, onMouseDown: function (e) { return _this.onResizerMouseDown(e, index); } })));
+                React.createElement("span", { style: resizerStyle, onDragStart: onResizerDragStart, onMouseDown: function (e) { return onResizerMouseDown(e, index); } })));
         };
-        var this_1 = this;
         for (var index = 0; index < columnCount; index++) {
             _loop_1(index);
         }
         if (spaceColumnWidth > 0) {
+            tableWidth += spaceColumnWidth;
             headers.push(React.createElement("td", { key: "space-column", style: __assign({}, headerCellStyle, { width: spaceColumnWidth }) }));
         }
-        return (React.createElement("table", { style: tableStyle },
+        return (React.createElement("table", { style: __assign({}, tableStyle, { width: tableWidth }) },
             React.createElement("thead", null,
                 React.createElement("tr", null, headers))));
-    };
-    HeadComponent.prototype.onResizerMouseDown = function (e, index) {
-        console.log("down", e.pageX);
-        clearSelection();
-        this.setState({
-            resizerIndex: index,
-            resizerPosition: [e.pageX, e.pageY],
-        });
-    };
-    HeadComponent.prototype.onDocumentMouseMove = function (e) {
-        var resizerIndex = this.state.resizerIndex;
-        if (resizerIndex !== -1) {
-            clearSelection();
-            var pageX_1 = e.pageX, pageY = e.pageY;
-            var _a = __read(this.state.resizerPosition, 2), posX_1 = _a[0], posY = _a[1];
-            var columns = this.state.columns;
-            console.log("up", pageX_1);
-            this.setState({
-                //resizerIndex: -1,
-                resizerPosition: [e.pageX, e.pageY],
-                columns: columns.map(function (column, index) {
-                    if (index === resizerIndex) {
-                        var newWidth = column.width + (pageX_1 - posX_1);
-                        return __assign({}, column, { width: newWidth });
-                    }
-                    return column;
-                }),
-            });
-        }
-    };
-    HeadComponent.prototype.onResizerDragStart = function (e) {
-        return false;
-    };
-    HeadComponent.prototype.onDocumentMouseUp = function (e) {
-        var resizerIndex = this.state.resizerIndex;
-        if (resizerIndex !== -1) {
-            clearSelection();
-            console.log("up");
-            this.setState({
-                resizerIndex: -1,
-            });
-        }
     };
     return HeadComponent;
 }(React.Component));
@@ -21758,15 +21686,21 @@ var BodyComponent = /** @class */ (function (_super) {
             margin: 0,
             padding: 0,
         };
+        var tableWidth = 0;
         for (var offset = 0; offset < middleCount; offset++) {
             var index = topCount + offset;
             var item = data[index];
             var row = [];
+            var spaceColumnWidth = 1014;
             try {
                 for (var columns_1 = __values(columns), columns_1_1 = columns_1.next(); !columns_1_1.done; columns_1_1 = columns_1.next()) {
                     var column = columns_1_1.value;
                     var value = item ? item[column.id] : null;
-                    row.push(React.createElement("td", { key: column.id + index, style: cellStyle }, column.getValue ? column.getValue(value, item, column) : value));
+                    spaceColumnWidth -= column.width;
+                    if (offset === 0) {
+                        tableWidth += column.width;
+                    }
+                    row.push(React.createElement("td", { key: column.id + index, style: __assign({}, cellStyle, { width: column.width + "px" }) }, column.getValue ? column.getValue(value, item, column) : value));
                 }
             }
             catch (e_1_1) { e_1 = { error: e_1_1 }; }
@@ -21776,8 +21710,15 @@ var BodyComponent = /** @class */ (function (_super) {
                 }
                 finally { if (e_1) throw e_1.error; }
             }
+            if (spaceColumnWidth > 0) {
+                if (offset === 0) {
+                    tableWidth += spaceColumnWidth;
+                }
+                row.push(React.createElement("td", { key: "space-column", style: __assign({}, cellStyle, { width: spaceColumnWidth + "px" }) }));
+            }
             body.push(React.createElement("tr", { key: index }, row));
         }
+        tableWidth = tableWidth || 1014;
         // bottom space
         var bottomSpaceStyle = {
             backgroundColor: "green",
@@ -21790,12 +21731,12 @@ var BodyComponent = /** @class */ (function (_super) {
         // body
         var style = {
             height: height + "px",
-            overflow: "auto",
+            width: tableWidth + "px",
+            overflowY: "scroll",
         };
         var tableStyle = {
             border: "none",
             borderSpacing: 0,
-            width: "100%",
         };
         return (React.createElement("div", { style: style, onScroll: this.onScroll },
             React.createElement("table", { style: tableStyle },
@@ -21810,17 +21751,71 @@ var VirtualTable = /** @class */ (function (_super) {
     __extends(VirtualTable, _super);
     function VirtualTable(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = {};
+        _this.onDocumentMouseUp = _this.onDocumentMouseUp.bind(_this);
+        _this.onDocumentMouseMove = _this.onDocumentMouseMove.bind(_this);
+        _this.onResizerDragStart = _this.onResizerDragStart.bind(_this);
+        _this.onResizerMouseDown = _this.onResizerMouseDown.bind(_this);
+        _this.state = {
+            columns: props.columns,
+            resizerIndex: -1,
+            resizerX: null,
+        };
         return _this;
     }
+    VirtualTable.prototype.componentWillMount = function () {
+        window.document.documentElement.addEventListener("mouseup", this.onDocumentMouseUp);
+        window.document.documentElement.addEventListener("mousemove", this.onDocumentMouseMove);
+    };
+    VirtualTable.prototype.componentWillUnmount = function () {
+        window.document.documentElement.removeEventListener("mouseup", this.onDocumentMouseUp);
+        window.document.documentElement.removeEventListener("mousemove", this.onDocumentMouseMove);
+    };
     VirtualTable.prototype.render = function () {
-        var _a = this.props, columns = _a.columns, data = _a.data, height = _a.height, rowHeight = _a.rowHeight;
+        var _a = this.props, data = _a.data, height = _a.height, rowHeight = _a.rowHeight;
+        var columns = this.state.columns;
         var style = {
-            height: height + "px",
+            overflowX: "scroll",
+            width: "100%",
+            height: height + 17 + "px",
         };
         return (React.createElement("div", { style: style },
-            React.createElement(HeadComponent, { columns: columns }),
+            React.createElement(HeadComponent, { columns: columns, onResizerDragStart: this.onResizerDragStart, onResizerMouseDown: this.onResizerMouseDown }),
             React.createElement(BodyComponent, { columns: columns, data: data, tableHeight: height, rowHeight: rowHeight })));
+    };
+    VirtualTable.prototype.onResizerMouseDown = function (e, index) {
+        clearSelection();
+        this.setState({
+            resizerIndex: index,
+            resizerX: e.pageX,
+        });
+    };
+    VirtualTable.prototype.onDocumentMouseMove = function (e) {
+        var resizerIndex = this.state.resizerIndex;
+        if (resizerIndex !== -1) {
+            clearSelection();
+            var resizerX_1 = this.state.resizerX;
+            var columns = this.state.columns;
+            this.setState({
+                resizerX: e.pageX,
+                columns: columns.map(function (column, index) {
+                    if (index === resizerIndex) {
+                        var newWidth = column.width + (e.pageX - resizerX_1);
+                        return __assign({}, column, { width: newWidth });
+                    }
+                    return column;
+                }),
+            });
+        }
+    };
+    VirtualTable.prototype.onResizerDragStart = function (e) {
+        return false;
+    };
+    VirtualTable.prototype.onDocumentMouseUp = function (e) {
+        var resizerIndex = this.state.resizerIndex;
+        if (resizerIndex !== -1) {
+            clearSelection();
+            this.setState({ resizerIndex: -1 });
+        }
     };
     return VirtualTable;
 }(React.Component));

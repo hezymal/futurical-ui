@@ -18,12 +18,11 @@ interface IColumn<TItem> {
 namespace HeadComponent {
     export interface IProps<TItem> {
         columns: IColumn<TItem>[];
+        onResizerMouseDown: (e: React.MouseEvent, columnIndex: number) => void;
+        onResizerDragStart: (e: React.MouseEvent) => void;
     }
 
-    export interface IState<TItem> {
-        columns: IColumn<TItem>[];
-        resizerIndex: number;
-        resizerPosition: number[];
+    export interface IState {
     }
 }
 
@@ -48,40 +47,25 @@ namespace VirtualTable {
         rowHeight?: number;
     }
 
-    export interface IState {
+    export interface IState<TItem> {
+        columns: IColumn<TItem>[];
+        resizerIndex: number;
+        resizerX: number;
     }
 }
 
 const headerHeight = 50;
 
-class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, HeadComponent.IState<TItem>> {
+class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, HeadComponent.IState> {
     public constructor(props: HeadComponent.IProps<TItem>) {
         super(props);
 
-        this.onDocumentMouseUp = this.onDocumentMouseUp.bind(this);
-        this.onDocumentMouseMove = this.onDocumentMouseMove.bind(this);
-        this.onResizerDragStart = this.onResizerDragStart.bind(this);
-        this.onResizerMouseDown = this.onResizerMouseDown.bind(this);
-
         this.state = {
-            columns: props.columns,
-            resizerIndex: -1,
-            resizerPosition: [],
         };
     }
 
-    public componentWillMount() {
-        window.document.documentElement.addEventListener("mouseup", this.onDocumentMouseUp);
-        window.document.documentElement.addEventListener("mousemove", this.onDocumentMouseMove);
-    }
-
-    public componentWillUnmount() {
-        window.document.documentElement.removeEventListener("mouseup", this.onDocumentMouseUp);
-        window.document.documentElement.removeEventListener("mousemove", this.onDocumentMouseMove);
-    }
-
     public render() {
-        const { columns } = this.state;
+        const { columns, onResizerMouseDown, onResizerDragStart } = this.props;
 
         const tableStyle: React.CSSProperties = {
             border: "none",
@@ -95,6 +79,7 @@ class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, 
             height: headerHeight + "px",
             margin: 0,
             padding: "0 5px",
+            boxSizing: "border-box",
         };
 
         const resizerStyle: React.CSSProperties = {
@@ -111,31 +96,34 @@ class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, 
         // draw headers
         const headers: JSX.Element[] = [];
         const columnCount = columns.length;
-        let spaceColumnWidth = 1024;
+        let tableWidth = 0;
+        let spaceColumnWidth = 1014;
         for (let index = 0; index < columnCount; index++) {
             const column = columns[index];
 
             spaceColumnWidth -= column.width;
+            tableWidth += column.width;
 
             headers.push(
                 <td key={column.id} style={{ ...headerCellStyle, width: column.width }}>
                     {column.title}
                     <span
                         style={resizerStyle}
-                        onDragStart={this.onResizerDragStart}
-                        onMouseDown={(e) => this.onResizerMouseDown(e, index)}
+                        onDragStart={onResizerDragStart}
+                        onMouseDown={(e) => onResizerMouseDown(e, index)}
                     />
                 </td>
             );
         }
         if (spaceColumnWidth > 0) {
+            tableWidth += spaceColumnWidth;
             headers.push(
                 <td key="space-column" style={{ ...headerCellStyle, width: spaceColumnWidth }} />
             );
         }
 
         return (
-            <table style={tableStyle}>
+            <table style={{ ...tableStyle, width: tableWidth }}>
                 <thead>
                     <tr>
                         {headers}
@@ -143,65 +131,6 @@ class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, 
                 </thead>
             </table>
         );
-    }
-
-    private onResizerMouseDown(e: React.MouseEvent, index: number) {
-        console.log("down", e.pageX);
-
-        clearSelection();
-
-        this.setState({
-            resizerIndex: index,
-            resizerPosition: [e.pageX, e.pageY],
-        });
-    }
-
-    private onDocumentMouseMove(e: MouseEvent) {
-
-        
-        const resizerIndex = this.state.resizerIndex;
-        
-        if (resizerIndex !== -1) {
-            clearSelection();
-
-            const { pageX, pageY } = e;
-            const [posX, posY] = this.state.resizerPosition;
-            const columns = this.state.columns;
-
-            console.log("up", pageX);
-
-            this.setState({
-                //resizerIndex: -1,
-                resizerPosition: [e.pageX, e.pageY],
-                columns: columns.map((column, index) => {
-                    if (index === resizerIndex) {
-                        const newWidth = column.width + (pageX - posX);
-
-                        return { ...column, width: newWidth };
-                    }
-
-                    return column;
-                }),
-            });
-        }
-
-    }
-
-    private onResizerDragStart(e: React.MouseEvent) {
-        return false;
-    }
-
-    private onDocumentMouseUp(e: MouseEvent) {
-        const resizerIndex = this.state.resizerIndex;
-        if (resizerIndex !== -1) {
-            clearSelection();
-
-            console.log("up");
-
-            this.setState({
-                resizerIndex: -1,
-            });
-        }
     }
 }
 
@@ -255,23 +184,39 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
             margin: 0,
             padding: 0,
         };
+        let tableWidth = 0;
         for (let offset = 0; offset < middleCount; offset++) {
             const index = topCount + offset;
             const item: any = data[index];
             const row: JSX.Element[] = [];
 
+            let spaceColumnWidth = 1014;
             for (const column of columns) {
                 const value = item ? item[column.id] : null;
 
+                spaceColumnWidth -= column.width;
+                if (offset === 0) {
+                    tableWidth += column.width;
+                }
+
                 row.push(
-                    <td key={column.id + index} style={cellStyle}>
+                    <td key={column.id + index} style={{ ...cellStyle, width: column.width + "px" }}>
                         {column.getValue ? column.getValue(value, item, column) : value}
                     </td>
+                );
+            }
+            if (spaceColumnWidth > 0) {
+                if (offset === 0) {
+                    tableWidth += spaceColumnWidth;
+                }
+                row.push(
+                    <td key="space-column" style={{ ...cellStyle, width: spaceColumnWidth + "px" }} />
                 );
             }
 
             body.push(<tr key={index}>{row}</tr>);
         }
+        tableWidth = tableWidth || 1014;
 
         // bottom space
         const bottomSpaceStyle: React.CSSProperties = {
@@ -289,12 +234,12 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
         // body
         const style: React.CSSProperties = {
             height: height + "px",
-            overflow: "auto",
+            width: tableWidth + "px",
+            overflowY: "scroll",
         };
         const tableStyle: React.CSSProperties = {
             border: "none",
             borderSpacing: 0,
-            width: "100%",
         };
         return (
             <div style={style} onScroll={this.onScroll}>
@@ -312,29 +257,53 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
     }
 }
 
-class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, VirtualTable.IState> {
+class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, VirtualTable.IState<TItem>> {
     public constructor(props: VirtualTable.IProps<TItem>) {
         super(props);
 
-        this.state = {};
+        this.onDocumentMouseUp = this.onDocumentMouseUp.bind(this);
+        this.onDocumentMouseMove = this.onDocumentMouseMove.bind(this);
+        this.onResizerDragStart = this.onResizerDragStart.bind(this);
+        this.onResizerMouseDown = this.onResizerMouseDown.bind(this);
+
+        this.state = {
+            columns: props.columns,
+            resizerIndex: -1,
+            resizerX: null,
+        };
+    }
+
+    public componentWillMount() {
+        window.document.documentElement.addEventListener("mouseup", this.onDocumentMouseUp);
+        window.document.documentElement.addEventListener("mousemove", this.onDocumentMouseMove);
+    }
+
+    public componentWillUnmount() {
+        window.document.documentElement.removeEventListener("mouseup", this.onDocumentMouseUp);
+        window.document.documentElement.removeEventListener("mousemove", this.onDocumentMouseMove);
     }
 
     public render() {
         const {
-            columns,
             data,
             height,
             rowHeight,
         } = this.props;
 
+        const columns = this.state.columns;
+
         const style: React.CSSProperties = {
-            height: height + "px",
+            overflowX: "scroll",
+            width: "100%",
+            height: height + 17 + "px",
         };
 
         return (
             <div style={style}>
                 <HeadComponent
                     columns={columns}
+                    onResizerDragStart={this.onResizerDragStart}
+                    onResizerMouseDown={this.onResizerMouseDown}
                 />
                 <BodyComponent
                     columns={columns}
@@ -344,6 +313,53 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
                 />
             </div>
         );
+    }
+
+    private onResizerMouseDown(e: React.MouseEvent, index: number) {
+        clearSelection();
+
+        this.setState({
+            resizerIndex: index,
+            resizerX: e.pageX,
+        });
+    }
+
+    private onDocumentMouseMove(e: MouseEvent) {
+        const resizerIndex = this.state.resizerIndex;
+        
+        if (resizerIndex !== -1) {
+            clearSelection();
+
+            const resizerX = this.state.resizerX;
+            const columns = this.state.columns;
+
+            this.setState({
+                resizerX: e.pageX,
+                columns: columns.map((column, index) => {
+                    if (index === resizerIndex) {
+                        const newWidth = column.width + (e.pageX - resizerX);
+
+                        return { ...column, width: newWidth };
+                    }
+
+                    return column;
+                }),
+            });
+        }
+    }
+
+    private onResizerDragStart(e: React.MouseEvent) {
+        return false;
+    }
+
+    private onDocumentMouseUp(e: MouseEvent) {
+        const resizerIndex = this.state.resizerIndex;
+
+        if (resizerIndex !== -1) {
+            clearSelection();
+
+            this.setState({ resizerIndex: -1 });
+        }
     }
 }
 
