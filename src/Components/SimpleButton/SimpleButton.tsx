@@ -1,7 +1,6 @@
 import * as React from "react";
-
+import * as classnames from "classnames";
 import Button from "Primitives/Button";
-import { addClassName } from "../../Utils";
 import * as Styles from "./SimpleButton.scss";
 
 class Props {
@@ -14,10 +13,9 @@ class Props {
 function SimpleButton(props: Props): JSX.Element {
     const { title, onClick, disabled = false, style = "Default" } = props;
 
-    const className =
-        Styles.Button +
-        addClassName(!!Styles[style], Styles[style]) +
-        addClassName(disabled, Styles.Disabled);
+    const className = classnames(Styles.Button, Styles[style], {
+        [Styles.Disabled]: disabled
+    });
 
     return (
         <Button className={className} onClick={event => onClick(event)}>

@@ -11,7 +11,8 @@
 		"allowSyntheticDefaultImports": true,
         "paths": {
             "Components": ["Components/*"],
-            "Primitives/*": ["Primitives/*"]
+            "Primitives/*": ["Primitives/*"],
+            "Utils/*": ["Utils/*"]
         },
 		"downlevelIteration": true,
         "lib": ["dom", "es2018"]

@@ -26,7 +26,8 @@ module.exports = {
         extensions: [".ts", ".tsx", ".js", ".jsx"],
         alias: {
             Components: path.resolve(__dirname, "../src/Components"),
-            Primitives: path.resolve(__dirname, "../src/Primitives")
+            Primitives: path.resolve(__dirname, "../src/Primitives"),
+            Utils: path.resolve(__dirname, "../src/Utils")
         }
     }
 };

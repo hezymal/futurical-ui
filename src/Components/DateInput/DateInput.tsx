@@ -1,8 +1,7 @@
 import * as React from "react";
-
+import * as classnames from "classnames";
 import Input from "Primitives/Input";
 import * as Styles from "./DateInput.scss";
-import { addClassName } from "../../Utils";
 
 interface Props {
     value: string;
@@ -12,10 +11,7 @@ interface Props {
 
 function DateInput(props: Props) {
     const { value, className, onChange } = props;
-
-    const fullClassName =
-        Styles.DateInput + addClassName(!!className, className);
-
+    const fullClassName = classnames(Styles.DateInput, className);
     const pattern = /^([0-2]{1}[0-9]{1}|3[0-1]{1})\.(0[0-9]{1}|1[0-2]{1})\.[0-9]{4}$/;
 
     return (

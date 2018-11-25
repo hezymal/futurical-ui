@@ -1,0 +1,15 @@
+@import "../Common.scss";
+
+.BodyComponent {
+    overflow-y: scroll;
+
+    > table {
+        border: "none";
+        border-spacing: 0;
+    }
+
+    .Cell {
+        box-sizing: border-box;
+        padding: 0 $cell-padding;
+    }
+}

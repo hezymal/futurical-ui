@@ -1,8 +1,8 @@
 import * as React from "react";
+import * as classnames from "classnames";
 
 import Button from "Primitives/Button";
 import * as Styles from "./CheckButton.scss";
-import { addClassName } from "../../Utils";
 
 interface Props {
     value: boolean;
@@ -13,10 +13,9 @@ interface Props {
 function CheckButton(props: Props) {
     const { value, className, onChange } = props;
 
-    const fullClassName =
-        Styles.CheckButton +
-        addClassName(!!className, className) +
-        addClassName(value, Styles.Checked);
+    const fullClassName = classnames(Styles.CheckButton, className, {
+        [Styles.Checked]: value,
+    });
 
     return (
         <Button className={fullClassName} onClick={() => onChange(!value)} />

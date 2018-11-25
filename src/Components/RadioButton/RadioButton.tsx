@@ -1,7 +1,6 @@
 import * as React from "react";
-
+import * as classnames from "classnames";
 import Button from "Primitives/Button";
-import { addClassName } from "../../Utils";
 import * as Styles from "./RadioButton.scss";
 
 interface Props {
@@ -14,10 +13,9 @@ interface Props {
 function RadioButton(props: Props) {
     const { value, checked, className = "", onSelect } = props;
 
-    const fullClassName =
-        Styles.RadioButton +
-        addClassName(!!className, className) +
-        addClassName(checked, Styles.Checked);
+    const fullClassName = classnames(Styles.RadioButton, className, { 
+        [Styles.Checked]: checked 
+    });
 
     return (
         <Button

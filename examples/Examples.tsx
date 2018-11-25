@@ -1,16 +1,16 @@
 import * as React from "react";
-import {
+import { 
     CheckButton,
     DateInput,
     Layout,
     NumberInput,
+    OptionSelect,
     RadioButton,
     SimpleButton,
     TextInput,
     TimeInput,
-    OptionSelect,
-    VirtualTable
-} from "../library-index";
+    VirtualTable,
+} from "../src/lib";
 import * as Styles from "./Styles.scss";
 
 function SimpleButtons() {
@@ -258,7 +258,7 @@ class Tables extends React.Component<{}, any> {
         return (
             <section style={{ display: "block" }}>
                 <header>Tables</header>
-                <div>
+                <div style={{ height: "200px" }}>
                     <VirtualTable
                         columns={[
                             { 
@@ -274,8 +274,6 @@ class Tables extends React.Component<{}, any> {
                             },
                         ]}
                         data={data}
-                        height={200}
-                        rowHeight={50}
                     />
                 </div>
             </section>
