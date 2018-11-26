@@ -10,29 +10,21 @@ class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, 
         this.onResizerDragStart = this.onResizerDragStart.bind(this);
         this.onResizerMouseDown = this.onResizerMouseDown.bind(this);
 
-        this.state = {
-        };
+        this.state = {};
     }
 
     public render() {
-        const { columns } = this.props;
-
-        let tableWidth = 0;
-        let spaceColumnWidth = 1014;
-
-        const columnCount = columns.length;
+        const { columns, containerWidth } = this.props;
+        let width = 0;
+        
         const headerCells: JSX.Element[] = [];
-        for (let index = 0; index < columnCount; index++) {
+        for (let index = 0; index < columns.length; index++) {
             const column = columns[index];
-            const style: React.CSSProperties = {
-                width: column.width + "px",
-            };
 
-            spaceColumnWidth -= column.width;
-            tableWidth += column.width;
+            width += column.width;
 
             headerCells.push(
-                <td key={column.id} className={_Styles.HeaderCell} style={style}>
+                <td key={column.id} className={_Styles.HeaderCell} style={{ width: column.width + "px" }}>
                     {column.title}
                     <span
                         className={_Styles.Resizer}
@@ -43,23 +35,18 @@ class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, 
             );
         }
 
-        if (spaceColumnWidth > 0) {
-            tableWidth += spaceColumnWidth;
+        if (containerWidth > width) {
             headerCells.push(
                 <td 
                     key="space-column" 
                     className={_Styles.HeaderCell} 
-                    style={{ width: spaceColumnWidth + "px" }} 
+                    style={{ width: `calc(100% - ${width}px)` }} 
                 />
             );
         }
 
-        const tableStyle: React.CSSProperties = {
-            width: tableWidth + "px",
-        };
-
         return (
-            <div style={tableStyle} className={_Styles.HeadComponent}>
+            <div className={_Styles.HeadComponent}>
                 <table>
                     <thead>
                         <tr>
@@ -85,11 +72,11 @@ class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, 
 namespace HeadComponent {
     export interface IProps<TItem> {
         columns: IColumn<TItem>[];
+        containerWidth: number;
         onResizerStart: (resizerX: number, columnIndex: number) => void;
     }
 
-    export interface IState {
-    }
+    export interface IState {}
 
     export const Styles = _Styles;
 }

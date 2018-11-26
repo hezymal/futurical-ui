@@ -19,7 +19,8 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
         const {
             columns,
             data,
-            tableHeight,
+            containerWidth,
+            height,
         } = this.props;
 
         const {
@@ -29,7 +30,6 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
         const body: JSX.Element[] = [];
 
         // calculate indexes and sizes
-        const height = tableHeight;
         const topCount = Math.floor(scrollTop / rowHeight);
         const midCount = Math.ceil((scrollTop + height) / rowHeight) - topCount;
         const botCount = data.length - topCount - midCount;
@@ -43,50 +43,46 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
         }
 
         // mid content
-        const cellStyle: React.CSSProperties = {
-            height: rowHeight + "px"
-        };
-        let tableWidth = 0;
+        let width = 0;
         for (let offset = 0; offset < midCount; offset++) {
             const index = topCount + offset;
             const item: any = data[index];
             const row: JSX.Element[] = [];
 
-            let spaceColumnWidth = 1014;
             for (const column of columns) {
                 const value = item ? item[column.id] : null;
 
-                spaceColumnWidth -= column.width;
                 if (offset === 0) {
-                    tableWidth += column.width;
+                    width += column.width;
                 }
 
                 row.push(
                     <td 
                         key={column.id + index} 
-                        style={{ ...cellStyle, width: column.width + "px" }}
+                        style={{ width: column.width + "px", height: rowHeight + "px" }}
                         className={_Styles.Cell}
                     >
                         {column.getValue ? column.getValue(value, item, column) : value}
                     </td>
                 );
             }
-            if (spaceColumnWidth > 0) {
-                if (offset === 0) {
-                    tableWidth += spaceColumnWidth;
-                }
+
+            if (containerWidth > width) {
                 row.push(
                     <td 
                         key="space-column" 
-                        style={{ ...cellStyle, width: spaceColumnWidth + "px" }} 
+                        style={{ width: containerWidth - width - 2 + "px", height: rowHeight + "px" }} 
                         className={_Styles.Cell}
                     />
                 );
+
+                if (offset === 0) {
+                    width = containerWidth;
+                }
             }
 
             body.push(<tr key={index}>{row}</tr>);
         }
-        tableWidth = tableWidth || 1014;
 
         // bot space
         if (botSpaceHeight) {
@@ -96,7 +92,6 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
         // body
         const style: React.CSSProperties = {
             height: height + "px",
-            width: tableWidth + "px",
         };
         return (
             <div className={_Styles.BodyComponent} style={style} onScroll={this.onScroll}>
@@ -118,7 +113,8 @@ namespace BodyComponent {
     export interface IProps<TItem> {
         columns: IColumn<TItem>[];
         data: TItem[];
-        tableHeight: number;
+        containerWidth: number;
+        height: number;
     }
 
     export interface IState {

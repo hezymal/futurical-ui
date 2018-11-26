@@ -13,8 +13,9 @@ namespace VirtualTable {
 
     export interface IState<TItem> {
         columns: IColumn<TItem>[];
-        headHeight: number;
+        width: number;
         height: number;
+        headHeight: number;
         resizerIndex: number;
         resizerX: number;
     }
@@ -34,8 +35,9 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
 
         this.state = {
             columns: props.columns,
-            headHeight: -1,
+            width: -1,
             height: -1,
+            headHeight: -1,
             resizerIndex: -1,
             resizerX: null,
         };
@@ -49,7 +51,8 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
         const headElements = container.getElementsByClassName(HeadComponent.Styles.HeadComponent);
         const headElement = headElements.item(0) as HTMLDivElement;
         
-        this.setState({ 
+        this.setState({
+            width: container.offsetWidth,
             height: container.offsetHeight,
             headHeight: headElement.offsetHeight,
         });
@@ -62,18 +65,20 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
 
     public render() {
         const { data } = this.props;
-        const { columns, height, headHeight } = this.state;
+        const { columns, width, height, headHeight } = this.state;
 
         return (
             <div className={Styles.VirtualTable} ref={this.container}>
                 <HeadComponent
                     columns={columns}
+                    containerWidth={width}
                     onResizerStart={this.onResizerStart}
                 />
-                {height !== -1 && <BodyComponent
+                {width !== -1 && <BodyComponent
                     columns={columns}
                     data={data}
-                    tableHeight={height - headHeight}
+                    containerWidth={width}
+                    height={height - headHeight - 2}
                 />}
             </div>
         );
