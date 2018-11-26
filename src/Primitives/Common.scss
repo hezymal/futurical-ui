@@ -8,11 +8,38 @@ $base-alpha-color: #2980b9;
 $base-beta-color: #ff5b5b;
 $base-gamma-color: #fba300;
 
+// border //
+
+$bui-border-color: ($base-secondary-color + #666666);
+$bui-border-color-light: ($bui-border-color + #555555);
+
+@mixin bui-border($top: false, $right: false, $bottom: false, $left: false, $color: $bui-border-color) {
+    @if $top { 
+        border-top: 1px solid $color;
+    }
+    
+    @if $right { 
+        border-right: 1px solid $color;
+    }
+    
+    @if $bottom { 
+        border-bottom: 1px solid $color;
+    }
+    
+    @if $left { 
+        border-left: 1px solid $color;
+    }
+}
+
+@mixin bui-border-light($top: false, $right: false, $bottom: false, $left: false) {
+    @include bui-border($top, $right, $bottom, $left, $bui-border-color-light)
+}
+
 // component //
 
 $component-background: $base-primary-color;
 $component-height: 36px;
 $component-padding: 8px;
-$component-border: 1px solid ($base-secondary-color + #666666);
+$component-border: 1px solid $bui-border-color;
 $component-border-hover: 1px solid $base-alpha-color;
 $component-font-size: 13px;

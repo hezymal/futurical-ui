@@ -1,13 +1,25 @@
+@import "Primitives/Common.scss";
 @import "../Common.scss";
 
 .BodyComponent {
     overflow-y: scroll;
+    overflow-x: auto;
 
     > table {
-        width: 100%;
         border-spacing: 0;
-    }
 
+        > tbody {
+            > tr > td {
+                box-sizing: border-box;
+                @include bui-border-light($bottom: true);
+            }
+            
+            > tr:hover > td {
+                background-color: #c7e6fb;
+            }
+        }
+    }
+    
     .Cell {
         box-sizing: border-box;
         padding: 0 $cell-padding;

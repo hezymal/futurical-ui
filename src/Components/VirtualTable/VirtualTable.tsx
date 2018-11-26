@@ -21,8 +21,11 @@ namespace VirtualTable {
     }
 }
 
+const borderWidth = 2;
+
 class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, VirtualTable.IState<TItem>> {
     private container: React.RefObject<HTMLDivElement>;
+    private headElement: HTMLDivElement;
 
     public constructor(props: VirtualTable.IProps<TItem>) {
         super(props);
@@ -30,6 +33,7 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
         this.onDocumentMouseUp = this.onDocumentMouseUp.bind(this);
         this.onDocumentMouseMove = this.onDocumentMouseMove.bind(this);
         this.onResizerStart = this.onResizerStart.bind(this);
+        this.onBodyScrollLeft = this.onBodyScrollLeft.bind(this);
 
         this.container = React.createRef();
 
@@ -49,12 +53,12 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
 
         const container = this.container.current;
         const headElements = container.getElementsByClassName(HeadComponent.Styles.HeadComponent);
-        const headElement = headElements.item(0) as HTMLDivElement;
+        this.headElement = headElements.item(0) as HTMLDivElement;
         
         this.setState({
             width: container.offsetWidth,
             height: container.offsetHeight,
-            headHeight: headElement.offsetHeight,
+            headHeight: this.headElement.offsetHeight,
         });
     }
 
@@ -71,14 +75,15 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
             <div className={Styles.VirtualTable} ref={this.container}>
                 <HeadComponent
                     columns={columns}
-                    containerWidth={width}
+                    containerWidth={width - borderWidth}
                     onResizerStart={this.onResizerStart}
                 />
                 {width !== -1 && <BodyComponent
                     columns={columns}
                     data={data}
-                    containerWidth={width}
-                    height={height - headHeight - 2}
+                    containerWidth={width - borderWidth}
+                    height={height - headHeight - borderWidth}
+                    onScrollLeft={this.onBodyScrollLeft}
                 />}
             </div>
         );
@@ -120,6 +125,10 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
 
     private onResizerStart(resizerX: number, resizerIndex: number) {
         this.setState({ resizerX, resizerIndex });
+    }
+
+    private onBodyScrollLeft(scrollLeft: number) {
+        this.headElement.scrollLeft = scrollLeft;
     }
 }
 

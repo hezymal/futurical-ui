@@ -40,14 +40,16 @@ class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, 
                 <td 
                     key="space-column" 
                     className={_Styles.HeaderCell} 
-                    style={{ width: `calc(100% - ${width}px)` }} 
+                    style={{ width: containerWidth - width + "px" }} 
                 />
             );
+
+            width = containerWidth;
         }
 
         return (
             <div className={_Styles.HeadComponent}>
-                <table>
+                <table style={{ width }}>
                     <thead>
                         <tr>
                             {headerCells}

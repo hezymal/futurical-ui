@@ -3,6 +3,7 @@ import IColumn from "../IColumn";
 import * as _Styles from "./BodyComponent.scss";
 
 const rowHeight = 36;
+const scrollWidth = 17;
 
 class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, BodyComponent.IState> {
     public constructor(props: BodyComponent.IProps<TItem>) {
@@ -31,20 +32,20 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
 
         // calculate indexes and sizes
         const topCount = Math.floor(scrollTop / rowHeight);
-        const midCount = Math.ceil((scrollTop + height) / rowHeight) - topCount;
-        const botCount = data.length - topCount - midCount;
+        const middleCount = Math.ceil((scrollTop + height) / rowHeight) - topCount;
+        const bottomCount = data.length - topCount - middleCount;
 
         const topSpaceHeight = topCount * rowHeight;
-        const botSpaceHeight = botCount * rowHeight;
+        const bottomSpaceHeight = bottomCount * rowHeight;
 
         // top space
         if (topSpaceHeight) {
             body.push(<tr key="top-space" style={{ height: topSpaceHeight + "px" }} />);
         }
 
-        // mid content
+        // middle content
         let width = 0;
-        for (let offset = 0; offset < midCount; offset++) {
+        for (let offset = 0; offset < middleCount; offset++) {
             const index = topCount + offset;
             const item: any = data[index];
             const row: JSX.Element[] = [];
@@ -59,7 +60,7 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
                 row.push(
                     <td 
                         key={column.id + index} 
-                        style={{ width: column.width + "px", height: rowHeight + "px" }}
+                        style={{ width: column.width + "px" }}
                         className={_Styles.Cell}
                     >
                         {column.getValue ? column.getValue(value, item, column) : value}
@@ -71,31 +72,27 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
                 row.push(
                     <td 
                         key="space-column" 
-                        style={{ width: containerWidth - width - 2 + "px", height: rowHeight + "px" }} 
+                        style={{ width: containerWidth - width - scrollWidth + "px" }} 
                         className={_Styles.Cell}
                     />
                 );
-
-                if (offset === 0) {
-                    width = containerWidth;
-                }
             }
 
-            body.push(<tr key={index}>{row}</tr>);
+            body.push(<tr key={index} style={{ height: rowHeight + "px" }}>{row}</tr>);
         }
 
-        // bot space
-        if (botSpaceHeight) {
-            body.push(<tr key="bottom-space" style={{ height: botSpaceHeight + "px" }} />);
+        if (containerWidth > width) {
+            width = containerWidth;
         }
 
-        // body
-        const style: React.CSSProperties = {
-            height: height + "px",
-        };
+        // bottom space
+        if (bottomSpaceHeight) {
+            body.push(<tr key="bottom-space" style={{ height: bottomSpaceHeight + "px" }} />);
+        }
+
         return (
-            <div className={_Styles.BodyComponent} style={style} onScroll={this.onScroll}>
-                <table>
+            <div className={_Styles.BodyComponent} style={{ height: height + "px" }} onScroll={this.onScroll}>
+                <table style={{ width: width - scrollWidth + "px" }}>
                     <tbody>
                         {body}
                     </tbody>
@@ -105,7 +102,10 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
     }
 
     private onScroll(e: React.UIEvent) {
-        this.setState({ scrollTop: e.currentTarget.scrollTop });
+        const { scrollTop, scrollLeft } = e.currentTarget;
+
+        this.setState({ scrollTop });
+        this.props.onScrollLeft(scrollLeft);
     }
 }
 
@@ -115,6 +115,7 @@ namespace BodyComponent {
         data: TItem[];
         containerWidth: number;
         height: number;
+        onScrollLeft: (scrollLeft: number) => void;
     }
 
     export interface IState {
