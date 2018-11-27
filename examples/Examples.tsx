@@ -242,6 +242,11 @@ class OptionsSelects extends React.Component<{}, any> {
 }
 
 class Tables extends React.Component<{}, any> {
+    static words = [
+        "Yello", "Red", "Green", "Blue", "Mellow", 
+        "Cyber", "Royal", "Trombone", "Banana", "Flax"
+    ];
+
     constructor(props: {}) {
         super(props);
 
@@ -286,7 +291,7 @@ class Tables extends React.Component<{}, any> {
         for (let i = 1; i <= size; i++) {
             data.push({
                 id: i,
-                name: i.toString(),
+                name: Tables.words[(i - 1) % 10],
             });
         }
 

@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as Styles from "./VirtualTable.scss";
 import IColumn from "./IColumn";
+import ISort from "./ISort";
 import HeadComponent from "./HeadComponent";
 import BodyComponent from "./BodyComponent";
 import * as Browser from "Utils/Browser";
@@ -17,7 +18,8 @@ namespace VirtualTable {
         height: number;
         headHeight: number;
         resizerIndex: number;
-        resizerX: number;
+        resizerLeft: number;
+        sort: ISort;
     }
 }
 
@@ -33,6 +35,7 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
         this.onDocumentMouseUp = this.onDocumentMouseUp.bind(this);
         this.onDocumentMouseMove = this.onDocumentMouseMove.bind(this);
         this.onResizerStart = this.onResizerStart.bind(this);
+        this.onHeadSort = this.onHeadSort.bind(this);
         this.onBodyScrollLeft = this.onBodyScrollLeft.bind(this);
 
         this.container = React.createRef();
@@ -43,7 +46,8 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
             height: -1,
             headHeight: -1,
             resizerIndex: -1,
-            resizerX: null,
+            resizerLeft: null,
+            sort: null,
         };
     }
 
@@ -69,19 +73,22 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
 
     public render() {
         const { data } = this.props;
-        const { columns, width, height, headHeight } = this.state;
+        const { columns, width, height, headHeight, sort } = this.state;
 
         return (
             <div className={Styles.VirtualTable} ref={this.container}>
                 <HeadComponent
                     columns={columns}
                     containerWidth={width - borderWidth}
+                    sort={sort}
                     onResizerStart={this.onResizerStart}
+                    onSort={this.onHeadSort}
                 />
                 {width !== -1 && <BodyComponent
                     columns={columns}
                     data={data}
                     containerWidth={width - borderWidth}
+                    sort={sort}
                     height={height - headHeight - borderWidth}
                     onScrollLeft={this.onBodyScrollLeft}
                 />}
@@ -95,13 +102,13 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
         if (resizerIndex !== -1) {
             Browser.clearSelection();
 
-            const resizerX = this.state.resizerX;
+            const resizerLeft = this.state.resizerLeft;
             const columns = this.state.columns;
             
-            const newResizerX = e.pageX;
+            const newResizerLeft = e.pageX;
             const newColumns = columns.map((column, columnIndex) => {
                 if (columnIndex === resizerIndex) {
-                    const newWidth = column.width + (newResizerX - resizerX);
+                    const newWidth = column.width + (newResizerLeft - resizerLeft);
 
                     return { ...column, width: newWidth };
                 } else {
@@ -109,7 +116,7 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
                 }
             });
 
-            this.setState({ resizerX: newResizerX, columns: newColumns });
+            this.setState({ resizerLeft: newResizerLeft, columns: newColumns });
         }
     }
 
@@ -123,8 +130,19 @@ class VirtualTable<TItem> extends React.Component<VirtualTable.IProps<TItem>, Vi
         }
     }
 
-    private onResizerStart(resizerX: number, resizerIndex: number) {
-        this.setState({ resizerX, resizerIndex });
+    private onResizerStart(resizerLeft: number, resizerIndex: number) {
+        this.setState({ resizerLeft, resizerIndex });
+    }
+
+    private onHeadSort(columnId: string) {
+        const sort = this.state.sort;
+        const newSort = 
+            !sort ? { columnId, desc: false } : 
+            columnId !== sort.columnId ? { columnId, desc: sort.desc } : 
+            !sort.desc ? { columnId, desc: true }
+            : null;
+
+        this.setState({ sort: newSort });
     }
 
     private onBodyScrollLeft(scrollLeft: number) {

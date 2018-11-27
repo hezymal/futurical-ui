@@ -1,30 +1,39 @@
 import * as React from "react";
 import IColumn from "../IColumn";
+import ISort from "../ISort";
 import * as _Styles from "./BodyComponent.scss";
 
 const rowHeight = 36;
 const scrollWidth = 17;
 
-class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, BodyComponent.IState> {
+class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, BodyComponent.IState<TItem>> {
     public constructor(props: BodyComponent.IProps<TItem>) {
         super(props);
 
         this.onScroll = this.onScroll.bind(this);
+        this.getDataOfProps = this.getDataOfProps.bind(this);
 
         this.state = {
             scrollTop: 0,
+            data: this.getDataOfProps(props),
         };
+    }
+
+    public componentWillReceiveProps(nextProps: BodyComponent.IProps<TItem>) {
+        this.setState({ 
+            data: this.getDataOfProps(nextProps),
+        });
     }
 
     public render() {
         const {
             columns,
-            data,
             containerWidth,
             height,
         } = this.props;
 
         const {
+            data,
             scrollTop,
         } = this.state;
 
@@ -107,6 +116,24 @@ class BodyComponent<TItem> extends React.Component<BodyComponent.IProps<TItem>, 
         this.setState({ scrollTop });
         this.props.onScrollLeft(scrollLeft);
     }
+
+    private getDataOfProps(props: BodyComponent.IProps<TItem>) {
+        const { sort, data } = props;
+
+        if (sort) {
+            const { columnId, desc } = sort;
+
+            return data.slice().sort((item1: TItem, item2: TItem) => {
+                const value1 = (item1 as any)[columnId] + "";
+                const value2 = (item2 as any)[columnId] + "";
+                const result = value1.localeCompare(value2);
+        
+                return !desc ? result : (result === -1 ? +1 : result === 0 ? 0 : -1);
+            });
+        }
+
+        return data;
+    }
 }
 
 namespace BodyComponent {
@@ -115,11 +142,13 @@ namespace BodyComponent {
         data: TItem[];
         containerWidth: number;
         height: number;
+        sort: ISort;
         onScrollLeft: (scrollLeft: number) => void;
     }
 
-    export interface IState {
+    export interface IState<TItem> {
         scrollTop: number;
+        data: TItem[];
     }
 }
 

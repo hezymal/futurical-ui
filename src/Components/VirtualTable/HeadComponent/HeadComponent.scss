@@ -15,6 +15,38 @@
             margin: 0;
             padding: 0 $cell-padding;
             height: $component-height;
+            font-weight: bold;
+            color: #555;
+
+            &.IsAscSorted {
+                color: $base-alpha-color;
+
+                &:after {
+                    content: "▼";
+                    position: absolute;
+                    top: 11px;
+                    right: 10px;
+                    font-size: 10px;
+                }
+            }
+
+            &.IsDescSorted {
+                color: $base-alpha-color;
+                
+                &:after {
+                    content: "▲";
+                    font-weight: bold;
+                    position: absolute;
+                    top: 11px;
+                    right: 10px;
+                    font-size: 10px;
+                }
+            }
+
+            > i {
+                font-style: normal;
+                cursor: pointer;
+            }
 
             > .Resizer {
                 position: absolute;
