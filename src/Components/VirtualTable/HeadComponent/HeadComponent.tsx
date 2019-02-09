@@ -23,8 +23,8 @@ class HeadComponent<TItem> extends React.Component<HeadComponent.IProps<TItem>, 
         for (let index = 0; index < columns.length; index++) {
             const column = columns[index];
             const className = classnames(_Styles.HeaderCell, {
-                [_Styles.IsAscSorted]: sort && sort.columnId === column.id && !sort.desc,
-                [_Styles.IsDescSorted]: sort && sort.columnId === column.id && sort.desc,
+                [_Styles.IsAscending]: sort && sort.columnId === column.id && !sort.desc,
+                [_Styles.IsDescending]: sort && sort.columnId === column.id && sort.desc,
             });
             const style: React.CSSProperties = {
                 width: column.width + "px"
