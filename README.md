@@ -1,31 +1,32 @@
 ﻿Borderlands UI
 ==============
 
-This is UI (User Interface) library for ReactJS.
+Borderlands UI - это библиотека пользовательского интерфейса для JavaScript.
 
 
-Installation
+Установка
 ------------
 
+Установка для Yarn
 ```
 yarn add https://github.com/hezymal/borderlands-ui.git --save
 ```
 
 
-Build
+Сборка
 -----
 
-for build in Yarn:
+Сборка библиотеки для NPM:
 ```
-yarn run build
-```
-
-for build examples in Yarn:
-```
-yarn run build:examples
+npm run build
 ```
 
-for run watching in Yarn: 
+Сборка документации для NPM:
 ```
-yarn run watch:examples
+npm run build:docs
+```
+
+Сборка документации с "watch" для NPM:
+```
+npm run watch:docs
 ```

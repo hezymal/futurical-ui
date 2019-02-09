@@ -6,7 +6,7 @@ module.exports = {
     mode: "development",
     entry: path.resolve(__dirname, "../src/lib.ts"),
     output: {
-        path: path.resolve(__dirname, "../dist"),
+        path: path.resolve(__dirname, "../lib"),
         filename: "borderlands-ui.development.js"
     }
 };

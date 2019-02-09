@@ -4,7 +4,7 @@ const fs = require("fs");
 config = {
     entry: path.join(__dirname, "../src/index.js"),
     output: {
-        path: path.join(__dirname, "../dist"),
+        path: path.join(__dirname, "../lib"),
         filename: "index.js"
     }
 };
