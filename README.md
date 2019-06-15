@@ -1,32 +1,33 @@
-﻿Borderlands UI
+﻿futurical-ui
 ==============
 
-Borderlands UI - это библиотека пользовательского интерфейса для JavaScript.
+Futurical UI - user interface library for ReactJS.
 
 
-Установка
-------------
+Install
+-------
 
-Установка для Yarn
 ```
-yarn add https://github.com/hezymal/borderlands-ui.git --save
+yarn add https://github.com/hezymal/futurical-ui.git --save
 ```
 
 
-Сборка
+Build
 -----
 
-Сборка библиотеки для NPM:
 ```
 npm run build
 ```
 
-Сборка документации для NPM:
+
+Build documentation
+-------------------
+
 ```
 npm run build:docs
 ```
 
-Сборка документации с "watch" для NPM:
+for watching
 ```
 npm run watch:docs
 ```
