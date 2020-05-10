@@ -10,8 +10,8 @@ $base-gamma-color: #fba300;
 
 // border //
 
-$bui-border-color: ($base-secondary-color + #666666);
-$bui-border-color-light: ($bui-border-color + #555555);
+$bui-border-color: #666666;
+$bui-border-color-light: #bbbbbb;
 
 @mixin bui-border($top: false, $right: false, $bottom: false, $left: false, $color: $bui-border-color) {
     @if $top { 

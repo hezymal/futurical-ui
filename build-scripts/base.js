@@ -16,7 +16,16 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     "style-loader",
-                    "typings-for-css-modules-loader?modules&namedExport&localIdentName='[local]__[hash:base64:8]'",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                mode: 'local',
+                                exportGlobals: true,
+                                localIdentName: '[local]__[hash:base64:8]',
+                            }
+                        }
+                    },
                     "sass-loader"
                 ]
             }
