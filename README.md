@@ -1,33 +1,28 @@
-﻿futurical-ui
-==============
+﻿Futurical UI
+====
 
-Futurical UI - user interface library for ReactJS.
-
-
-Install
--------
-
-```
-yarn add https://github.com/hezymal/futurical-ui.git --save
-```
+ReactJS UI library
 
 
 Build
 -----
 
+Build development version:
 ```
-npm run build
+npm run build:dev
 ```
 
+Build production version:
+```
+npm run build:prod
+```
 
-Build documentation
--------------------
-
+Build documentation:
 ```
 npm run build:docs
 ```
 
-for watching
+Watching documentation:
 ```
 npm run watch:docs
 ```

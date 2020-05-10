@@ -1,7 +1,7 @@
 {
   "name": "futurical-ui",
   "version": "0.1.0a",
-  "description": "futurical-ui - ReactJS UI library",
+  "description": "ReactJS UI library",
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.13.1"
