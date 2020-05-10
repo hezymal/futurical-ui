@@ -10,7 +10,7 @@ import {
     TextInput,
     TimeInput,
     VirtualTable,
-} from "../src/lib";
+} from "../lib";
 import * as Styles from "./Styles.scss";
 
 function SimpleButtons() {

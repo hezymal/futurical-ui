@@ -5,15 +5,15 @@ const config = require("./base");
 module.exports = {
     ...config,
     mode: "development",
-    entry: path.resolve(__dirname, "../docs/index.tsx"),
+    entry: path.resolve(__dirname, "../src/Docs/index.tsx"),
     output: {
-        path: path.resolve(__dirname, "../lib/docs"),
+        path: path.resolve(__dirname, "../docs"),
         filename: "bundle.js"
     },
     devtool: "sourcemap",
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, "../docs/template.html")
+            template: path.join(__dirname, "../src/Docs/template.html")
         })
     ]
 };

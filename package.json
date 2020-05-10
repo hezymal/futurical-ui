@@ -25,13 +25,13 @@
   "optionalDependencies": {
     "react-dom": "^16.13.1"
   },
-  "main": "lib/borderlands-ui.development.js",
+  "main": "lib/borderlands-ui.dev.js",
   "scripts": {
     "build:docs": "npx webpack --config ./build-scripts/docs.js",
     "watch:docs": "npx webpack --config ./build-scripts/docs.js --watch",
-    "build:prod": "npx webpack --config ./build-scripts/production.js",
-    "build:dev": "npx webpack --config ./build-scripts/development.js",
-    "build": "yarn run build:dev && yarn run build:prod && node ./build-scripts/make-bootstrap-script.js"
+    "build:prod": "npx webpack --config ./build-scripts/prod.js",
+    "build:dev": "npx webpack --config ./build-scripts/dev.js",
+    "build": "npm run build:dev && npm run build:prod && node ./build-scripts/make-bootstrap-script.js"
   },
   "author": "github.com/hezymal",
   "license": "ISC"

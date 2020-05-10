@@ -3,10 +3,10 @@ const baseConfig = require("./base");
 
 module.exports = {
     ...baseConfig,
-    mode: "production",
+    mode: "development",
     entry: path.resolve(__dirname, "../src/lib.ts"),
     output: {
         path: path.resolve(__dirname, "../lib"),
-        filename: "borderlands-ui.production.js"
+        filename: "borderlands-ui.dev.js"
     }
 };

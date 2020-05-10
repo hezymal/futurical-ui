@@ -81,284 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./docs/index.tsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/Docs/index.tsx");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./docs/Examples.tsx":
-/*!***************************!*\
-  !*** ./docs/Examples.tsx ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var lib_1 = __webpack_require__(/*! ../src/lib */ "./src/lib.ts");
-var Styles = __webpack_require__(/*! ./Styles.scss */ "./docs/Styles.scss");
-function SimpleButtons() {
-    return (React.createElement("section", null,
-        React.createElement("header", null, "Buttons"),
-        React.createElement("div", null,
-            React.createElement(lib_1.SimpleButton, { title: "Default Button", onClick: function () { } })),
-        React.createElement("div", null,
-            React.createElement(lib_1.SimpleButton, { title: "Primary Button", style: "Primary", onClick: function () { } })),
-        React.createElement("div", null,
-            React.createElement(lib_1.SimpleButton, { title: "Danger Button", style: "Danger", onClick: function () { } })),
-        React.createElement("div", null,
-            React.createElement(lib_1.SimpleButton, { title: "Warning Button", style: "Warning", onClick: function () { } }))));
-}
-var Inputs = /** @class */ (function (_super) {
-    __extends(Inputs, _super);
-    function Inputs(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            textInputValue: "Text Input",
-            integerInputValue: 1234,
-            floatInputValue: 12.34
-        };
-        return _this;
-    }
-    Inputs.prototype.render = function () {
-        var _this = this;
-        var _a = this.state, textInputValue = _a.textInputValue, integerInputValue = _a.integerInputValue, floatInputValue = _a.floatInputValue;
-        return (React.createElement("section", null,
-            React.createElement("header", null, "Inputs"),
-            React.createElement("div", null,
-                React.createElement(lib_1.TextInput, { value: textInputValue, onChange: function (value) {
-                        return _this.setState({ textInputValue: value });
-                    } })),
-            React.createElement("div", null,
-                React.createElement(lib_1.NumberInput, { value: integerInputValue, onChange: function (value) {
-                        return _this.setState({ integerInputValue: value });
-                    } })),
-            React.createElement("div", null,
-                React.createElement(lib_1.NumberInput, { value: floatInputValue, isFloat: true, onChange: function (value) {
-                        return _this.setState({ floatInputValue: value });
-                    } }))));
-    };
-    return Inputs;
-}(React.Component));
-var CheckButtons = /** @class */ (function (_super) {
-    __extends(CheckButtons, _super);
-    function CheckButtons(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            value: false
-        };
-        return _this;
-    }
-    CheckButtons.prototype.render = function () {
-        var _this = this;
-        var value = this.state.value;
-        return (React.createElement("section", null,
-            React.createElement("header", null, "Check button"),
-            React.createElement("div", null,
-                React.createElement(lib_1.CheckButton, { value: value, onChange: function (newValue) {
-                        return _this.setState({ value: newValue });
-                    } }))));
-    };
-    return CheckButtons;
-}(React.Component));
-var RadioButtonGroup = /** @class */ (function (_super) {
-    __extends(RadioButtonGroup, _super);
-    function RadioButtonGroup(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            value: 1
-        };
-        return _this;
-    }
-    RadioButtonGroup.prototype.render = function () {
-        var _this = this;
-        var value = this.state.value;
-        return (React.createElement("section", null,
-            React.createElement("header", null, "Radio button group"),
-            React.createElement("div", null,
-                React.createElement(lib_1.RadioButton, { value: 1, checked: value === 1, onSelect: function (value) { return _this.setState({ value: value }); } }),
-                React.createElement(lib_1.RadioButton, { value: 2, checked: value === 2, onSelect: function (value) { return _this.setState({ value: value }); } }),
-                React.createElement(lib_1.RadioButton, { value: 3, checked: value === 3, onSelect: function (value) { return _this.setState({ value: value }); } }))));
-    };
-    return RadioButtonGroup;
-}(React.Component));
-var DateAndTimeInputs = /** @class */ (function (_super) {
-    __extends(DateAndTimeInputs, _super);
-    function DateAndTimeInputs(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            value1: "00:00",
-            value2: "00:00:00",
-            value3: "01.01.2018"
-        };
-        return _this;
-    }
-    DateAndTimeInputs.prototype.render = function () {
-        var _this = this;
-        var _a = this.state, value1 = _a.value1, value2 = _a.value2, value3 = _a.value3;
-        return (React.createElement("section", null,
-            React.createElement("header", null, "Data and time inputs"),
-            React.createElement("div", null,
-                React.createElement(lib_1.TimeInput, { value: value1, onChange: function (newValue) {
-                        return _this.setState({ value1: newValue });
-                    } })),
-            React.createElement("div", null,
-                React.createElement(lib_1.TimeInput, { value: value2, secondComponent: true, onChange: function (newValue) {
-                        return _this.setState({ value2: newValue });
-                    } })),
-            React.createElement("div", null,
-                React.createElement(lib_1.DateInput, { value: value3, onChange: function (newValue) {
-                        return _this.setState({ value3: newValue });
-                    } }))));
-    };
-    return DateAndTimeInputs;
-}(React.Component));
-var OptionsSelects = /** @class */ (function (_super) {
-    __extends(OptionsSelects, _super);
-    function OptionsSelects(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            value1: "red"
-        };
-        return _this;
-    }
-    OptionsSelects.prototype.render = function () {
-        var _this = this;
-        var value1 = this.state.value1;
-        return (React.createElement("section", { style: { display: "block" } },
-            React.createElement("header", null, "Option selects"),
-            React.createElement("div", null,
-                React.createElement(lib_1.OptionSelect, { value: value1, options: [
-                        { title: "Red", value: "red" },
-                        { title: "Green", value: "green" },
-                        { title: "Blue", value: "blue" }
-                    ], onChange: function (newValue) {
-                        return _this.setState({ value1: newValue });
-                    } }))));
-    };
-    return OptionsSelects;
-}(React.Component));
-var Tables = /** @class */ (function (_super) {
-    __extends(Tables, _super);
-    function Tables(props) {
-        var _this = _super.call(this, props) || this;
-        _this.generateData = _this.generateData.bind(_this);
-        _this.state = {
-            data: _this.generateData(20),
-        };
-        return _this;
-    }
-    Tables.prototype.render = function () {
-        var data = this.state.data;
-        return (React.createElement("section", { style: { display: "block" } },
-            React.createElement("header", null, "Tables"),
-            React.createElement("div", { style: { height: "200px" } },
-                React.createElement(lib_1.VirtualTable, { columns: [
-                        {
-                            id: "id",
-                            title: "#",
-                            getValue: function (value) { console.log(value); return value; },
-                            width: 100,
-                        },
-                        {
-                            id: "name",
-                            title: "Name",
-                            width: 100,
-                        },
-                    ], data: data }))));
-    };
-    Tables.prototype.generateData = function (size) {
-        var data = [];
-        for (var i = 1; i <= size; i++) {
-            data.push({
-                id: i,
-                name: Tables.words[(i - 1) % 10],
-            });
-        }
-        return data;
-    };
-    Tables.words = [
-        "Yello", "Red", "Green", "Blue", "Mellow",
-        "Cyber", "Royal", "Trombone", "Banana", "Flax"
-    ];
-    return Tables;
-}(React.Component));
-function Examples() {
-    return (React.createElement(lib_1.Layout, { className: Styles.Examples },
-        React.createElement(SimpleButtons, null),
-        React.createElement(Inputs, null),
-        React.createElement(CheckButtons, null),
-        React.createElement(RadioButtonGroup, null),
-        React.createElement(DateAndTimeInputs, null),
-        React.createElement(OptionsSelects, null),
-        React.createElement(Tables, null)));
-}
-exports.default = Examples;
-
-
-/***/ }),
-
-/***/ "./docs/Styles.scss":
-/*!**************************!*\
-  !*** ./docs/Styles.scss ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/sass-loader/dist/cjs.js!./Styles.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./docs/Styles.scss");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-
-
-module.exports = content.locals || {};
-
-/***/ }),
-
-/***/ "./docs/index.tsx":
-/*!************************!*\
-  !*** ./docs/index.tsx ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var react_dom_1 = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-var Examples_1 = __webpack_require__(/*! ./Examples */ "./docs/Examples.tsx");
-react_dom_1.render(React.createElement(Examples_1.default, null), document.getElementById("root"));
-
-
-/***/ }),
 
 /***/ "./node_modules/classnames/index.js":
 /*!******************************************!*\
@@ -418,27 +144,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	} else {}
 }());
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./docs/Styles.scss":
-/*!*****************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/sass-loader/dist/cjs.js!./docs/Styles.scss ***!
-  \*****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".Examples__2n72oucd {\n  margin: 0 auto;\n  width: 1024px; }\n  .Examples__2n72oucd > section {\n    display: flex;\n    flex-wrap: wrap; }\n    .Examples__2n72oucd > section > header {\n      width: 100%; }\n    .Examples__2n72oucd > section > div {\n      margin: 10px 0 10px 10px; }\n", ""]);
-// Exports
-exports.locals = {
-	"Examples": "Examples__2n72oucd"
-};
-module.exports = exports;
 
 
 /***/ }),
@@ -703,6 +408,27 @@ exports.push([module.i, ".VirtualTable__36q99lkP {\n  box-sizing: border-box;\n 
 // Exports
 exports.locals = {
 	"VirtualTable": "VirtualTable__36q99lkP"
+};
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/Docs/Styles.scss":
+/*!*********************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/sass-loader/dist/cjs.js!./src/Docs/Styles.scss ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".Examples__13sK8pnW {\n  margin: 0 auto;\n  width: 1024px; }\n  .Examples__13sK8pnW > section {\n    display: flex;\n    flex-wrap: wrap; }\n    .Examples__13sK8pnW > section > header {\n      width: 100%; }\n    .Examples__13sK8pnW > section > div {\n      margin: 10px 0 10px 10px; }\n", ""]);
+// Exports
+exports.locals = {
+	"Examples": "Examples__13sK8pnW"
 };
 module.exports = exports;
 
@@ -30826,6 +30552,280 @@ var OptionSelect_1 = __webpack_require__(/*! ./OptionSelect */ "./src/Components
 exports.OptionSelect = OptionSelect_1.default;
 var VirtualTable_1 = __webpack_require__(/*! ./VirtualTable */ "./src/Components/VirtualTable/index.ts");
 exports.VirtualTable = VirtualTable_1.default;
+
+
+/***/ }),
+
+/***/ "./src/Docs/Examples.tsx":
+/*!*******************************!*\
+  !*** ./src/Docs/Examples.tsx ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var lib_1 = __webpack_require__(/*! ../lib */ "./src/lib.ts");
+var Styles = __webpack_require__(/*! ./Styles.scss */ "./src/Docs/Styles.scss");
+function SimpleButtons() {
+    return (React.createElement("section", null,
+        React.createElement("header", null, "Buttons"),
+        React.createElement("div", null,
+            React.createElement(lib_1.SimpleButton, { title: "Default Button", onClick: function () { } })),
+        React.createElement("div", null,
+            React.createElement(lib_1.SimpleButton, { title: "Primary Button", style: "Primary", onClick: function () { } })),
+        React.createElement("div", null,
+            React.createElement(lib_1.SimpleButton, { title: "Danger Button", style: "Danger", onClick: function () { } })),
+        React.createElement("div", null,
+            React.createElement(lib_1.SimpleButton, { title: "Warning Button", style: "Warning", onClick: function () { } }))));
+}
+var Inputs = /** @class */ (function (_super) {
+    __extends(Inputs, _super);
+    function Inputs(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            textInputValue: "Text Input",
+            integerInputValue: 1234,
+            floatInputValue: 12.34
+        };
+        return _this;
+    }
+    Inputs.prototype.render = function () {
+        var _this = this;
+        var _a = this.state, textInputValue = _a.textInputValue, integerInputValue = _a.integerInputValue, floatInputValue = _a.floatInputValue;
+        return (React.createElement("section", null,
+            React.createElement("header", null, "Inputs"),
+            React.createElement("div", null,
+                React.createElement(lib_1.TextInput, { value: textInputValue, onChange: function (value) {
+                        return _this.setState({ textInputValue: value });
+                    } })),
+            React.createElement("div", null,
+                React.createElement(lib_1.NumberInput, { value: integerInputValue, onChange: function (value) {
+                        return _this.setState({ integerInputValue: value });
+                    } })),
+            React.createElement("div", null,
+                React.createElement(lib_1.NumberInput, { value: floatInputValue, isFloat: true, onChange: function (value) {
+                        return _this.setState({ floatInputValue: value });
+                    } }))));
+    };
+    return Inputs;
+}(React.Component));
+var CheckButtons = /** @class */ (function (_super) {
+    __extends(CheckButtons, _super);
+    function CheckButtons(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value: false
+        };
+        return _this;
+    }
+    CheckButtons.prototype.render = function () {
+        var _this = this;
+        var value = this.state.value;
+        return (React.createElement("section", null,
+            React.createElement("header", null, "Check button"),
+            React.createElement("div", null,
+                React.createElement(lib_1.CheckButton, { value: value, onChange: function (newValue) {
+                        return _this.setState({ value: newValue });
+                    } }))));
+    };
+    return CheckButtons;
+}(React.Component));
+var RadioButtonGroup = /** @class */ (function (_super) {
+    __extends(RadioButtonGroup, _super);
+    function RadioButtonGroup(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value: 1
+        };
+        return _this;
+    }
+    RadioButtonGroup.prototype.render = function () {
+        var _this = this;
+        var value = this.state.value;
+        return (React.createElement("section", null,
+            React.createElement("header", null, "Radio button group"),
+            React.createElement("div", null,
+                React.createElement(lib_1.RadioButton, { value: 1, checked: value === 1, onSelect: function (value) { return _this.setState({ value: value }); } }),
+                React.createElement(lib_1.RadioButton, { value: 2, checked: value === 2, onSelect: function (value) { return _this.setState({ value: value }); } }),
+                React.createElement(lib_1.RadioButton, { value: 3, checked: value === 3, onSelect: function (value) { return _this.setState({ value: value }); } }))));
+    };
+    return RadioButtonGroup;
+}(React.Component));
+var DateAndTimeInputs = /** @class */ (function (_super) {
+    __extends(DateAndTimeInputs, _super);
+    function DateAndTimeInputs(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value1: "00:00",
+            value2: "00:00:00",
+            value3: "01.01.2018"
+        };
+        return _this;
+    }
+    DateAndTimeInputs.prototype.render = function () {
+        var _this = this;
+        var _a = this.state, value1 = _a.value1, value2 = _a.value2, value3 = _a.value3;
+        return (React.createElement("section", null,
+            React.createElement("header", null, "Data and time inputs"),
+            React.createElement("div", null,
+                React.createElement(lib_1.TimeInput, { value: value1, onChange: function (newValue) {
+                        return _this.setState({ value1: newValue });
+                    } })),
+            React.createElement("div", null,
+                React.createElement(lib_1.TimeInput, { value: value2, secondComponent: true, onChange: function (newValue) {
+                        return _this.setState({ value2: newValue });
+                    } })),
+            React.createElement("div", null,
+                React.createElement(lib_1.DateInput, { value: value3, onChange: function (newValue) {
+                        return _this.setState({ value3: newValue });
+                    } }))));
+    };
+    return DateAndTimeInputs;
+}(React.Component));
+var OptionsSelects = /** @class */ (function (_super) {
+    __extends(OptionsSelects, _super);
+    function OptionsSelects(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value1: "red"
+        };
+        return _this;
+    }
+    OptionsSelects.prototype.render = function () {
+        var _this = this;
+        var value1 = this.state.value1;
+        return (React.createElement("section", { style: { display: "block" } },
+            React.createElement("header", null, "Option selects"),
+            React.createElement("div", null,
+                React.createElement(lib_1.OptionSelect, { value: value1, options: [
+                        { title: "Red", value: "red" },
+                        { title: "Green", value: "green" },
+                        { title: "Blue", value: "blue" }
+                    ], onChange: function (newValue) {
+                        return _this.setState({ value1: newValue });
+                    } }))));
+    };
+    return OptionsSelects;
+}(React.Component));
+var Tables = /** @class */ (function (_super) {
+    __extends(Tables, _super);
+    function Tables(props) {
+        var _this = _super.call(this, props) || this;
+        _this.generateData = _this.generateData.bind(_this);
+        _this.state = {
+            data: _this.generateData(20),
+        };
+        return _this;
+    }
+    Tables.prototype.render = function () {
+        var data = this.state.data;
+        return (React.createElement("section", { style: { display: "block" } },
+            React.createElement("header", null, "Tables"),
+            React.createElement("div", { style: { height: "200px" } },
+                React.createElement(lib_1.VirtualTable, { columns: [
+                        {
+                            id: "id",
+                            title: "#",
+                            getValue: function (value) { console.log(value); return value; },
+                            width: 100,
+                        },
+                        {
+                            id: "name",
+                            title: "Name",
+                            width: 100,
+                        },
+                    ], data: data }))));
+    };
+    Tables.prototype.generateData = function (size) {
+        var data = [];
+        for (var i = 1; i <= size; i++) {
+            data.push({
+                id: i,
+                name: Tables.words[(i - 1) % 10],
+            });
+        }
+        return data;
+    };
+    Tables.words = [
+        "Yello", "Red", "Green", "Blue", "Mellow",
+        "Cyber", "Royal", "Trombone", "Banana", "Flax"
+    ];
+    return Tables;
+}(React.Component));
+function Examples() {
+    return (React.createElement(lib_1.Layout, { className: Styles.Examples },
+        React.createElement(SimpleButtons, null),
+        React.createElement(Inputs, null),
+        React.createElement(CheckButtons, null),
+        React.createElement(RadioButtonGroup, null),
+        React.createElement(DateAndTimeInputs, null),
+        React.createElement(OptionsSelects, null),
+        React.createElement(Tables, null)));
+}
+exports.default = Examples;
+
+
+/***/ }),
+
+/***/ "./src/Docs/Styles.scss":
+/*!******************************!*\
+  !*** ./src/Docs/Styles.scss ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../node_modules/sass-loader/dist/cjs.js!./Styles.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/Docs/Styles.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/Docs/index.tsx":
+/*!****************************!*\
+  !*** ./src/Docs/index.tsx ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var react_dom_1 = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+var Examples_1 = __webpack_require__(/*! ./Examples */ "./src/Docs/Examples.tsx");
+react_dom_1.render(React.createElement(Examples_1.default, null), document.getElementById("root"));
 
 
 /***/ }),
